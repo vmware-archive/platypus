@@ -13856,6 +13856,9 @@
   },
   "/composition-service/api/blueprints/{id}/components/{componentId}/properties" : {
     "patch" : {
+       "tags" : [
+        "notification-service"
+      ],
       "parameters" : [
         {
           "required" : true,
@@ -16868,6 +16871,9 @@
   },
   "/composition-service/api/blueprints/{id}/properties" : {
     "patch" : {
+       "tags" : [
+        "notification-service"
+      ],
       "parameters" : [
         {
           "required" : true,
