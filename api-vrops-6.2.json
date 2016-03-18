@@ -4,8 +4,9 @@
     "version": "1.2",
     "title": "VMware vRealize Operations 6.2",
     "contact": {
-      "name": "John Dias",
-      "email": "jdias@vmware.com",
+      "name": "Paul Gifford",
+      "email": "pgifford@vmware.com",
+      "url": "cloudcanuck.ca"
     }
   },
   "basePath": "",

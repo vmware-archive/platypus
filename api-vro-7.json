@@ -1,1 +1,3430 @@
-{"swagger":"2.0","info":{"version":"1.0","title":"Service 1"},"basePath":"","paths":{"/vco/":{"get":{"operationId":"","parameters":[]}},"/vco/about":{"get":{"operationId":"","parameters":[]}},"/vco/actions":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"categoryName","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"categoryName","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/actions/{actionId}":{"get":{"operationId":"","parameters":[{"name":"actionId","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"actionId","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"}]}},"/vco/actions/{actionId}/executions":{"post":{"operationId":"","parameters":[{"name":"actionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/actions/{categoryName}/{actionName}":{"get":{"operationId":"","parameters":[{"name":"categoryName","in":"path","required":true,"type":"string"},{"name":"actionName","in":"path","required":true,"type":"string"}]}},"/vco/actions/{categoryName}/{actionName}/executions":{"post":{"operationId":"","parameters":[{"name":"categoryName","in":"path","required":true,"type":"string"},{"name":"actionName","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/actions/{id}/permissions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/actions/{id}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/catalog":{"get":{"operationId":"","parameters":[]}},"/vco/catalog/{namespace}":{"get":{"operationId":"","parameters":[{"name":"keys","in":"query","required":false,"type":"string"},{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"}]}},"/vco/catalog/{namespace}/metadata":{"get":{"operationId":"","parameters":[{"name":"showHiddenTypes","in":"query","required":false,"type":"string"},{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"showHiddenTypes","in":"query","required":false,"type":"string"}]}},"/vco/catalog/{namespace}/metadata/icon":{"get":{"operationId":"","parameters":[{"name":"namespace","in":"path","required":true,"type":"string"}]}},"/vco/catalog/{namespace}/{parentType}/{parentId}/{relationName}":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"parentType","in":"path","required":true,"type":"string"},{"name":"parentId","in":"path","required":true,"type":"string"},{"name":"relationName","in":"path","required":true,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"}]}},"/vco/catalog/{namespace}/{type}":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"rootObject","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"},{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"type","in":"path","required":true,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"rootObject","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"}]}},"/vco/catalog/{namespace}/{type}/metadata/icon":{"get":{"operationId":"","parameters":[{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"type","in":"path","required":true,"type":"string"}]}},"/vco/catalog/{namespace}/{type}/{id}":{"get":{"operationId":"","parameters":[{"name":"keys","in":"query","required":false,"type":"string"},{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"type","in":"path","required":true,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"}]}},"/vco/catalog/{namespace}/{type}/{id}/tags":{"get":{"operationId":"","parameters":[{"name":"searchScope","in":"query","required":false,"type":"string"},{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"type","in":"path","required":true,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"name":"searchScope","in":"query","required":false,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"type","in":"path","required":true,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/catalog/{namespace}/{type}/{id}/tags/{tagname}":{"delete":{"operationId":"","parameters":[{"name":"namespace","in":"path","required":true,"type":"string"},{"name":"type","in":"path","required":true,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"name":"tagname","in":"path","required":true,"type":"string"}]}},"/vco/categories":{"get":{"operationId":"","parameters":[{"name":"categoryType","in":"query","required":false,"type":"string"},{"name":"isRoot","in":"query","required":false,"type":"string"},{"name":"categoryType","in":"query","required":false,"type":"string"},{"name":"isRoot","in":"query","required":false,"type":"string"}]},"post":{"operationId":"","parameters":[{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/categories/{id}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"deleteNonEmptyContent","in":"query","required":false,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"name":"deleteNonEmptyContent","in":"query","required":false,"type":"string"}]}},"/vco/categories/{id}/permissions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/categories/{id}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/configurations":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"categoryId","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"categoryId","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/configurations/{id}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"}]}},"/vco/configurations/{id}/permissions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/configurations/{id}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/content":{"get":{"operationId":"","parameters":[]}},"/vco/content/actions":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"}]}},"/vco/content/actions/{actionName}":{"get":{"operationId":"","parameters":[{"name":"actionName","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"actionName","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"}]}},"/vco/content/actions/{categoryName}":{"post":{"operationId":"","parameters":[{"name":"file","in":"query","required":false,"type":"string"},{"name":"categoryName","in":"path","required":true,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/content/packages":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"file","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"importConfigurationAttributeValues","in":"query","required":false,"type":"string"},{"name":"tagImportMode","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"importConfigurationAttributeValues","in":"query","required":false,"type":"string"},{"name":"tagImportMode","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/content/packages/{packageName}":{"get":{"operationId":"","parameters":[{"name":"exportConfigurationAttributeValues","in":"query","required":false,"type":"string"},{"name":"exportGlobalTags","in":"query","required":false,"type":"string"},{"name":"packageName","in":"path","required":true,"type":"string"},{"name":"exportConfigurationAttributeValues","in":"query","required":false,"type":"string"},{"name":"exportGlobalTags","in":"query","required":false,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"packageName","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"}]}},"/vco/content/workflows":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"}]}},"/vco/content/workflows/{categoryId}":{"post":{"operationId":"","parameters":[{"name":"file","in":"query","required":false,"type":"string"},{"name":"categoryId","in":"path","required":true,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/content/workflows/{workflowId}":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"}]}},"/vco/docs":{"get":{"operationId":"","parameters":[]}},"/vco/healthstatus":{"get":{"operationId":"","parameters":[{"name":"showDetails","in":"query","required":false,"type":"string"},{"name":"showDetails","in":"query","required":false,"type":"string"}]}},"/vco/interactions":{"get":{"operationId":"","parameters":[]}},"/vco/inventory/**":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"}]}},"/vco/packages":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"file","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"importConfigurationAttributeValues","in":"query","required":false,"type":"string"},{"name":"tagImportMode","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"importConfigurationAttributeValues","in":"query","required":false,"type":"string"},{"name":"tagImportMode","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/packages/{packageName}":{"get":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"option","in":"query","required":false,"type":"string"},{"name":"packageName","in":"path","required":true,"type":"string"},{"name":"option","in":"query","required":false,"type":"string"}]}},"/vco/packages/{packageName}/permissions":{"get":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"}]}},"/vco/packages/{packageName}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"packageName","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/plugins":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"file","in":"query","required":false,"type":"string"},{"name":"format","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"format","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/plugins/installPluginDynamically":{"post":{"operationId":"","parameters":[{"name":"file","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/plugins/{pluginName}":{"get":{"operationId":"","parameters":[{"name":"pluginName","in":"path","required":true,"type":"string"}]}},"/vco/plugins/{pluginName}/state":{"put":{"operationId":"","parameters":[{"name":"pluginName","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/resources":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"categoryId","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"categoryId","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/resources/{id}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"id","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"}]}},"/vco/resources/{id}/permissions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/resources/{id}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/schema":{"get":{"operationId":"","parameters":[]}},"/vco/schema/{name}":{"get":{"operationId":"","parameters":[{"name":"name","in":"path","required":true,"type":"string"}]}},"/vco/server":{"get":{"operationId":"","parameters":[]}},"/vco/server-configuration":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"name":"password","in":"query","required":false,"type":"string"},{"name":"importIdentity","in":"query","required":false,"type":"string"},{"name":"isUpgradeBackup","in":"query","required":false,"type":"string"},{"name":"password","in":"query","required":false,"type":"string"},{"name":"importIdentity","in":"query","required":false,"type":"string"},{"name":"isUpgradeBackup","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/server/authentication":{"get":{"operationId":"","parameters":[]}},"/vco/server/groups":{"get":{"operationId":"","parameters":[{"name":"filter","in":"query","required":false,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"filter","in":"query","required":false,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"}]}},"/vco/server/permissions":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[]}},"/vco/server/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/status":{"get":{"operationId":"","parameters":[]}},"/vco/tags":{"get":{"operationId":"","parameters":[]}},"/vco/tags/{owner}":{"get":{"operationId":"","parameters":[{"name":"owner","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"owner","in":"path","required":true,"type":"string"}]}},"/vco/tags/{owner}/{tagName}":{"get":{"operationId":"","parameters":[{"name":"owner","in":"path","required":true,"type":"string"},{"name":"tagName","in":"path","required":true,"type":"string"}]}},"/vco/tasks":{"get":{"operationId":"","parameters":[]},"post":{"operationId":"","parameters":[{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/tasks/{id}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/tasks/{id}/executions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/tasks/{id}/permissions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/tasks/{id}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/users":{"get":{"operationId":"","parameters":[]}},"/vco/versions":{"get":{"operationId":"","parameters":[]}},"/vco/workflows":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"queryCount","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"tags","in":"query","required":false,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"categoryId","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"name":"categoryId","in":"query","required":false,"type":"string"},{"name":"overwrite","in":"query","required":false,"type":"string"},{"name":"file","in":"query","required":false,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/workflows/{id}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{id}/icon":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{id}/permissions":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{id}/permissions/{ruleId}":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]},"put":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"},{"name":"ruleId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{id}/schema":{"get":{"operationId":"","parameters":[{"name":"id","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}":{"delete":{"operationId":"","parameters":[{"name":"force","in":"query","required":false,"type":"string"},{"name":"forceDeleteLocked","in":"query","required":false,"type":"string"},{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"force","in":"query","required":false,"type":"string"},{"name":"forceDeleteLocked","in":"query","required":false,"type":"string"}]}},"/vco/workflows/{workflowId}/executions":{"get":{"operationId":"","parameters":[{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"},{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"maxResult","in":"query","required":false,"type":"string"},{"name":"startIndex","in":"query","required":false,"type":"string"},{"name":"keys","in":"query","required":false,"type":"string"},{"name":"conditions","in":"query","required":false,"type":"string"},{"name":"sortOrders","in":"query","required":false,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/workflows/{workflowId}/executions/{executionId}":{"get":{"operationId":"","parameters":[{"name":"showDetails","in":"query","required":false,"type":"string"},{"name":"expand","in":"query","required":false,"type":"string"},{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"name":"showDetails","in":"query","required":false,"type":"string"},{"name":"expand","in":"query","required":false,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/executions/{executionId}/interaction":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/workflows/{workflowId}/executions/{executionId}/interaction/presentation":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/executions/{executionId}/interaction/presentation/instances":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/workflows/{workflowId}/executions/{executionId}/interaction/presentation/instances/{presentationExecutionId}":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"name":"presentationExecutionId","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"name":"presentationExecutionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"put":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"name":"presentationExecutionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"name":"presentationExecutionId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/executions/{executionId}/logs":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/executions/{executionId}/state":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]},"delete":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/interactions":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/presentation":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/presentation/instances":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]}},"/vco/workflows/{workflowId}/presentation/instances/{executionId}":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]},"post":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"put":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}]},"delete":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"},{"name":"executionId","in":"path","required":true,"type":"string"}]}},"/vco/workflows/{workflowId}/tasks":{"get":{"operationId":"","parameters":[{"name":"workflowId","in":"path","required":true,"type":"string"}]}}}}
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.2",
+    "title": "VMware vRealize Orchestrator 7",
+    "contact": {
+      "name": "John Dias",
+      "email": "jdias@vmware.com",
+      "url": "storagegumbo.com"
+    }
+  },
+  "basePath": "",
+  "paths": {
+    "/vco/": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/about": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/actions": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryName",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/actions/{actionId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "actionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "actionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/actions/{actionId}/executions": {
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "actionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/actions/{categoryName}/{actionName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/actions/{categoryName}/{actionName}/executions": {
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/actions/{id}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/actions/{id}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/catalog/{namespace}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/metadata": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "showHiddenTypes",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "showHiddenTypes",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/metadata/icon": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/{parentType}/{parentId}/{relationName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "parentType",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "parentId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "relationName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/{type}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "rootObject",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "rootObject",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/{type}/metadata/icon": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/{type}/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/{type}/{id}/tags": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "searchScope",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "searchScope",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/catalog/{namespace}/{type}/{id}/tags/{tagname}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tagname",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/categories": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "isRoot",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "isRoot",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/categories/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "deleteNonEmptyContent",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "deleteNonEmptyContent",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/categories/{id}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/categories/{id}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/configurations": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/configurations/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/configurations/{id}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/configurations/{id}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/content": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/content/actions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/content/actions/{actionName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "actionName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/content/actions/{categoryName}": {
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/content/packages": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "importConfigurationAttributeValues",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tagImportMode",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "importConfigurationAttributeValues",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tagImportMode",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/content/packages/{packageName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "exportConfigurationAttributeValues",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "exportGlobalTags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "exportConfigurationAttributeValues",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "exportGlobalTags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/content/workflows": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/content/workflows/{categoryId}": {
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/content/workflows/{workflowId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/docs": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/healthstatus": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "showDetails",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "showDetails",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/interactions": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/inventory/**": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/packages": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "importConfigurationAttributeValues",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tagImportMode",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "importConfigurationAttributeValues",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tagImportMode",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/packages/{packageName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "option",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/packages/{packageName}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/packages/{packageName}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "packageName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/plugins": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/plugins/installPluginDynamically": {
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/plugins/{pluginName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "pluginName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/plugins/{pluginName}/state": {
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "pluginName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/resources": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/resources/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/resources/{id}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/resources/{id}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/schema": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/schema/{name}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/server": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/server-configuration": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "password",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "importIdentity",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "isUpgradeBackup",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "importIdentity",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "isUpgradeBackup",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/server/authentication": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/server/groups": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/server/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/server/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/status": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/tags": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/tags/{owner}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/tags/{owner}/{tagName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tagName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/tasks": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/tasks/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/tasks/{id}/executions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/tasks/{id}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/tasks/{id}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/users": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/versions": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/vco/workflows": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "queryCount",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{id}/icon": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{id}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{id}/permissions/{ruleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{id}/schema": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "forceDeleteLocked",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "force",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "forceDeleteLocked",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "maxResult",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "keys",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "conditions",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sortOrders",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "showDetails",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "expand",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "showDetails",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "expand",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}/interaction": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}/interaction/presentation": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}/interaction/presentation/instances": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}/interaction/presentation/instances/{presentationExecutionId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "presentationExecutionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "presentationExecutionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "presentationExecutionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "presentationExecutionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}/logs": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/executions/{executionId}/state": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/interactions": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/presentation": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/presentation/instances": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/presentation/instances/{executionId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "executionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/vco/workflows/{workflowId}/tasks": {
+      "get": {
+        "operationId": "",
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  }
+}
