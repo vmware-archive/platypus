@@ -8,9 +8,9 @@
 
 ## Specify PRODUCT & VERSION
 
-`docker run --name platypus --rm -p 80:8080 -e PRODUCT="vra" -e VERSION="7" platypus`
+`docker run --name platypus --rm -p 80:8080 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
 
-`docker run --name platypus --rm -p 80:8080 -e PRODUCT="vrops" -e VERSION="6.2" platypus`
+`docker run --name platypus --rm -p 80:8080 -e PRODUCT="vrops" -e VERSION="6.2" vmware/platypus`
 
 ## Supported Variants
 
