@@ -2,9 +2,10 @@
   "swagger": "2.0",
   "info": {
     "version": "1.2",
-    "title": "VMware vRealize Operations 7",
+    "title": "VMware vRealize Operations 6.2",
     "contact": {
-      "name": "Paul Gifford & John Dias"
+      "name": "John Dias",
+      "email": "jdias@vmware.com",
     }
   },
   "basePath": "",
