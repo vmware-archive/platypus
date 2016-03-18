@@ -23,8 +23,10 @@ RUN npm install
 
 EXPOSE 8080
 
-COPY vra-api.json /app/dist/
+COPY "api-*.json" /app/dist/
 
-RUN sed -i -e "s|http://petstore.swagger.io/v2/swagger.json|vra-api.json|g" /app/dist/index.html
+COPY "runner.sh" /app/dist/ 
 
-CMD /app/node_modules/gulp/bin/gulp.js serve
+WORKDIR /app/dist/
+
+ENTRYPOINT ["/app/dist/runner.sh"]

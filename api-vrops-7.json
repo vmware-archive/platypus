@@ -1,0 +1,5282 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.2",
+    "title": "VMware vRealize Operations 7",
+    "contact": {
+      "name": "Paul Gifford & John Dias"
+    }
+  },
+  "basePath": "",
+  "paths": {
+    "/suite-api/api/": {},
+    "/suite-api/api/api": {},
+    "/suite-api/api/api-docs": {},
+    "/suite-api/api/api-docs/{swaggerGroup}/{apiDeclaration}": {},
+    "/suite-api/api/api/actiondefinitions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/actions/{id}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/actions/{id}/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{adapterKindKey}": {},
+    "/suite-api/api/api/adapterkinds/{adapterKindKey}/resourcekinds/{resourceKindKey}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{adapterKindKey}/resourcekinds/{resourceKindKey}/properties": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{adapterKindKey}/resourcekinds/{resourceKindKey}/resources": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "identifiers",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "identifiers",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{adapterKindKey}/resourcekinds/{resourceKindKey}/statkeys": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{adapterKindKey}/resources": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapterkinds/{key}/resourcekinds": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapters": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKindKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKindKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {},
+          "400": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {},
+          "400": {}
+        }
+      },
+      "patch": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {},
+          "400": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapters/{adapterId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapters/{adapterId}/maintained": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "adapterId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/adapters/{adapterId}/monitoringstate": {},
+    "/suite-api/api/api/adapters/{adapterId}/monitoringstate/start": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/adapters/{adapterId}/monitoringstate/stop": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/adapters/{adapterId}/resources": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "adapterId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/adapters/{id}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "deleteResources",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "deleteResources",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }]
+      }
+    },
+    "/suite-api/api/api/alertdefinitions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/alertdefinitions/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/alertplugins": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "pluginTypeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "pluginTypeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "patch": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/alertplugins/types": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/suite-api/api/api/alertplugins/types/{pluginTypeId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "pluginTypeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/alertplugins/{pluginId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "pluginId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "pluginId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/alertplugins/{pluginId}/enable/{enabled}": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "pluginId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "enabled",
+          "in": "path",
+          "required": true,
+          "type": "byte"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/alertplugins/{pluginId}/rules": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "pluginId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/alerts": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "action",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "minutes",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "action",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "minutes",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/alerts/notes/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/alerts/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/alerts/types": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "ignoreLegacy",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "ignoreLegacy",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }]
+      }
+    },
+    "/suite-api/api/api/alerts/{alertId}/notes": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "alertId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "alertId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/api/alerts/{alertId}/notes/{noteId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "alertId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "noteId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/alerts/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth": {},
+    "/suite-api/api/api/auth/privilegegroups": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "key",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/privileges": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "key",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/roles": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "roleName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/roles/{roleName}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/roles/{roleName}/privileges": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/sources": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {},
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "patch": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/sources/{sourceId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/sourcetypes": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/sourcetypes/{sourceId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/token": {},
+    "/suite-api/api/api/auth/token/acquire": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/token/release": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/traversalspecs": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/usergroups": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/usergroups/{groupId}": {},
+    "/suite-api/api/api/auth/usergroups/{groupId}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/usergroups/{groupId}/permissions/{roleName}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/usergroups/{groupId}/traversalspecs": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/usergroups/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/users": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "roleName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "username",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "roleName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "username",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/users/passwordchange": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/users/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/users/{userId}": {},
+    "/suite-api/api/api/auth/users/{userId}/permissions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/auth/users/{userId}/permissions/{roleName}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/auth/users/{userId}/traversalspecs": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/collectorgroups": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/collectorgroups/{collectorGroupId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "collectorGroupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/collectorgroups/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/collectorgroups/{id}/collector/{collectorId}": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "collectorId",
+          "in": "path",
+          "required": true,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "collectorId",
+          "in": "path",
+          "required": true,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/collectors": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "host",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "host",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/credentialkinds": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/credentials": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/credentials/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/credentials/{id}/adapters": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/credentials/{id}/resources": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/deployment": {},
+    "/suite-api/api/api/deployment/config": {},
+    "/suite-api/api/api/deployment/config/globalsettings": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/suite-api/api/api/deployment/config/globalsettings/metadata": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/suite-api/api/api/deployment/config/globalsettings/{key}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/config/globalsettings/{key}/{value}": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "value",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/config/properties/{namespace}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/config/properties/{namespace}/{key}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/config/properties/{namespace}/{key}/{value}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "value",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/licenses": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/licenses/{licenseId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "licenseId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/deployment/node": {},
+    "/suite-api/api/api/deployment/node/services/api/ping": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/suite-api/api/api/deployment/node/status": {
+      "get": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/suite-api/api/api/docs/{group}": {},
+    "/suite-api/api/api/docs/{group}/{swaggerGroup}/{apiDeclaration}": {},
+    "/suite-api/api/api/events": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/events/adapterkinds/{adapterKind}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKind",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/events/bulk": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/events/bulk/adapterkinds/{adapterKind}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKind",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/maintenanceschedules": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/notifications": {},
+    "/suite-api/api/api/notifications/email/templates": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }]
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/notifications/email/templates/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/notifications/email/templates/{id}/conditions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {},
+          "404": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/notifications/rules": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/notifications/rules/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/notifications/rules/{ruleId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "ruleId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/recommendations": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "targetAdapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "targetResourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "targetAdapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "targetResourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/recommendations/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "force",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "force",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }]
+      }
+    },
+    "/suite-api/api/api/reportdefinitions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "owner",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "subject",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "owner",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "subject",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/reportdefinitions/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/reportdefinitions/{id}/schedules": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      }
+    },
+    "/suite-api/api/api/reportdefinitions/{id}/schedules/{scheduleId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "scheduleId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {},
+          "404": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "scheduleId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/reports": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "owner",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "status",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "subject",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "owner",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "status",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "subject",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/reports/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/reports/{id}/download": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "format",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "format",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "regex",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "collectorName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "collectorId",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "maintenanceScheduleId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterInstanceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "recentlyAdded",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "resourceState",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceStatus",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceHealth",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "parentId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "credentialId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "propertyName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "propertyValue",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKeyLowerBound",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "statKeyUpperBound",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "statKeyInclusive",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "regex",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "collectorName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "collectorId",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "maintenanceScheduleId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterInstanceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "recentlyAdded",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "resourceState",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceStatus",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceHealth",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "parentId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "credentialId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "propertyName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "propertyValue",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKeyLowerBound",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "statKeyUpperBound",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "statKeyInclusive",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/adapterkinds/{adapterKindKey}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/adapters/{adapterInstanceId}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterInstanceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/maintained": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/monitoringstate": {},
+    "/suite-api/api/api/resources/monitoringstate/start": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/monitoringstate/stop": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/properties": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/statkeys": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "searchstring",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "searchstring",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/stats": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/stats/dt/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/stats/latest": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "maxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "maxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/stats/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/stats/topn": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "groupBy",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "sortOrder",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "topN",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "groupBy",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "sortOrder",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "topN",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}": {},
+    "/suite-api/api/api/resources/{id}/geolocation": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "latitude",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "longitude",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "latitude",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "longitude",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/maintained": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/monitoringstate": {},
+    "/suite-api/api/api/resources/{id}/monitoringstate/start": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/monitoringstate/stop": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "adapterId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/properties": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/properties/adapterkinds/{adapterKind}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/relationships": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "relationshipType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "relationshipType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/{id}/stats": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "disableAnalyticsProcessing",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "disableAnalyticsProcessing",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/stats/adapterkinds/{adapterKind}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "disableAnalyticsProcessing",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "disableAnalyticsProcessing",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{id}/stats/dt": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "showSmooth",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        }, {
+          "name": "smoothFactor",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "showSmooth",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        }, {
+          "name": "smoothFactor",
+          "in": "query",
+          "required": false,
+          "type": "double"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/{id}/stats/latest": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "maxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "maxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/{id}/stats/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/{id}/stats/topn": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "groupBy",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "sortOrder",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "topN",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "begin",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "dt",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "end",
+          "in": "query",
+          "required": false,
+          "type": "long"
+        }, {
+          "name": "groupBy",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "intervalQuantifier",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "intervalType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "latestMaxSamples",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "rollUpType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "sortOrder",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "statKey",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "topN",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{resourceId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{resourceId}/properties": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/resources/{resourceId}/relationships/{relationshipType}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "relationshipType",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "relationshipType",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "relationshipType",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{resourceId}/relationships/{relationshipType}/{relatedId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "relationshipType",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "relatedId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/resources/{resourceId}/statkeys": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/solutions": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/solutions/{solutionId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "solutionId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/solutions/{solutionId}/adapterkinds": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "solutionId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/solutions/{solutionId}/licenses": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "solutionId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "solutionId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/api/solutions/{solutionId}/licenses/{licenseId}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "solutionId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "licenseId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/supermetrics": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/supermetrics/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/symptomdefinitions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/symptomdefinitions/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/api/symptoms": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "activeOnly",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "activeOnly",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/symptoms/query": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/tasks": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "taskId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "taskState",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "taskId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "taskState",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/tasks/{taskId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "taskId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/versions": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/versions/current": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/api/versions/current/endpoints": {
+      "get": {
+        "operationId": "",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal": {},
+    "/suite-api/api/internal/adapterkinds": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "file",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "forceUpload",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "forceContentUpdate",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "file",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "forceUpload",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "forceContentUpdate",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "202": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/adapterkinds/describe": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "forceDescribe",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "forceDescribe",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "202": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/adapterkinds/describeupload": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "describeFile",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "forceDescribe",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "name": "describeFile",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "forceDescribe",
+          "in": "query",
+          "required": false,
+          "type": "byte"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "202": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/adapterkinds/{adapterKindKey}/resourcekinds": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "adapterKindKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/agent/upgrade": {},
+    "/suite-api/api/internal/auth/users/impersonate": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/deployment/config/properties/{namespace}": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/internal/deployment/config/properties/{namespace}/{key}": {
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/internal/deployment/config/properties/{namespace}/{key}/{value}": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "namespace",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "key",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "value",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/internal/projects": {},
+    "/suite-api/api/internal/projects/{projectId}": {},
+    "/suite-api/api/internal/relay": {},
+    "/suite-api/api/internal/relay/forwarddata": {},
+    "/suite-api/api/internal/relay/forwarddataalt": {},
+    "/suite-api/api/internal/relay/heartbeat": {},
+    "/suite-api/api/internal/relay/task": {},
+    "/suite-api/api/internal/relay/task/{collectorid}/{timeout}": {},
+    "/suite-api/api/internal/resources": {
+      "delete": {
+        "operationId": "",
+        "parameters": []
+      }
+    },
+    "/suite-api/api/internal/resources/groups": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "groupId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/resources/groups/static": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "description",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "adapterKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceKind",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "description",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/resources/groups/{groupId}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "operationId": "",
+        "parameters": [{
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }]
+      }
+    },
+    "/suite-api/api/internal/resources/groups/{groupId}/excludedResources": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/resources/groups/{groupId}/includedResources": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "resourceId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/resources/groups/{groupId}/members": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }, {
+          "name": "pageSize",
+          "in": "query",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/resources/merge": {
+      "put": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }]
+      }
+    },
+    "/suite-api/api/internal/resources/remotemonitoring": {
+      "post": {
+        "operationId": "",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Request body",
+          "required": true
+        }],
+        "responses": {
+          "201": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/viewdefinitions": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "description",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "owner",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "description",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "owner",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/suite-api/api/internal/viewdefinitions/{id}": {
+      "get": {
+        "operationId": "",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {}
+        }
+      }
+    }
+  }
+}
