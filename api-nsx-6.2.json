@@ -7,7 +7,7 @@
       "name": "Grant Orchard",
       "email": "gorchard@vmware.com",
       "url": "grantorchard.com"
-  	}
+    }
   },
   "host": "platypus_host",
   "basePath": "/",
@@ -16,7 +16,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/advancedconfig": {
       "post": {
         "tags": ["Web"],
-        "summary": "advancedConfigRead /4.0/edges/{{edgeId}}/sslvpn/config/advancedconfig",
         "description": "Retrieve SSL VPN advanced configuration\n\nParameters:\n\n",
         "operationId": "advancedConfigRead40EdgesEdgeIdSslvpnConfigAdvancedconfig",
         "consumes": ["application/xml"],
@@ -43,7 +42,6 @@
     "/api/4.0/edges/{edge_id}/aesni": {
       "post": {
         "tags": ["Web"],
-        "summary": "aesniCreate /4.0/edges/{{edgeId}}/aesni",
         "description": "Modify AESNI setting\n\nParameters:\n\n",
         "operationId": "aesniCreate40EdgesEdgeIdAesni",
         "consumes": ["application/xml"],
@@ -77,7 +75,6 @@
     "/api/2.0/si/fabric/sync/conflicts": {
       "post": {
         "tags": ["Web"],
-        "summary": "agentConflictsRead /2.0/si/fabric/sync/conflicts",
         "description": "Retrieve conflicting Deployment Units and EAM Agencies, if any, and the allowed operations on them\n\nParameters:\n\n",
         "operationId": "agentConflictsRead20SiFabricSyncConflicts",
         "consumes": ["application/xml"],
@@ -96,7 +93,6 @@
     "/api/2.0/si/agent/{agent_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "agentInformationRead /2.0/si/agent/{{agentID}}",
         "description": "Retrieve agent details\n\nParameters:\n\nagentID: Specified agent\n\n",
         "operationId": "agentInformationRead20SiAgentAgentId",
         "consumes": ["application/xml"],
@@ -123,7 +119,6 @@
     "/api/2.0/vdn/config/resources/allocated": {
       "post": {
         "tags": ["Web"],
-        "summary": "allocatedResourcesRead /2.0/vdn/config/resources/allocated",
         "description": "Retrieve a list of resources allocated\n\nParameters:\n\n",
         "operationId": "allocatedResourcesRead20VdnConfigResourcesAllocated",
         "consumes": ["application/xml"],
@@ -164,7 +159,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/auth/localusers/users": {
       "post": {
         "tags": ["Web"],
-        "summary": "allUsersUpdate /4.0/edges/{{edgeId}}/sslvpn/auth/localusers/users",
         "description": "Update all users with the given list of users. If the user is present, it is updated. Otherwise, and new user is created. Existing users not included in the body are deleted.\n\nParameters:\n\n",
         "operationId": "allUsersUpdate40EdgesEdgeIdSslvpnAuthLocalusersUsers",
         "consumes": ["application/xml"],
@@ -199,7 +193,6 @@
     "/api/3.0/ai/app": {
       "post": {
         "tags": ["Web"],
-        "summary": "appDetailsRead /3.0/ai/app",
         "description": "Retrieve app details\n\nParameters:\n\n",
         "operationId": "appDetailsRead30AiApp",
         "consumes": ["application/xml"],
@@ -218,7 +211,6 @@
     "/api/1.0/appliance-management/backuprestore/backup": {
       "post": {
         "tags": ["Web"],
-        "summary": "applianceMgrBackup /1.0/appliance-management/backuprestore/backup",
         "description": "Backup NSX data on-demand\n\nParameters:\n\n",
         "operationId": "applianceMgrBackup10ApplianceManagementBackuprestoreBackup",
         "consumes": ["application/xml"],
@@ -237,7 +229,6 @@
     "/api/1.0/appliance-management/backuprestore/restore": {
       "post": {
         "tags": ["Web"],
-        "summary": "applianceMgrBackupRestore /1.0/appliance-management/backuprestore/restore",
         "description": "Restore data from a backup file\n\nParameters:\n\n",
         "operationId": "applianceMgrBackupRestore10ApplianceManagementBackuprestoreRestore",
         "consumes": ["application/xml"],
@@ -264,7 +255,6 @@
     "/api/1.0/appliance-management/backuprestore/backupsettings": {
       "post": {
         "tags": ["Web"],
-        "summary": "applianceMgrBackupSettingsRead /1.0/appliance-management/backuprestore/backupsettings",
         "description": "Retrieve backup settings\n\nParameters:\n\n",
         "operationId": "applianceMgrBackupSettingsRead10ApplianceManagementBackuprestoreBackupsettings",
         "consumes": ["application/xml"],
@@ -283,7 +273,6 @@
     "/api/1.0/appliance-management/backuprestore/backups": {
       "post": {
         "tags": ["Web"],
-        "summary": "applianceMgrBackupsRead /1.0/appliance-management/backuprestore/backups",
         "description": "Retrieve list of all backups available at configured backup location\n\nParameters:\n\n",
         "operationId": "applianceMgrBackupsRead10ApplianceManagementBackuprestoreBackups",
         "consumes": ["application/xml"],
@@ -302,7 +291,6 @@
     "/api/4.0/edges/{edge_id}/appliances/{ha_index}": {
       "post": {
         "tags": ["Web"],
-        "summary": "applianceRead /4.0/edges/{{edgeId}}/appliances/{{haIndex}}",
         "description": "Get configuration of specified appliance\n\nParameters:\n\nhaIndex: Specified appliance HA index\n\n",
         "operationId": "applianceRead40EdgesEdgeIdAppliancesHaIndex",
         "consumes": ["application/xml"],
@@ -336,7 +324,6 @@
     "/api/4.0/edges/{edge_id}/appliances": {
       "post": {
         "tags": ["Web"],
-        "summary": "appliancesCreate /4.0/edges/{{edgeId}}/appliances",
         "description": "Change the size of both appliances\n\nParameters:\n\n",
         "operationId": "appliancesCreate40EdgesEdgeIdAppliances",
         "consumes": ["application/xml"],
@@ -370,7 +357,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/applicationprofiles": {
       "post": {
         "tags": ["Web"],
-        "summary": "applicationProfilesCreate /4.0/edges/{{edgeId}}/loadbalancer/config/applicationprofiles",
         "description": "Add an application profile\n\nParameters:\n\n",
         "operationId": "applicationProfilesCreate40EdgesEdgeIdLoadbalancerConfigApplicationprofiles",
         "consumes": ["application/xml"],
@@ -405,7 +391,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/applicationprofiles/{app_profile_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "applicationProfileUpdate /4.0/edges/{{edgeId}}/loadbalancer/config/applicationprofiles/{{appProfileID}}",
         "description": "Modify an application profile\n\nParameters:\n\nappProfileID: Specified application profile\n\n",
         "operationId": "applicationProfileUpdate40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileId",
         "consumes": ["application/xml"],
@@ -447,7 +432,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/applicationrules/{apprule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "appRuleRead /4.0/edges/{{edgeId}}/loadbalancer/config/applicationrules/{{appruleID}}",
         "description": "Retrieve an application rule\n\nParameters:\n\nappruleID: Specified application rule\n\n",
         "operationId": "appRuleRead40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleId",
         "consumes": ["application/xml"],
@@ -481,7 +465,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/applicationrules": {
       "post": {
         "tags": ["Web"],
-        "summary": "appRulesCreate /4.0/edges/{{edgeId}}/loadbalancer/config/applicationrules",
         "description": "Add an application rule\n\nParameters:\n\n",
         "operationId": "appRulesCreate40EdgesEdgeIdLoadbalancerConfigApplicationrules",
         "consumes": ["application/xml"],
@@ -516,7 +499,6 @@
     "/api/2.0/xvs/networks/{id}/features": {
       "post": {
         "tags": ["Web"],
-        "summary": "arpMACRead /2.0/xvs/networks/{{ID}}/features",
         "description": "Query ARP suppression and MAC learning information\n\nParameters:\n\nID: dvpg MoID or virtual wire ID\n\n",
         "operationId": "arpMacRead20XvsNetworksIdFeatures",
         "consumes": ["application/xml"],
@@ -543,7 +525,6 @@
     "/api/2.0/auditlog": {
       "post": {
         "tags": ["Web"],
-        "summary": "auditLogsRead /2.0/auditlog",
         "description": "Get NSX Manager audit logs\n\nParameters:\n\n",
         "operationId": "auditLogsRead20Auditlog",
         "consumes": ["application/xml"],
@@ -577,7 +558,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/auth/settings": {
       "post": {
         "tags": ["Web"],
-        "summary": "authSettingsRead /4.0/edges/{{edgeId}}/sslvpn/config/auth/settings",
         "description": "Get information about authentication server\n\nParameters:\n\n",
         "operationId": "authSettingsRead40EdgesEdgeIdSslvpnConfigAuthSettings",
         "consumes": ["application/xml"],
@@ -604,7 +584,6 @@
     "/api/4.0/edges/{edge_id}/autoconfiguration": {
       "post": {
         "tags": ["Web"],
-        "summary": "autoConfigRead /4.0/edges/{{edgeId}}/autoconfiguration",
         "description": "Retrieve auto config settings for the Edge\n\nParameters:\n\n",
         "operationId": "autoConfigRead40EdgesEdgeIdAutoconfiguration",
         "consumes": ["application/xml"],
@@ -631,7 +610,6 @@
     "/api/4.0/edges/{edge_id}/bridging/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "bridgingRead /4.0/edges/{{edgeId}}/bridging/config",
         "description": "Retrieve bridge configuration\n\nParameters:\n\n",
         "operationId": "bridgingRead40EdgesEdgeIdBridgingConfig",
         "consumes": ["application/xml"],
@@ -658,7 +636,6 @@
     "/api/2.0/services/truststore/certificate": {
       "post": {
         "tags": ["Web"],
-        "summary": "certificateCSRCreate /2.0/services/truststore/certificate",
         "description": "Create certificate for CSR\n\nParameters:\n\n",
         "operationId": "certificateCsrCreate20ServicesTruststoreCertificate",
         "consumes": ["application/xml"],
@@ -686,7 +663,6 @@
     "/api/2.0/services/truststore/certificate/{certificate_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "certificateRead /2.0/services/truststore/certificate/{{certificateId}}",
         "description": "Retrieve the certificate object specified by ID. If the ID specifies a chain, multiple certificate objects are retrieved.\n\nParameters:\n\ncertificateId: certificate ID\n\n",
         "operationId": "certificateRead20ServicesTruststoreCertificateCertificateId",
         "consumes": ["application/xml"],
@@ -713,7 +689,6 @@
     "/api/2.0/services/truststore/certificate/scope/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "certificateScopeRead /2.0/services/truststore/certificate/scope/{{scopeId}}",
         "description": "Query all certificates for a scope\n\nParameters:\n\nscopeId: Scope ID\n\n",
         "operationId": "certificateScopeRead20ServicesTruststoreCertificateScopeScopeId",
         "consumes": ["application/xml"],
@@ -740,7 +715,6 @@
     "/api/2.0/services/truststore/certificate/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "certificateSelfSignedCreate /2.0/services/truststore/certificate/{{scopeId}}",
         "description": "Create a single certificate\n\nParameters:\n\nscopeId: Scope ID\n\n",
         "operationId": "certificateSelfSignedCreate20ServicesTruststoreCertificateScopeId",
         "consumes": ["application/xml"],
@@ -775,7 +749,6 @@
     "/api/2.0/nwfabric/status/child/{parent_resource_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "childStatusRead /2.0/nwfabric/status/child/{{parentResourceID}}",
         "description": "Retrieve status\n\nParameters:\n\nparentResourceID: Parent resource ID\n\n",
         "operationId": "childStatusRead20NwfabricStatusChildParentResourceId",
         "consumes": ["application/xml"],
@@ -802,7 +775,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/clientconfig": {
       "post": {
         "tags": ["Web"],
-        "summary": "clientConfigUpdate /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/clientconfig",
         "description": "Set parameters for full access client configurations\n\nParameters:\n\n",
         "operationId": "clientConfigUpdate40EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfig",
         "consumes": ["application/xml"],
@@ -837,7 +809,6 @@
     "/api/4.0/edges/{edge_id}/cliremoteaccess": {
       "post": {
         "tags": ["Web"],
-        "summary": "cliRemoteCreate /4.0/edges/{{edgeId}}/cliremoteaccess",
         "description": "Change CLI remote access\n\nParameters:\n\n",
         "operationId": "cliRemoteCreate40EdgesEdgeIdCliremoteaccess",
         "consumes": ["application/xml"],
@@ -871,7 +842,6 @@
     "/api/4.0/edges/{edge_id}/clisettings": {
       "post": {
         "tags": ["Web"],
-        "summary": "cliSettingsUpdate /4.0/edges/{{edgeId}}/clisettings",
         "description": "Modify CLI credentials and enable/disable SSH for Edge\n\nParameters:\n\n",
         "operationId": "cliSettingsUpdate40EdgesEdgeIdClisettings",
         "consumes": ["application/xml"],
@@ -906,7 +876,6 @@
     "/api/1.0/appliance-management/components/{component_id}/dependencies": {
       "post": {
         "tags": ["Web"],
-        "summary": "componentDependenciesRead /1.0/appliance-management/components/{{componentID}}/dependencies",
         "description": "Retrieve dependency details for specified component\n\nParameters:\n\n",
         "operationId": "componentDependenciesRead10ApplianceManagementComponentsComponentIdDependencies",
         "consumes": ["application/xml"],
@@ -933,7 +902,6 @@
     "/api/1.0/appliance-management/components/{component_id}/dependents": {
       "post": {
         "tags": ["Web"],
-        "summary": "componentDependentsRead /1.0/appliance-management/components/{{componentID}}/dependents",
         "description": "Retrieve dependents for the specified component\n\nParameters:\n\n",
         "operationId": "componentDependentsRead10ApplianceManagementComponentsComponentIdDependents",
         "consumes": ["application/xml"],
@@ -960,7 +928,6 @@
     "/api/1.0/appliance-management/summary/components": {
       "post": {
         "tags": ["Web"],
-        "summary": "componentInfoRead /1.0/appliance-management/summary/components",
         "description": "Retrieve summary of all available components and their status info\n\nParameters:\n\n",
         "operationId": "componentInfoRead10ApplianceManagementSummaryComponents",
         "consumes": ["application/xml"],
@@ -979,7 +946,6 @@
     "/api/1.0/appliance-management/components/{component_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "componentManagementRead /1.0/appliance-management/components/{{componentID}}",
         "description": "Retrieve details for specified component\n\nParameters:\n\ncomponentID: Specified component ID\n\n",
         "operationId": "componentManagementRead10ApplianceManagementComponentsComponentId",
         "consumes": ["application/xml"],
@@ -1006,7 +972,6 @@
     "/api/1.0/appliance-management/components": {
       "post": {
         "tags": ["Web"],
-        "summary": "componentsManagementRead /1.0/appliance-management/components",
         "description": "Retrieve all Appliance Manager components\n\nParameters:\n\n",
         "operationId": "componentsManagementRead10ApplianceManagementComponents",
         "consumes": ["application/xml"],
@@ -1025,7 +990,6 @@
     "/api/1.0/appliance-management/components/{component_id}/status": {
       "post": {
         "tags": ["Web"],
-        "summary": "componentStatusRead /1.0/appliance-management/components/{{componentID}}/status",
         "description": "Retrieve current status for specified component\n\nParameters:\n\n",
         "operationId": "componentStatusRead10ApplianceManagementComponentsComponentIdStatus",
         "consumes": ["application/xml"],
@@ -1052,7 +1016,6 @@
     "/api/4.0/edges/{edge_id}/coredump": {
       "post": {
         "tags": ["Web"],
-        "summary": "coreDumpCreate /4.0/edges/{{edgeId}}/coredump",
         "description": "Modify core dump setting\n\nParameters:\n\n",
         "operationId": "coreDumpCreate40EdgesEdgeIdCoredump",
         "consumes": ["application/xml"],
@@ -1079,7 +1042,6 @@
     "/api/2.0/services/truststore/crl/{crl_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "crlIDRead /2.0/services/truststore/crl/{{crlId}}",
         "description": "Retrieve certificate object for specified crlID\n\nParameters:\n\ncrlId: CRL ID\n\n",
         "operationId": "crlIdRead20ServicesTruststoreCrlCrlId",
         "consumes": ["application/xml"],
@@ -1106,7 +1068,6 @@
     "/api/2.0/services/truststore/crl/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "crlScopeCreate /2.0/services/truststore/crl/{{scopeId}}",
         "description": "Create CRL on the specified scope\n\nParameters:\n\nscopeId: Specified scope\n\n",
         "operationId": "crlScopeCreate20ServicesTruststoreCrlScopeId",
         "consumes": ["application/xml"],
@@ -1141,7 +1102,6 @@
     "/api/2.0/services/truststore/crl/scope/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "crlScopeRead /2.0/services/truststore/crl/scope/{{scopeId}}",
         "description": "Retrieve all certificates for the specified scope\n\nParameters:\n\nscopeId: Specified scope\n\n",
         "operationId": "crlScopeRead20ServicesTruststoreCrlScopeScopeId",
         "consumes": ["application/xml"],
@@ -1168,7 +1128,6 @@
     "/api/2.0/services/truststore/csr/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "csrCreate /2.0/services/truststore/csr/{{scopeId}}",
         "description": "Create a CSR\n\nParameters:\n\nscopeId: Specified scope ID\n\n",
         "operationId": "csrCreate20ServicesTruststoreCsrScopeId",
         "consumes": ["application/xml"],
@@ -1203,7 +1162,6 @@
     "/api/2.0/services/truststore/csr/scope/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "csrScopeRead /2.0/services/truststore/csr/scope/{{scopeId}}",
         "description": "Query CSRs for specific scope\n\nParameters:\n\nscopeId: Specified scope\n\n",
         "operationId": "csrScopeRead20ServicesTruststoreCsrScopeScopeId",
         "consumes": ["application/xml"],
@@ -1230,7 +1188,6 @@
     "/api/2.0/services/truststore/csr/{csr_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "csrSelfSignedUpdate /2.0/services/truststore/csr/{{csrId}}",
         "description": "Create a self signed certificate for CSR\n\nParameters:\n\ncsrId: CSR ID\n\n",
         "operationId": "csrSelfSignedUpdate20ServicesTruststoreCsrCsrId",
         "consumes": ["application/xml"],
@@ -1264,7 +1221,6 @@
     "/api/1.0/eventcontrol/eventcontrol-root/request": {
       "post": {
         "tags": ["Web"],
-        "summary": "dataCollectionKillSwitch /1.0/eventcontrol/eventcontrol-root/request",
         "description": "Turn on/off data collection at global level\n\nParameters:\n\n",
         "operationId": "dataCollectionKillSwitch10EventcontrolEventcontrolRootRequest",
         "consumes": ["application/xml"],
@@ -1292,7 +1248,6 @@
     "/api/1.0/eventcontrol/vm/{vm_id}/request": {
       "post": {
         "tags": ["Web"],
-        "summary": "dataCollectionVMCreate /1.0/eventcontrol/vm/{{vmID}}/request",
         "description": "Enable or disable data collection on a virtual machine\n\nParameters:\n\nvmID: MOID of the guest vm\n\n",
         "operationId": "dataCollectionVmCreate10EventcontrolVmVmIdRequest",
         "consumes": ["application/xml"],
@@ -1327,7 +1282,6 @@
     "/api/1.0/eventcontrol/config/vm/{vm_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dataCollectionVMInfoRead /1.0/eventcontrol/config/vm/{{vmID}}",
         "description": "Retrieve per vm configuration for data collection\n\nParameters:\n\nvmID: MOID of the guest vm\n\n",
         "operationId": "dataCollectionVmInfoRead10EventcontrolConfigVmVmId",
         "consumes": ["application/xml"],
@@ -1354,7 +1308,6 @@
     "/api/4.0/edges/{edge_id}/firewall/config/defaultpolicy": {
       "post": {
         "tags": ["Web"],
-        "summary": "defaultFirewallPolicyRead /4.0/edges/{{edgeId}}/firewall/config/defaultpolicy",
         "description": "Retrieve default firewall policy\n\nParameters:\n\n",
         "operationId": "defaultFirewallPolicyRead40EdgesEdgeIdFirewallConfigDefaultpolicy",
         "consumes": ["application/xml"],
@@ -1381,7 +1334,6 @@
     "/api/2.0/si/deployment/{deploymentunit_id}/agents": {
       "post": {
         "tags": ["Web"],
-        "summary": "deploymentAgentsRead /2.0/si/deployment/{{deploymentunitID}}/agents",
         "description": "Retrieve all agents for the specified deployment\n\nParameters:\n\ndeploymentunitID: Specified deployment\n\n",
         "operationId": "deploymentAgentsRead20SiDeploymentDeploymentunitIdAgents",
         "consumes": ["application/xml"],
@@ -1408,7 +1360,6 @@
     "/api/3.0/ai/desktoppool": {
       "post": {
         "tags": ["Web"],
-        "summary": "desktopPoolRead /3.0/ai/desktoppool",
         "description": "Retrieve list of all discovered desktop pools by agent introspection\n\nParameters:\n\n",
         "operationId": "desktopPoolRead30AiDesktoppool",
         "consumes": ["application/xml"],
@@ -1427,7 +1378,6 @@
     "/api/4.0/firewall/globalroot-0/drafts/{draft_id}/action/export": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwConfigExport /4.0/firewall/globalroot-0/drafts/{{draftID}}/action/export",
         "description": "Export a configuration\n\nParameters:\n\n",
         "operationId": "dfwConfigExport40FirewallGlobalroot0DraftsDraftIdActionExport",
         "consumes": ["application/xml"],
@@ -1454,7 +1404,6 @@
     "/api/4.0/firewall/globalroot-0/drafts/{draft_id}/action/import": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwConfigImport /4.0/firewall/globalroot-0/drafts/{{draftID}}/action/import",
         "description": "Import a configuration\n\nParameters:\n\n",
         "operationId": "dfwConfigImport40FirewallGlobalroot0DraftsDraftIdActionImport",
         "consumes": ["application/xml"],
@@ -1489,7 +1438,6 @@
     "/api/4.0/firewall/globalroot-0/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwConfigShow /4.0/firewall/globalroot-0/config",
         "description": "Global Distributed Firewall Rules configuration, use query Parameters to filter\n\nParameters:\n\n",
         "operationId": "dfwConfigShow40FirewallGlobalroot0Config",
         "consumes": ["application/xml"],
@@ -1565,7 +1513,6 @@
     "/api/4.0/firewall/globalroot-0/drafts/{draft_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwDraftRead /4.0/firewall/globalroot-0/drafts/{{draftID}}",
         "description": "Get a saved firewall configuration\n\nParameters:\n\ndraftID: Specified draft ID (retrieved through dfwDrafts GET call)\n\n",
         "operationId": "dfwDraftRead40FirewallGlobalroot0DraftsDraftId",
         "consumes": ["application/xml"],
@@ -1592,7 +1539,6 @@
     "/api/4.0/firewall/globalroot-0/drafts": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwDraftsCreate /4.0/firewall/globalroot-0/drafts",
         "description": "Save a firewall configuration\n\nParameters:\n\n",
         "operationId": "dfwDraftsCreate40FirewallGlobalroot0Drafts",
         "consumes": ["application/xml"],
@@ -1620,7 +1566,6 @@
     "/api/4.0/firewall/{domain_id}/enable/{truefalse}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwEnableDisableAPI /4.0/firewall/{{domainID}}/enable/{{truefalse}}",
         "description": "Enable or disable firewall components on a cluster\n\nParameters:\n\ndomainID: Specified cluster\n\ntruefalse: Set parameter to true/false to enable/disable\n\n",
         "operationId": "dfwEnableDisableApi40FirewallDomainIdEnableTruefalse",
         "consumes": ["application/xml"],
@@ -1654,7 +1599,6 @@
     "/api/2.1/app/excludelist": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwExclusionRead /2.1/app/excludelist",
         "description": "Retrieve the set of vm's in the exclusion list\n\nParameters:\n\n",
         "operationId": "dfwExclusionRead21AppExcludelist",
         "consumes": ["application/xml"],
@@ -1673,7 +1617,6 @@
     "/api/2.1/app/excludelist/{member_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwExclusionUpdate /2.1/app/excludelist/{{memberID}}",
         "description": "Add a vm to the exclusion list\n\nParameters:\n\nmemberID: vc-moref-id of a virtual machine\n\n",
         "operationId": "dfwExclusionUpdate21AppExcludelistMemberId",
         "consumes": ["application/xml"],
@@ -1700,7 +1643,6 @@
     "/api/4.0/firewall/{context_id}/config/ipfix": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwIPFixRead /4.0/firewall/{{contextId}}/config/ipfix",
         "description": "Query IPFix configuration\n\nParameters:\n\ncontextId: Specified context\n\n",
         "operationId": "dfwIpFixRead40FirewallContextIdConfigIpfix",
         "consumes": ["application/xml"],
@@ -1727,7 +1669,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer2sections/{section_id}/rules/{rule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL2RuleRead /4.0/firewall/globalroot-0/config/layer2sections/{{sectionId}}/rules/{{ruleId}}",
         "description": "Read the configuration of a specific rule identified by rule Id\n\nParameters:\n\nruleId: The ID of the rule beeing read, updated or deleted\n\n",
         "operationId": "dfwL2RuleRead40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleId",
         "consumes": ["application/xml"],
@@ -1761,7 +1702,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer2sections/{section_id}/rules": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL2RulesAdd /4.0/firewall/globalroot-0/config/layer2sections/{{sectionId}}/rules",
         "description": "Add L2 Rule\n\nParameters:\n\n",
         "operationId": "dfwL2RulesAdd40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRules",
         "consumes": ["application/xml"],
@@ -1803,7 +1743,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer2sections/{section_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL2SectionIdRead /4.0/firewall/globalroot-0/config/layer2sections/{{sectionId}}",
         "description": "Read a specific section of the DFW config specified by Id\n\nParameters:\n\nsectionId: The ID of the section beeing added, updated or deleted\n\n",
         "operationId": "dfwL2SectionIdRead40FirewallGlobalroot0ConfigLayer2sectionsSectionId",
         "consumes": ["application/xml"],
@@ -1830,7 +1769,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer2sections/{section_name}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL2SectionNameUpdate /4.0/firewall/globalroot-0/config/layer2sections/{{sectionName}}",
         "description": "Updates a L2 DFW Section. To do this you need to read it first, make your changes, and then update the section by supplying the Etag value received in the read in the If-Match header\n\nParameters:\n\nsectionName: \n\n",
         "operationId": "dfwL2SectionNameUpdate40FirewallGlobalroot0ConfigLayer2sectionsSectionName",
         "consumes": ["application/xml"],
@@ -1872,7 +1810,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer2sections": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL2SectionRead /4.0/firewall/globalroot-0/config/layer2sections",
         "description": "Read a specific section of the DFW config specified by name\n\nParameters:\n\n",
         "operationId": "dfwL2SectionRead40FirewallGlobalroot0ConfigLayer2sections",
         "consumes": ["application/xml"],
@@ -1899,7 +1836,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3sections/{section_id}/rules/{rule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL3RuleRead /4.0/firewall/globalroot-0/config/layer3sections/{{sectionId}}/rules/{{ruleId}}",
         "description": "Read the configuration of a specific rule identified by rule Id\n\nParameters:\n\nruleId: The ID of the rule beeing read, updated or deleted\n\n",
         "operationId": "dfwL3RuleRead40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleId",
         "consumes": ["application/xml"],
@@ -1933,7 +1869,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3sections/{section_id}/rules": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL3RulesAdd /4.0/firewall/globalroot-0/config/layer3sections/{{sectionId}}/rules",
         "description": "Add a L3 Rule\n\nParameters:\n\n",
         "operationId": "dfwL3RulesAdd40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRules",
         "consumes": ["application/xml"],
@@ -1975,7 +1910,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3sections/{section_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL3SectionIdRead /4.0/firewall/globalroot-0/config/layer3sections/{{sectionId}}",
         "description": "Read a specific section of the DFW config specified by Id\n\nParameters:\n\nsectionId: The ID of the section beeing added, updated or deleted\n\n",
         "operationId": "dfwL3SectionIdRead40FirewallGlobalroot0ConfigLayer3sectionsSectionId",
         "consumes": ["application/xml"],
@@ -2002,7 +1936,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3sections/{section_name}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL3SectionNameUpdate /4.0/firewall/globalroot-0/config/layer3sections/{{sectionName}}",
         "description": "Updates a L3 DFW Section. To do this you need to read it first, make your changes, and then update the section by supplying the Etag value received in the read in the If-Match header\n\nParameters:\n\nsectionName: \n\n",
         "operationId": "dfwL3SectionNameUpdate40FirewallGlobalroot0ConfigLayer3sectionsSectionName",
         "consumes": ["application/xml"],
@@ -2044,7 +1977,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3sections": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwL3SectionRead /4.0/firewall/globalroot-0/config/layer3sections",
         "description": "Read a specific section of the DFW config specified by name\n\nParameters:\n\n",
         "operationId": "dfwL3SectionRead40FirewallGlobalroot0ConfigLayer3sections",
         "consumes": ["application/xml"],
@@ -2071,7 +2003,6 @@
     "/api/4.0/firewall/config/globalconfiguration": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwPerformanceRead /4.0/firewall/config/globalconfiguration",
         "description": "Query RuleOptimize and TCPStrict flags\n\nParameters:\n\n",
         "operationId": "dfwPerformanceRead40FirewallConfigGlobalconfiguration",
         "consumes": ["application/xml"],
@@ -2090,7 +2021,6 @@
     "/api/4.0/firewall/globalroot-0/status": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwStatusRead /4.0/firewall/globalroot-0/status",
         "description": "Get firewall configuration status\n\nParameters:\n\n",
         "operationId": "dfwStatusRead40FirewallGlobalroot0Status",
         "consumes": ["application/xml"],
@@ -2109,7 +2039,6 @@
     "/api/4.0/firewall/forceSync/{id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwSync /4.0/firewall/forceSync/{{ID}}",
         "description": "Force sync host/cluster\n\nParameters:\n\nID: Specified host or cluster to synchronize\n\n",
         "operationId": "dfwSync40FirewallForceSyncId",
         "consumes": ["application/xml"],
@@ -2136,7 +2065,6 @@
     "/api/4.0/firewall/stats/eventthresholds": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwThresholdsRead /4.0/firewall/stats/eventthresholds",
         "description": "Retrieve memory, CPU, and CPS thresholds for firewall\n\nParameters:\n\n",
         "operationId": "dfwThresholdsRead40FirewallStatsEventthresholds",
         "consumes": ["application/xml"],
@@ -2155,7 +2083,6 @@
     "/api/4.0/firewall/globalroot-0/state": {
       "post": {
         "tags": ["Web"],
-        "summary": "dfwUpgradeRead /4.0/firewall/globalroot-0/state",
         "description": "Get current state of firewall functioning after NSX upgrade\n\nParameters:\n\n",
         "operationId": "dfwUpgradeRead40FirewallGlobalroot0State",
         "consumes": ["application/xml"],
@@ -2174,7 +2101,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/leaseInfo": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpLeaseRead /4.0/edges/{{edgeId}}/dhcp/leaseInfo",
         "description": "Get DHCP lease information\n\nParameters:\n\n",
         "operationId": "dhcpLeaseRead40EdgesEdgeIdDhcpLeaseInfo",
         "consumes": ["application/xml"],
@@ -2201,7 +2127,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/config/ippools": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpPoolCreate /4.0/edges/{{edgeId}}/dhcp/config/ippools",
         "description": "Add an IP pool to the DHCP configuration. returns a pool ID within a Location HTTP header\n\nParameters:\n\n",
         "operationId": "dhcpPoolCreate40EdgesEdgeIdDhcpConfigIppools",
         "consumes": ["application/xml"],
@@ -2236,7 +2161,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/config/ippools/{pool_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpPoolIDDelete /4.0/edges/{{edgeId}}/dhcp/config/ippools/{{poolID}}",
         "description": "Delete a pool specified by pool ID\n\nParameters:\n\npoolID: Specified DHCP IP pool\n\n",
         "operationId": "dhcpPoolIdDelete40EdgesEdgeIdDhcpConfigIppoolsPoolId",
         "consumes": ["application/xml"],
@@ -2270,7 +2194,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpRead /4.0/edges/{{edgeId}}/dhcp/config",
         "description": "Get DHCP configuration\n\nParameters:\n\n",
         "operationId": "dhcpRead40EdgesEdgeIdDhcpConfig",
         "consumes": ["application/xml"],
@@ -2297,7 +2220,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/config/relay": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpRelayRead /4.0/edges/{{edgeId}}/dhcp/config/relay",
         "description": "Query DHCP relay\n\nParameters:\n\n",
         "operationId": "dhcpRelayRead40EdgesEdgeIdDhcpConfigRelay",
         "consumes": ["application/xml"],
@@ -2324,7 +2246,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/config/bindings": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpStaticBindingCreate /4.0/edges/{{edgeId}}/dhcp/config/bindings",
         "description": "Append a static-binding to DHCP config. A static-binding ID is returned within a Location HTTP header\n\nParameters:\n\n",
         "operationId": "dhcpStaticBindingCreate40EdgesEdgeIdDhcpConfigBindings",
         "consumes": ["application/xml"],
@@ -2359,7 +2280,6 @@
     "/api/4.0/edges/{edge_id}/dhcp/config/bindings/{binding_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dhcpStaticBindingIDDelete /4.0/edges/{{edgeId}}/dhcp/config/bindings/{{bindingID}}",
         "description": "Delete the static-binding by ID\n\nParameters:\n\nbindingID: Specified static-binding ID\n\n",
         "operationId": "dhcpStaticBindingIdDelete40EdgesEdgeIdDhcpConfigBindingsBindingId",
         "consumes": ["application/xml"],
@@ -2393,7 +2313,6 @@
     "/api/3.0/ai/directorygroup": {
       "post": {
         "tags": ["Web"],
-        "summary": "dirGroupRead /3.0/ai/directorygroup",
         "description": "Retrieve list of all discovered (and configured) LDAP directory groups\n\nParameters:\n\n",
         "operationId": "dirGroupRead30AiDirectorygroup",
         "consumes": ["application/xml"],
@@ -2412,7 +2331,6 @@
     "/api/2.0/dlp/classificationvalue": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpClassificationValueRead /2.0/dlp/classificationvalue",
         "description": "Get all classification values\n\nParameters:\n\n",
         "operationId": "dlpClassificationValueRead20DlpClassificationvalue",
         "consumes": ["application/xml"],
@@ -2431,7 +2349,6 @@
     "/api/2.0/dlp/policy/regulations": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpEnableRegulation /2.0/dlp/policy/regulations",
         "description": "Enable one or more regulations by putting the regulation IDs into the policy. You can get the IDs from the output of the dlpRegulation GET call\n\nParameters:\n\n",
         "operationId": "dlpEnableRegulation20DlpPolicyRegulations",
         "consumes": ["application/xml"],
@@ -2459,7 +2376,6 @@
     "/api/2.0/dlp/excludableareas": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpExcludableAreas /2.0/dlp/excludableareas",
         "description": "Retrieve list of datacenters, clusters, and resource pools that are excludable from policy inspection\n\nParameters:\n\n",
         "operationId": "dlpExcludableAreas20DlpExcludableareas",
         "consumes": ["application/xml"],
@@ -2478,7 +2394,6 @@
     "/api/2.0/dlp/policy/excludedareas": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpExcludeArea /2.0/dlp/policy/excludedareas",
         "description": "(DEPRECATED; use PUT /2.0/dlp/policy/excludedsecuritygroups instead) Exclude areas from policy inspection\n\nParameters:\n\n",
         "operationId": "dlpExcludeArea20DlpPolicyExcludedareas",
         "consumes": ["application/xml"],
@@ -2506,7 +2421,6 @@
     "/api/2.0/dlp/policy/excludedsecuritygroups": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpExcludeSecGroupRead /2.0/dlp/policy/excludedsecuritygroups",
         "description": "Retrieve security groups that have been excluded from data security scans\n\nParameters:\n\n",
         "operationId": "dlpExcludeSecGroupRead20DlpPolicyExcludedsecuritygroups",
         "consumes": ["application/xml"],
@@ -2525,7 +2439,6 @@
     "/api/2.0/dlp/policy/FileFilters": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpFileFiltersUpdate /2.0/dlp/policy/FileFilters",
         "description": "Configure file filters for scanning\n\nParameters:\n\n",
         "operationId": "dlpFileFiltersUpdate20DlpPolicyFileFilters",
         "consumes": ["application/xml"],
@@ -2553,7 +2466,6 @@
     "/api/2.0/dlp/policy/includedsecuritygroups": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpIncludeSecGroupRead /2.0/dlp/policy/includedsecuritygroups",
         "description": "Retrieve security groups that have been included in data security scans\n\nParameters:\n\n",
         "operationId": "dlpIncludeSecGroupRead20DlpPolicyIncludedsecuritygroups",
         "consumes": ["application/xml"],
@@ -2572,7 +2484,6 @@
     "/api/2.0/dlp/scan/{scan_id}/policyasxml": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpPolicyAsXML /2.0/dlp/scan/{{scanID}}/policyasxml",
         "description": "Retrieve XML representation of the policy used in the previous scan\n\nParameters:\n\nscanID: Specified previous scan\n\n",
         "operationId": "dlpPolicyAsXml20DlpScanScanIdPolicyasxml",
         "consumes": ["application/xml"],
@@ -2599,7 +2510,6 @@
     "/api/2.0/dlp/policy/publish": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpPolicyPublish /2.0/dlp/policy/publish",
         "description": "Publish the updated policy\n\nParameters:\n\n",
         "operationId": "dlpPolicyPublish20DlpPolicyPublish",
         "consumes": ["application/xml"],
@@ -2618,7 +2528,6 @@
     "/api/2.0/dlp/policy/published": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpPolicyPublished /2.0/dlp/policy/published",
         "description": "Retrieve currently published policy\n\nParameters:\n\n",
         "operationId": "dlpPolicyPublished20DlpPolicyPublished",
         "consumes": ["application/xml"],
@@ -2637,7 +2546,6 @@
     "/api/2.0/dlp/policy/saved": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpPolicySave /2.0/dlp/policy/saved",
         "description": "Get saved policy\n\nParameters:\n\n",
         "operationId": "dlpPolicySave20DlpPolicySaved",
         "consumes": ["application/xml"],
@@ -2656,7 +2564,6 @@
     "/api/2.0/dlp/scan/{scan_id}/detailsascsv": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpPreviousScanRead /2.0/dlp/scan/{{scanID}}/detailsascsv",
         "description": "Retrieve ID, Name, Scan status, and Violation counts for VM's scanned during specified scan\n\nParameters:\n\nscanID: Specified scan ID\n\n",
         "operationId": "dlpPreviousScanRead20DlpScanScanIdDetailsascsv",
         "consumes": ["application/xml"],
@@ -2683,7 +2590,6 @@
     "/api/2.0/dlp/policy/classificationvalues": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpRegexClassificationValue /2.0/dlp/policy/classificationvalues",
         "description": "Configure a customized regex as a classification value\n\nParameters:\n\n",
         "operationId": "dlpRegexClassificationValue20DlpPolicyClassificationvalues",
         "consumes": ["application/xml"],
@@ -2711,7 +2617,6 @@
     "/api/2.0/dlp/regulation": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpRegulationRead /2.0/dlp/regulation",
         "description": "Retrieve the list of available regulations for a policy.\n\nParameters:\n\n",
         "operationId": "dlpRegulationRead20DlpRegulation",
         "consumes": ["application/xml"],
@@ -2730,7 +2635,6 @@
     "/api/2.0/dlp/scanop": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpScanning /2.0/dlp/scanop",
         "description": "Start, pause, resume, or stop a data security scan\n\nParameters:\n\n",
         "operationId": "dlpScanning20DlpScanop",
         "consumes": ["application/xml"],
@@ -2758,7 +2662,6 @@
     "/api/2.0/dlp/scanstatus": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpScanStatus /2.0/dlp/scanstatus",
         "description": "Retrieve the status of a scan operation\n\nParameters:\n\n",
         "operationId": "dlpScanStatus20DlpScanstatus",
         "consumes": ["application/xml"],
@@ -2777,7 +2680,6 @@
     "/api/2.0/dlp/completedscansummaries": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpScanSummariesRead /2.0/dlp/completedscansummaries",
         "description": "Retrieve scan summaries\n\nParameters:\n\n",
         "operationId": "dlpScanSummariesRead20DlpCompletedscansummaries",
         "consumes": ["application/xml"],
@@ -2796,7 +2698,6 @@
     "/api/2.0/dlp/scan/current/vms/{id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpScanVMsRead /2.0/dlp/scan/current/vms/{{ID}}",
         "description": "Retrieve information about the vm's being scanned\n\nParameters:\n\nID: Limit filter results by VC MOID of datacenter, cluster, or resource pool\n\n",
         "operationId": "dlpScanVMsRead20DlpScanCurrentVmsId",
         "consumes": ["application/xml"],
@@ -2844,7 +2745,6 @@
     "/api/2.0/dlp/violatingfiles/{context_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpViolatingFilesContext /2.0/dlp/violatingfiles/{{contextID}}",
         "description": "Get violating files for a resource\n\nParameters:\n\ncontextID: Specified resource (moid of datacenter, cluster, folder, resource pool, or vm)\n\n",
         "operationId": "dlpViolatingFilesContext20DlpViolatingfilesContextId",
         "consumes": ["application/xml"],
@@ -2885,7 +2785,6 @@
     "/api/2.0/dlp/violatingfilesascsv/{context_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpViolatingFilesContextCSV /2.0/dlp/violatingfilesascsv/{{contextID}}",
         "description": "Get violated regulations and violating files for the resource in CSV format\n\nParameters:\n\ncontextID: Specified resource (moid of datacenter, cluster, folder, resource pool, or vm)\n\n",
         "operationId": "dlpViolatingFilesContextCsv20DlpViolatingfilesascsvContextId",
         "consumes": ["application/xml"],
@@ -2912,7 +2811,6 @@
     "/api/2.0/dlp/violatingfilesascsv": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpViolatingFilesCSV /2.0/dlp/violatingfilesascsv",
         "description": "Display the violating files and the regulations each file violated in CSV format\n\nParameters:\n\n",
         "operationId": "dlpViolatingFilesCsv20DlpViolatingfilesascsv",
         "consumes": ["application/xml"],
@@ -2931,7 +2829,6 @@
     "/api/2.0/dlp/violatingfiles": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpViolatingFilesRead /2.0/dlp/violatingfiles",
         "description": "Get violating files and the regulations each file violated\n\nParameters:\n\n",
         "operationId": "dlpViolatingFilesRead20DlpViolatingfiles",
         "consumes": ["application/xml"],
@@ -2965,7 +2862,6 @@
     "/api/2.0/dlp/violations/{context_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpViolationRead /2.0/dlp/violations/{{contextID}}",
         "description": "Get violation count for specific resource\n\nParameters:\n\ncontextID: Specified resource (moid of datacenter, cluster, folder, resource pool, or vm)\n\n",
         "operationId": "dlpViolationRead20DlpViolationsContextId",
         "consumes": ["application/xml"],
@@ -2992,7 +2888,6 @@
     "/api/2.0/dlp/violations": {
       "post": {
         "tags": ["Web"],
-        "summary": "dlpViolationsRead /2.0/dlp/violations",
         "description": "Get violation count for entire inventory\n\nParameters:\n\n",
         "operationId": "dlpViolationsRead20DlpViolations",
         "consumes": ["application/xml"],
@@ -3011,7 +2906,6 @@
     "/api/1.0/appliance-management/system/network/dns": {
       "post": {
         "tags": ["Web"],
-        "summary": "dnsUpdate /1.0/appliance-management/system/network/dns",
         "description": "Configure DNS\n\nParameters:\n\n",
         "operationId": "dnsUpdate10ApplianceManagementSystemNetworkDns",
         "consumes": ["application/xml"],
@@ -3039,7 +2933,6 @@
     "/api/1.0/directory/updateDomain": {
       "post": {
         "tags": ["Web"],
-        "summary": "domainCreate /1.0/directory/updateDomain",
         "description": "Register or update a domain with NSX Manager\n\nParameters:\n\n",
         "operationId": "domainCreate10DirectoryUpdateDomain",
         "consumes": ["application/xml"],
@@ -3067,7 +2960,6 @@
     "/api/3.0/directory/updateDomain": {
       "post": {
         "tags": ["Web"],
-        "summary": "domainCreate /3.0/directory/updateDomain",
         "description": "Register or update a domain with NSX Manager\n\nParameters:\n\n",
         "operationId": "domainCreate30DirectoryUpdateDomain",
         "consumes": ["application/xml"],
@@ -3095,7 +2987,6 @@
     "/api/1.0/directory/deleteDomain/{id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "domainDelete /1.0/directory/deleteDomain/{{ID}}",
         "description": "Delete domain\n\nParameters:\n\nID: Domain ID\n\n",
         "operationId": "domainDelete10DirectoryDeleteDomainId",
         "consumes": ["application/xml"],
@@ -3122,7 +3013,6 @@
     "/api/1.0/directory/listDomains": {
       "post": {
         "tags": ["Web"],
-        "summary": "domainListRead /1.0/directory/listDomains",
         "description": "Retrieve all agent discovered (or configured) LDAP domains\n\nParameters:\n\n",
         "operationId": "domainListRead10DirectoryListDomains",
         "consumes": ["application/xml"],
@@ -3141,7 +3031,6 @@
     "/api/4.0/edges/{edge_id}/dns/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "edgeDnsRead /4.0/edges/{{edgeId}}/dns/config",
         "description": "Retrieve DNS configuration\n\nParameters:\n\n",
         "operationId": "edgeDnsRead40EdgesEdgeIdDnsConfig",
         "consumes": ["application/xml"],
@@ -3168,7 +3057,6 @@
     "/api/4.0/edges/{edge_id}/dns/statistics": {
       "post": {
         "tags": ["Web"],
-        "summary": "edgeDnsStats /4.0/edges/{{edgeId}}/dns/statistics",
         "description": "Get DNS server statistics\n\nParameters:\n\n",
         "operationId": "edgeDnsStats40EdgesEdgeIdDnsStatistics",
         "consumes": ["application/xml"],
@@ -3195,7 +3083,6 @@
     "/api/4.0/edges/{edge_id}/nat/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "edgeNatConfig /4.0/edges/{{edgeId}}/nat/config",
         "description": "Configure SNAT and DNAT rules for an Edge\n\nParameters:\n\n",
         "operationId": "edgeNatConfig40EdgesEdgeIdNatConfig",
         "consumes": ["application/xml"],
@@ -3230,7 +3117,6 @@
     "/api/4.0/edges/{edge_id}/nat/config/rules": {
       "post": {
         "tags": ["Web"],
-        "summary": "edgeNatRulesCreate /4.0/edges/{{edgeId}}/nat/config/rules",
         "description": "Add a NAT rule above a specific rule in the NAT rules table (using aboveRuleId) or append NAT rules to the bottom\n\nParameters:\n\n",
         "operationId": "edgeNatRulesCreate40EdgesEdgeIdNatConfigRules",
         "consumes": ["application/xml"],
@@ -3272,7 +3158,6 @@
     "/api/4.0/edges/{edge_id}/nat/config/rules/{rule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "edgeNatRuleUpdate /4.0/edges/{{edgeId}}/nat/config/rules/{{ruleID}}",
         "description": "Modify a NAT rule\n\nParameters:\n\nruleID: Specified rule ID\n\n",
         "operationId": "edgeNatRuleUpdate40EdgesEdgeIdNatConfigRulesRuleId",
         "consumes": ["application/xml"],
@@ -3314,7 +3199,6 @@
     "/api/1.0/directory/directory/updateEventLogServer": {
       "post": {
         "tags": ["Web"],
-        "summary": "eLogServerCreate /1.0/directory/directory/updateEventLogServer",
         "description": "Create EventLog server\n\nParameters:\n\n",
         "operationId": "eLogServerCreate10DirectoryDirectoryUpdateEventLogServer",
         "consumes": ["application/xml"],
@@ -3342,7 +3226,6 @@
     "/api/1.0/directory/directory/deleteEventLogServer/{server_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "eLogServerDelete /1.0/directory/directory/deleteEventLogServer/{{serverID}}",
         "description": "Delete EventLog server\n\nParameters:\n\nserverID: Specified EventLog server ID\n\n",
         "operationId": "eLogServerDelete10DirectoryDirectoryDeleteEventLogServerServerId",
         "consumes": ["application/xml"],
@@ -3369,7 +3252,6 @@
     "/api/1.0/directory/directory/listEventLogServersForDomain/{domain_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "eLogServerDomainRead /1.0/directory/directory/listEventLogServersForDomain/{{domainID}}",
         "description": "Query EventLog servers for a domain\n\nParameters:\n\ndomainID: Specified domain\n\n",
         "operationId": "eLogServerDomainRead10DirectoryDirectoryListEventLogServersForDomainDomainId",
         "consumes": ["application/xml"],
@@ -3396,7 +3278,6 @@
     "/api/4.0/edges/{edge_id}/fips": {
       "post": {
         "tags": ["Web"],
-        "summary": "fipsCreate /4.0/edges/{{edgeId}}/fips",
         "description": "Modify FIPs setting\n\nParameters:\n\n",
         "operationId": "fipsCreate40EdgesEdgeIdFips",
         "consumes": ["application/xml"],
@@ -3430,7 +3311,6 @@
     "/api/4.0/edges/{edge_id}/firewall/config/rules/{rule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "firewallRuleRead /4.0/edges/{{edgeId}}/firewall/config/rules/{{ruleId}}",
         "description": "Retrieve specific rule\n\nParameters:\n\nruleId: Rule ID\n\n",
         "operationId": "firewallRuleRead40EdgesEdgeIdFirewallConfigRulesRuleId",
         "consumes": ["application/xml"],
@@ -3464,7 +3344,6 @@
     "/api/4.0/edges/{edge_id}/firewall/config/rules": {
       "post": {
         "tags": ["Web"],
-        "summary": "firewallRulesCreate /4.0/edges/{{edgeId}}/firewall/config/rules",
         "description": "Add one or more rules. You can add a rule above a specific rule using the query parameter, indicating the desired ruleID.\n\nParameters:\n\n",
         "operationId": "firewallRulesCreate40EdgesEdgeIdFirewallConfigRules",
         "consumes": ["application/xml"],
@@ -3506,7 +3385,6 @@
     "/api/4.0/edges/{edge_id}/firewall/statistics/{rule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "firewallRuleStatisticsRead /4.0/edges/{{edgeId}}/firewall/statistics/{{ruleId}}",
         "description": "Retrieve stats for firewall rule\n\nParameters:\n\nruleId: Specified rule\n\n",
         "operationId": "firewallRuleStatisticsRead40EdgesEdgeIdFirewallStatisticsRuleId",
         "consumes": ["application/xml"],
@@ -3540,7 +3418,6 @@
     "/api/4.0/edges/{edge_id}/firewall/statistics/firewall": {
       "post": {
         "tags": ["Web"],
-        "summary": "firewallStatisticsRead /4.0/edges/{{edgeId}}/firewall/statistics/firewall",
         "description": "Retrieve number of ongoing connections for the firewall config\n\nParameters:\n\n",
         "operationId": "firewallStatisticsRead40EdgesEdgeIdFirewallStatisticsFirewall",
         "consumes": ["application/xml"],
@@ -3574,7 +3451,6 @@
     "/api/2.1/internal/flow/flowdetails/application": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowDetailsAppRead /2.1/internal/flow/flowdetails/application",
         "description": "Retrieve flow details for given context by application\n\nParameters:\n\n",
         "operationId": "flowDetailsAppRead21InternalFlowFlowdetailsApplication",
         "consumes": ["application/xml"],
@@ -3629,7 +3505,6 @@
     "/api/2.1/internal/flow/flowdetails": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowDetailsRead /2.1/internal/flow/flowdetails",
         "description": "Retrieve flow details for given context\n\nParameters:\n\n",
         "operationId": "flowDetailsRead21InternalFlowFlowdetails",
         "consumes": ["application/xml"],
@@ -3677,7 +3552,6 @@
     "/api/2.1/internal/flow/pagedflowdetails/application": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowPagedDetailsAppRead /2.1/internal/flow/pagedflowdetails/application",
         "description": "Retrieve paged flow details by application\n\nParameters:\n\n",
         "operationId": "flowPagedDetailsAppRead21InternalFlowPagedflowdetailsApplication",
         "consumes": ["application/xml"],
@@ -3746,7 +3620,6 @@
     "/api/2.1/internal/flow/pagedflowdetails": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowPagedDetailsRead /2.1/internal/flow/pagedflowdetails",
         "description": "Retrieves paged flow details for given context\n\nParameters:\n\n",
         "operationId": "flowPagedDetailsRead21InternalFlowPagedflowdetails",
         "consumes": ["application/xml"],
@@ -3808,7 +3681,6 @@
     "/api/2.1/internal/flow/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowsExcludeCreate /2.1/internal/flow/config",
         "description": "Exclude specified flows\n\nParameters:\n\n",
         "operationId": "flowsExcludeCreate21InternalFlowConfig",
         "consumes": ["application/xml"],
@@ -3836,7 +3708,6 @@
     "/api/2.1/flow/flowstats": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowStatsRead /2.1/flow/flowstats",
         "description": "Retrieve flow statistics for a datacenter, port group, VM, or vNIC\n\nParameters:\n\n",
         "operationId": "flowStatsRead21FlowFlowstats",
         "consumes": ["application/xml"],
@@ -3898,7 +3769,6 @@
     "/api/2.1/internal/flow/flowsummary": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowSummaryRead /2.1/internal/flow/flowsummary",
         "description": "Retrieve flow summary\n\nParameters:\n\n",
         "operationId": "flowSummaryRead21InternalFlowFlowsummary",
         "consumes": ["application/xml"],
@@ -3939,7 +3809,6 @@
     "/api/2.1/internal/flow/flowtable": {
       "post": {
         "tags": ["Web"],
-        "summary": "flowTableRead /2.1/internal/flow/flowtable",
         "description": "Retrieve flow table for given context and table type\n\nParameters:\n\n",
         "operationId": "flowTableRead21InternalFlowFlowtable",
         "consumes": ["application/xml"],
@@ -3994,7 +3863,6 @@
     "/api/4.0/edges/{edge_id}/firewall/config/global": {
       "post": {
         "tags": ["Web"],
-        "summary": "globalFirewallConfigRead /4.0/edges/{{edgeId}}/firewall/config/global",
         "description": "Retrieve the firewall default policy for an Edge\n\nParameters:\n\n",
         "operationId": "globalFirewallConfigRead40EdgesEdgeIdFirewallConfigGlobal",
         "consumes": ["application/xml"],
@@ -4021,7 +3889,6 @@
     "/api/1.0/appliance-management/global/info": {
       "post": {
         "tags": ["Web"],
-        "summary": "globalInfoRead /1.0/appliance-management/global/info",
         "description": "Retrieve global information containing version information as well as current logged in user\n\nParameters:\n\n",
         "operationId": "globalInfoRead10ApplianceManagementGlobalInfo",
         "consumes": ["application/xml"],
@@ -4040,7 +3907,6 @@
     "/api/2.0/services/policy/securitypolicy/hierarchy": {
       "post": {
         "tags": ["Web"],
-        "summary": "hierarchyCreate /2.0/services/policy/securitypolicy/hierarchy",
         "description": "Import a security policy configuration\n\nParameters:\n\n",
         "operationId": "hierarchyCreate20ServicesPolicySecuritypolicyHierarchy",
         "consumes": ["application/xml"],
@@ -4075,7 +3941,6 @@
     "/api/4.0/edges/{edge_id}/highavailability/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "highAvailabilityRead /4.0/edges/{{edgeId}}/highavailability/config",
         "description": "Get high availability configuration\n\nParameters:\n\n",
         "operationId": "highAvailabilityRead40EdgesEdgeIdHighavailabilityConfig",
         "consumes": ["application/xml"],
@@ -4102,7 +3967,6 @@
     "/api/2.0/si/host/{host_id}/agents": {
       "post": {
         "tags": ["Web"],
-        "summary": "hostAgentsRead /2.0/si/host/{{hostID}}/agents",
         "description": "Retrieve all agents on the host\n\nParameters:\n\nhostID: Specified host\n\n",
         "operationId": "hostAgentsRead20SiHostHostIdAgents",
         "consumes": ["application/xml"],
@@ -4129,7 +3993,6 @@
     "/api/3.0/ai/host": {
       "post": {
         "tags": ["Web"],
-        "summary": "hostDetailsRead /3.0/ai/host",
         "description": "Retrieve list of all discovered hosts (both by agent introspection and LDAP Sync) and their detail\n\nParameters:\n\n",
         "operationId": "hostDetailsRead30AiHost",
         "consumes": ["application/xml"],
@@ -4148,7 +4011,6 @@
     "/api/1.0/identity/hostIpMapping": {
       "post": {
         "tags": ["Web"],
-        "summary": "hostIpMappingRead /1.0/identity/hostIpMapping",
         "description": "Query host-to-ip mapping list from database\n\nParameters:\n\n",
         "operationId": "hostIpMappingRead10IdentityHostIpMapping",
         "consumes": ["application/xml"],
@@ -4167,7 +4029,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/installpackages/{package_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "installPackageRead /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/installpackages/{{packageID}}",
         "description": "Get information about the specified installation package\n\nParameters:\n\npackageID: Specified installation package ID\n\n",
         "operationId": "installPackageRead40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackage",
         "consumes": ["application/xml"],
@@ -4201,7 +4062,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/installpackages": {
       "post": {
         "tags": ["Web"],
-        "summary": "installPackagesCreate /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/installpackages",
         "description": "Create installers for full access network clients. These setup binaries are downloaded by remote clients and installed on their systems.\n\nParameters:\n\n",
         "operationId": "installPackagesCreate40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackages",
         "consumes": ["application/xml"],
@@ -4236,7 +4096,6 @@
     "/api/4.0/edges/{edge_id}/interfaces/{index}": {
       "post": {
         "tags": ["Web"],
-        "summary": "interfaceRead /4.0/edges/{{edgeId}}/interfaces/{{index}}",
         "description": "Retrieve information on specified Edge router interface\n\nParameters:\n\nindex: Specified router interface\n\n",
         "operationId": "interfaceRead40EdgesEdgeIdInterfacesIndex",
         "consumes": ["application/xml"],
@@ -4270,7 +4129,6 @@
     "/api/4.0/edges/{edge_id}/interfaces": {
       "post": {
         "tags": ["Web"],
-        "summary": "interfacesCreate /4.0/edges/{{edgeId}}/interfaces",
         "description": "Add interfaces for NSX Edge router. Can have up to 8 uplink interfaces\n\nParameters:\n\n",
         "operationId": "interfacesCreate40EdgesEdgeIdInterfaces",
         "consumes": ["application/xml"],
@@ -4312,7 +4170,6 @@
     "/api/4.0/edges/{edge_id}/statistics/interfaces/internal": {
       "post": {
         "tags": ["Web"],
-        "summary": "internalVNICStatsRead /4.0/edges/{{edgeId}}/statistics/interfaces/internal",
         "description": "Get internal interface statistics\n\nParameters:\n\n",
         "operationId": "internalVnicStatsRead40EdgesEdgeIdStatisticsInterfacesInternal",
         "consumes": ["application/xml"],
@@ -4339,7 +4196,6 @@
     "/api/2.0/services/ipam/pools/{pool_id}/ipaddresses/{ip_address}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipAddressRelease /2.0/services/ipam/pools/{{poolId}}/ipaddresses/{{ipAddress}}",
         "description": "Release an IP Address allocation in the Pool\n\nParameters:\n\nipAddress: The Id of the ip address to release, e.g. '192.168.10.10'\n\n",
         "operationId": "ipAddressRelease20ServicesIpamPoolsPoolIdIpaddressesIpAddress",
         "consumes": ["application/xml"],
@@ -4373,7 +4229,6 @@
     "/api/2.0/services/ipam/pools/{pool_id}/ipaddresses": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipPoolIpsRead /2.0/services/ipam/pools/{{poolId}}/ipaddresses",
         "description": "Retrieve all IP's and their allocation status in an IP Pool\n\nParameters:\n\n",
         "operationId": "ipPoolIpsRead20ServicesIpamPoolsPoolIdIpaddresses",
         "consumes": ["application/xml"],
@@ -4400,7 +4255,6 @@
     "/api/2.0/services/ipam/pools/{pool_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipPoolRead /2.0/services/ipam/pools/{{poolId}}",
         "description": "Retrieve details about the IP pool\n\nParameters:\n\npoolId: Specified IP pool\n\n",
         "operationId": "ipPoolRead20ServicesIpamPoolsPoolId",
         "consumes": ["application/xml"],
@@ -4427,7 +4281,6 @@
     "/api/2.0/services/ipam/pools/scope/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipPoolRead /2.0/services/ipam/pools/scope/{{scopeId}}",
         "description": "Read all IP Pools in a scope\n\nParameters:\n\nscopeId: globalroot-0 or datacenterId in upgrade use cases\n\n",
         "operationId": "ipPoolRead20ServicesIpamPoolsScopeScopeId",
         "consumes": ["application/xml"],
@@ -4454,7 +4307,6 @@
     "/api/4.0/edges/{edge_id}/ipsec/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipsecConfigRead /4.0/edges/{{edgeId}}/ipsec/config",
         "description": "Retrieve IPSec configuration\n\nParameters:\n\n",
         "operationId": "ipsecConfigRead40EdgesEdgeIdIpsecConfig",
         "consumes": ["application/xml"],
@@ -4481,7 +4333,6 @@
     "/api/4.0/edges/{edge_id}/ipsec/statistics": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipsecStatsRead /4.0/edges/{{edgeId}}/ipsec/statistics",
         "description": "Retrieve IPSec statistics\n\nParameters:\n\n",
         "operationId": "ipsecStatsRead40EdgesEdgeIdIpsecStatistics",
         "consumes": ["application/xml"],
@@ -4508,7 +4359,6 @@
     "/api/4.0/edges/{edge_id}/statistics/dashboard/ipsec": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipsecTrafficStatsRead /4.0/edges/{{edgeId}}/statistics/dashboard/ipsec",
         "description": "Retrieve tunnel traffic statistics for specified time interval. Default is 1 hour. Other possible values are 1-60 minutes|oneDay|oneWeek|oneMonth|oneYear\n\nParameters:\n\n",
         "operationId": "ipsecTrafficStatsRead40EdgesEdgeIdStatisticsDashboardIpsec",
         "consumes": ["application/xml"],
@@ -4535,7 +4385,6 @@
     "/api/2.0/services/ipset/{scope_moref}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipsetCreate /2.0/services/ipset/{{scopeMoref}}",
         "description": "creates a new IPset\n\nParameters:\n\nscopeMoref: In the current version this scope-ref will always be globalroot-0\n\n",
         "operationId": "ipsetCreate20ServicesIpsetScopeMoref",
         "consumes": ["application/xml"],
@@ -4570,7 +4419,6 @@
     "/api/2.0/services/ipset/scope/{scope_moref}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipsetList /2.0/services/ipset/scope/{{scopeMoref}}",
         "description": "Retrieve all configured IPSets\n\nParameters:\n\nscopeMoref: In the current version this scope-ref will always be globalroot-0\n\n",
         "operationId": "ipsetList20ServicesIpsetScopeScopeMoref",
         "consumes": ["application/xml"],
@@ -4597,7 +4445,6 @@
     "/api/2.0/services/ipset/{ipset_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipsetRead /2.0/services/ipset/{{ipsetId}}",
         "description": "Retrieve an individual IPset\n\nParameters:\n\nipsetId: The IPset to be queried or changed\n\n",
         "operationId": "ipsetRead20ServicesIpsetIpsetId",
         "consumes": ["application/xml"],
@@ -4624,7 +4471,6 @@
     "/api/1.0/identity/ipToUserMapping": {
       "post": {
         "tags": ["Web"],
-        "summary": "ipToUserMappingRead /1.0/identity/ipToUserMapping",
         "description": "Query set of users associated with a given set of Ip addresses\n\nParameters:\n\n",
         "operationId": "ipToUserMappingRead10IdentityIpToUserMapping",
         "consumes": ["application/xml"],
@@ -4643,7 +4489,6 @@
     "/api/4.0/firewall/globalroot-0/status/layer2sections/{section_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "L2SectionStatusRead /4.0/firewall/globalroot-0/status/layer2sections/{{sectionID}}",
         "description": "Get Layer2 status\n\nParameters:\n\nsectionID: Section ID\n\n",
         "operationId": "l2SectionStatusRead40FirewallGlobalroot0StatusLayer2sectionsSectionId",
         "consumes": ["application/xml"],
@@ -4670,7 +4515,6 @@
     "/api/4.0/edges/{edge_id}/l2vpn/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "l2VPNCreate /4.0/edges/{{edgeId}}/l2vpn/config",
         "description": "Enable or disable L2 VPN service according to the value of the query parameter \"enableService\"\n\nParameters:\n\n",
         "operationId": "l2VpnCreate40EdgesEdgeIdL2vpnConfig",
         "consumes": ["application/xml"],
@@ -4704,7 +4548,6 @@
     "/api/4.0/firewall/globalroot-0/status/layer3sections/{section_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "L3SectionStatusRead /4.0/firewall/globalroot-0/status/layer3sections/{{sectionID}}",
         "description": "Get Layer3 status\n\nParameters:\n\nsectionID: Section ID\n\n",
         "operationId": "l3SectionStatusRead40FirewallGlobalroot0StatusLayer3sectionsSectionId",
         "consumes": ["application/xml"],
@@ -4731,7 +4574,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3redirectsections": {
       "post": {
         "tags": ["Web"],
-        "summary": "layer3RedirectSectionsCreate /4.0/firewall/globalroot-0/config/layer3redirectsections",
         "description": "Add L3 redirect section\n\nParameters:\n\n",
         "operationId": "layer3RedirectSectionsCreate40FirewallGlobalroot0ConfigLayer3redirectsections",
         "consumes": ["application/xml"],
@@ -4759,7 +4601,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/layout": {
       "post": {
         "tags": ["Web"],
-        "summary": "layoutRead /4.0/edges/{{edgeId}}/sslvpn/config/layout",
         "description": "Query layout configuration\n\nParameters:\n\n",
         "operationId": "layoutRead40EdgesEdgeIdSslvpnConfigLayout",
         "consumes": ["application/xml"],
@@ -4786,7 +4627,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/layout/images": {
       "post": {
         "tags": ["Web"],
-        "summary": "layoutUpdate /4.0/edges/{{edgeId}}/sslvpn/config/layout/images",
         "description": "Set the portal layout\n\nParameters:\n\n",
         "operationId": "layoutUpdate40EdgesEdgeIdSslvpnConfigLayoutImages",
         "consumes": ["application/xml"],
@@ -4821,7 +4661,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/members/{member_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "lbMemberCond /4.0/edges/{{edgeId}}/loadbalancer/config/members/{{memberID}}",
         "description": "Update member condition\n\nParameters:\n\nmemberID: Member ID\n\n",
         "operationId": "lbMemberCond40EdgesEdgeIdLoadbalancerConfigMembersMemberId",
         "consumes": ["application/xml"],
@@ -4862,7 +4701,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/monitors/{monitor_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "lbMonitorRead /4.0/edges/{{edgeId}}/loadbalancer/config/monitors/{{monitorID}}",
         "description": "Retrieve a load balancer monitor\n\nParameters:\n\nmonitorID: Specified monitor\n\n",
         "operationId": "lbMonitorRead40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorId",
         "consumes": ["application/xml"],
@@ -4896,7 +4734,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/monitors": {
       "post": {
         "tags": ["Web"],
-        "summary": "lbMonitorsCreate /4.0/edges/{{edgeId}}/loadbalancer/config/monitors",
         "description": "Add a load balancer monitor\n\nParameters:\n\n",
         "operationId": "lbMonitorsCreate40EdgesEdgeIdLoadbalancerConfigMonitors",
         "consumes": ["application/xml"],
@@ -4931,7 +4768,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/statistics": {
       "post": {
         "tags": ["Web"],
-        "summary": "lbStatisticsRead /4.0/edges/{{edgeId}}/loadbalancer/statistics",
         "description": "Retrieve load balancer statistics\n\nParameters:\n\n",
         "operationId": "lbStatisticsRead40EdgesEdgeIdLoadbalancerStatistics",
         "consumes": ["application/xml"],
@@ -4958,7 +4794,6 @@
     "/api/1.0/directory/directory/updateLdapServer": {
       "post": {
         "tags": ["Web"],
-        "summary": "ldapServerCreate /1.0/directory/directory/updateLdapServer",
         "description": "Create LDAP server\n\nParameters:\n\n",
         "operationId": "ldapServerCreate10DirectoryDirectoryUpdateLdapServer",
         "consumes": ["application/xml"],
@@ -4986,7 +4821,6 @@
     "/api/1.0/directory/directory/deleteLdapServer/{server_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ldapServerDelete /1.0/directory/directory/deleteLdapServer/{{serverID}}",
         "description": "Delete LDAP server\n\nParameters:\n\nserverID: Specified LDAP server\n\n",
         "operationId": "ldapServerDelete10DirectoryDirectoryDeleteLdapServerServerId",
         "consumes": ["application/xml"],
@@ -5013,7 +4847,6 @@
     "/api/1.0/directory/directory/deltaSync/{domain_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ldapServerDeltaSync /1.0/directory/directory/deltaSync/{{domainID}}",
         "description": "Start LDAP delta sync\n\nParameters:\n\ndomainID: Specified domain\n\n",
         "operationId": "ldapServerDeltaSync10DirectoryDirectoryDeltaSyncDomainId",
         "consumes": ["application/xml"],
@@ -5040,7 +4873,6 @@
     "/api/1.0/directory/directory/listLdapServersForDomain/{domain_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ldapServerDomainRead /1.0/directory/directory/listLdapServersForDomain/{{domainID}}",
         "description": "Query LDAP servers for a domain\n\nParameters:\n\ndomainID: Specified domain\n\n",
         "operationId": "ldapServerDomainRead10DirectoryDirectoryListLdapServersForDomainDomainId",
         "consumes": ["application/xml"],
@@ -5067,7 +4899,6 @@
     "/api/1.0/directory/directory/fullSync/{domain_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ldapServerSync /1.0/directory/directory/fullSync/{{domainID}}",
         "description": "Start LDAP full sync\n\nParameters:\n\ndomainID: Specified domain\n\n",
         "operationId": "ldapServerSync10DirectoryDirectoryFullSyncDomainId",
         "consumes": ["application/xml"],
@@ -5094,7 +4925,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "loadBalancerRead /4.0/edges/{{edgeId}}/loadbalancer/config",
         "description": "Get current load balancer config\n\nParameters:\n\n",
         "operationId": "loadBalancerRead40EdgesEdgeIdLoadbalancerConfig",
         "consumes": ["application/xml"],
@@ -5121,7 +4951,6 @@
     "/api/4.0/edges/{edge_id}/logging": {
       "post": {
         "tags": ["Web"],
-        "summary": "loggingCreate /4.0/edges/{{edgeId}}/logging",
         "description": "Modify log setting\n\nParameters:\n\n",
         "operationId": "loggingCreate40EdgesEdgeIdLogging",
         "consumes": ["application/xml"],
@@ -5155,7 +4984,6 @@
     "/api/2.0/vdn/virtualwires/{virtual_wire_id}/conn-check/multicast": {
       "post": {
         "tags": ["Web"],
-        "summary": "logicalSwitchConnCheck /2.0/vdn/virtualwires/{{virtualWireID}}/conn-check/multicast",
         "description": "Test multicast group connectivity in logical switch\n\nParameters:\n\n",
         "operationId": "logicalSwitchConnCheck20VdnVirtualwiresVirtualWireIdConnCheckMulticast",
         "consumes": ["application/xml"],
@@ -5190,7 +5018,6 @@
     "/api/2.0/vdn/virtualwires": {
       "post": {
         "tags": ["Web"],
-        "summary": "logicalSwitchesRead /2.0/vdn/virtualwires",
         "description": "List all logicalSwitches\n\nParameters:\n\n",
         "operationId": "logicalSwitchesRead20VdnVirtualwires",
         "consumes": ["application/xml"],
@@ -5224,7 +5051,6 @@
     "/api/2.0/vdn/scopes/{scope_id}/virtualwires": {
       "post": {
         "tags": ["Web"],
-        "summary": "logicalSwitchList /2.0/vdn/scopes/{{scopeId}}/virtualwires",
         "description": "Lists all logical Switches in the Transport Zone (Scope)\n\nParameters:\n\nscopeId: A valid scope Id\n\n",
         "operationId": "logicalSwitchList20VdnScopesScopeIdVirtualwires",
         "consumes": ["application/xml"],
@@ -5251,7 +5077,6 @@
     "/api/2.0/vdn/virtualwires/{virtual_wire_id}/conn-check/p2p": {
       "post": {
         "tags": ["Web"],
-        "summary": "logicalSwitchPing /2.0/vdn/virtualwires/{{virtualWireID}}/conn-check/p2p",
         "description": "Perform point to point connectivity test between two hosts across which a logical switch spans\n\nParameters:\n\n",
         "operationId": "logicalSwitchPing20VdnVirtualwiresVirtualWireIdConnCheckP2p",
         "consumes": ["application/xml"],
@@ -5286,7 +5111,6 @@
     "/api/2.0/vdn/virtualwires/{virtual_wire_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "logicalSwitchShow /2.0/vdn/virtualwires/{{virtualWireID}}",
         "description": "Retrieves the configuration of an individual logical switch\n\nParameters:\n\nvirtualWireID: A logical switch id, e.g. virtualwire-1002\n\n",
         "operationId": "logicalSwitchShow20VdnVirtualwiresVirtualWireId",
         "consumes": ["application/xml"],
@@ -5313,7 +5137,6 @@
     "/api/2.0/vdn/virtualwires/vm/vnic": {
       "post": {
         "tags": ["Web"],
-        "summary": "logicalSwitchVmAttach /2.0/vdn/virtualwires/vm/vnic",
         "description": "Migrate a Virtual Maschine vnic to a logical switch\n\nParameters:\n\n",
         "operationId": "logicalSwitchVmAttach20VdnVirtualwiresVmVnic",
         "consumes": ["application/xml"],
@@ -5341,7 +5164,6 @@
     "/api/2.0/services/macset/{macset_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "macsetRead /2.0/services/macset/{{macsetId}}",
         "description": "Retrieve details about a MACset\n\nParameters:\n\nmacsetId: Specified MACset ID (Can be retrieved by listing the MACset on a scope)\n\n",
         "operationId": "macsetRead20ServicesMacsetMacsetId",
         "consumes": ["application/xml"],
@@ -5368,7 +5190,6 @@
     "/api/2.0/services/macset/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "macsetScopesCreate /2.0/services/macset/{{scopeId}}",
         "description": "Create a MACset on a specified scope\n\nParameters:\n\nscopeId: Can be globalroot-0 or datacenterId in upgrade use cases\n\n",
         "operationId": "macsetScopesCreate20ServicesMacsetScopeId",
         "consumes": ["application/xml"],
@@ -5403,7 +5224,6 @@
     "/api/4.0/edges/{edge_id}/mgmtinterface": {
       "post": {
         "tags": ["Web"],
-        "summary": "mgmtInterfaceRead /4.0/edges/{{edgeId}}/mgmtinterface",
         "description": "Retrieve all managedment interfaces to the NSX Edge router\n\nParameters:\n\n",
         "operationId": "mgmtInterfaceRead40EdgesEdgeIdMgmtinterface",
         "consumes": ["application/xml"],
@@ -5430,7 +5250,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/ippools/{ippool_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "netExtipPoolRead /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/ippools/{{ippoolID}}",
         "description": "Get details of specified IP pool\n\nParameters:\n\nippoolID: Specified IP pool ID\n\n",
         "operationId": "netExtipPoolRead40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolId",
         "consumes": ["application/xml"],
@@ -5464,7 +5283,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/ippools": {
       "post": {
         "tags": ["Web"],
-        "summary": "netExtipPoolsCreate /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/ippools",
         "description": "Create an IP pool\n\nParameters:\n\n",
         "operationId": "netExtipPoolsCreate40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppools",
         "consumes": ["application/xml"],
@@ -5499,7 +5317,6 @@
     "/api/1.0/appliance-management/system/network": {
       "post": {
         "tags": ["Web"],
-        "summary": "networkSettingsRead /1.0/appliance-management/system/network",
         "description": "Retrieve network information i.e. host name, IP address, DNS settings\n\nParameters:\n\n",
         "operationId": "networkSettingsRead10ApplianceManagementSystemNetwork",
         "consumes": ["application/xml"],
@@ -5518,7 +5335,6 @@
     "/api/1.0/appliance-management/notifications/{id}/acknowledge": {
       "post": {
         "tags": ["Web"],
-        "summary": "notificationsAcknowledge /1.0/appliance-management/notifications/{{ID}}/acknowledge",
         "description": "Acknowledge a notification\n\nParameters:\n\nID: Notification ID\n\n",
         "operationId": "notificationsAcknowledge10ApplianceManagementNotificationsIdAcknowledge",
         "consumes": ["application/xml"],
@@ -5545,7 +5361,6 @@
     "/api/1.0/appliance-management/notifications": {
       "post": {
         "tags": ["Web"],
-        "summary": "notificationsRead /1.0/appliance-management/notifications",
         "description": "Retrieve all system generated notifications\n\nParameters:\n\n",
         "operationId": "notificationsRead10ApplianceManagementNotifications",
         "consumes": ["application/xml"],
@@ -5564,7 +5379,6 @@
     "/api/2.0/vdn/controller/cluster": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerClusterRead /2.0/vdn/controller/cluster",
         "description": "Retrieve cluster-wise configuration information for controller\n\nParameters:\n\n",
         "operationId": "nsxControllerClusterRead20VdnControllerCluster",
         "consumes": ["application/xml"],
@@ -5583,7 +5397,6 @@
     "/api/2.0/vdn/controller": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerCreate /2.0/vdn/controller",
         "description": "Add a new controller on a specified cluster. Request without body to upgrade controller cluster\n\nParameters:\n\n",
         "operationId": "nsxControllerCreate20VdnController",
         "consumes": ["application/xml"],
@@ -5611,7 +5424,6 @@
     "/api/2.0/vdn/controller/{controller_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerDelete /2.0/vdn/controller/{{controllerId}}",
         "description": "Delete NSX controller. When deleting last controller from cluster, forceRemoval must be set to true\n\nParameters:\n\ncontrollerId: Specified controller\n\n",
         "operationId": "nsxControllerDelete20VdnControllerControllerId",
         "consumes": ["application/xml"],
@@ -5645,7 +5457,6 @@
     "/api/2.0/vdn/controller/progress/{job_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerJobRead /2.0/vdn/controller/progress/{{jobId}}",
         "description": "Retrieve status of controller creation or removal. Returns percentage indication of job progress\n\nParameters:\n\njobId: Specified job Id\n\n",
         "operationId": "nsxControllerJobRead20VdnControllerProgressJobId",
         "consumes": ["application/xml"],
@@ -5672,7 +5483,6 @@
     "/api/2.0/vdn/controller/{controller_id}/techsupportlogs": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerLogsRead /2.0/vdn/controller/{{controllerId}}/techsupportlogs",
         "description": "Retrieve controller logs\n\nParameters:\n\n",
         "operationId": "nsxControllerLogsRead20VdnControllerControllerIdTechsupportlogs",
         "consumes": ["application/xml"],
@@ -5699,7 +5509,6 @@
     "/api/2.0/vdn/controller/credential": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerPasswordUpdate /2.0/vdn/controller/credential",
         "description": "Change the NSX controller password\n\nParameters:\n\n",
         "operationId": "nsxControllerPasswordUpdate20VdnControllerCredential",
         "consumes": ["application/xml"],
@@ -5727,7 +5536,6 @@
     "/api/2.0/vdn/controller/{controller_id}/snapshot": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerSnapshot /2.0/vdn/controller/{{controllerId}}/snapshot",
         "description": "Take a snapshot of the control cluster from the specified controller node\n\nParameters:\n\n",
         "operationId": "nsxControllerSnapshot20VdnControllerControllerIdSnapshot",
         "consumes": ["application/xml"],
@@ -5754,7 +5562,6 @@
     "/api/2.0/vdn/controller/{controller_id}/syslog": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerSyslogCreate /2.0/vdn/controller/{{controllerId}}/syslog",
         "description": "Add controller syslog exporter on the controller\n\nParameters:\n\n",
         "operationId": "nsxControllerSyslogCreate20VdnControllerControllerIdSyslog",
         "consumes": ["application/xml"],
@@ -5789,7 +5596,6 @@
     "/api/2.0/vdn/controller/upgrade-available": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxControllerUpgradeAvailability /2.0/vdn/controller/upgrade-available",
         "description": "Query controller upgrade availability\n\nParameters:\n\n",
         "operationId": "nsxControllerUpgradeAvailability20VdnControllerUpgradeAvailable",
         "consumes": ["application/xml"],
@@ -5808,7 +5614,6 @@
     "/api/4.0/edges/{edge_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgeCreate /4.0/edges/{{edgeId}}",
         "description": "Manage NSX Edge\n\nParameters:\n\nedgeId: Specified Edge ID\n\n",
         "operationId": "nsxEdgeCreate40EdgesEdgeId",
         "consumes": ["application/xml"],
@@ -5842,7 +5647,6 @@
     "/api/4.0/edges/{edge_id}/dnsclient": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgeDnsUpdate /4.0/edges/{{edgeId}}/dnsclient",
         "description": "Update Edge DNS settings\n\nParameters:\n\n",
         "operationId": "nsxEdgeDnsUpdate40EdgesEdgeIdDnsclient",
         "consumes": ["application/xml"],
@@ -5877,7 +5681,6 @@
     "/api/4.0/edges/{edge_id}/firewall/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgeFirewallConfigRead /4.0/edges/{{edgeId}}/firewall/config",
         "description": "Read the firewall configuration\n\nParameters:\n\n",
         "operationId": "nsxEdgeFirewallConfigRead40EdgesEdgeIdFirewallConfig",
         "consumes": ["application/xml"],
@@ -5904,7 +5707,6 @@
     "/api/4.0/edges/jobs/{job_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgeJobRead /4.0/edges/jobs/{{jobId}}",
         "description": "Retrieve job status (SUCCESS/FAILED/QUEUED/RUNNING/ROLLBACK), URI of the resource, and ID of the resource as shown in response body\n\nParameters:\n\njobId: Job ID\n\n",
         "operationId": "nsxEdgeJobRead40EdgesJobsJobId",
         "consumes": ["application/xml"],
@@ -5931,7 +5733,6 @@
     "/api/4.0/edges/jobs": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgeJobsRead /4.0/edges/jobs",
         "description": "Query jobs. Assumes Edge is configured in async mode, where ?async=true is used at the end of any 4.0 service configuration URI for POST, PUT, and DELETE calls.\n\nParameters:\n\n",
         "operationId": "nsxEdgeJobsRead40EdgesJobs",
         "consumes": ["application/xml"],
@@ -5958,7 +5759,6 @@
     "/api/4.0/edges": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgesCreate /4.0/edges",
         "description": "Install NSX Edge services gateway or logical router, depending on request body\n\nParameters:\n\n",
         "operationId": "nsxEdgesCreate40Edges",
         "consumes": ["application/xml"],
@@ -5986,7 +5786,6 @@
     "/api/3.0/edges/{edge_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "nsxEdgeUpgrade /3.0/edges/{{edgeID}}",
         "description": "Upgrade NSX Edge\n\nParameters:\n\nedgeID: Specified Edge\n\n",
         "operationId": "nsxEdgeUpgrade30EdgesEdgeId",
         "consumes": ["application/xml"],
@@ -6020,7 +5819,6 @@
     "/api/1.0/appliance-management/system/timesettings/ntp": {
       "post": {
         "tags": ["Web"],
-        "summary": "ntpDelete /1.0/appliance-management/system/timesettings/ntp",
         "description": "Delete NTP server\n\nParameters:\n\n",
         "operationId": "ntpDelete10ApplianceManagementSystemTimesettingsNtp",
         "consumes": ["application/xml"],
@@ -6039,7 +5837,6 @@
     "/api/2.0/nwfabric/configure": {
       "post": {
         "tags": ["Web"],
-        "summary": "nwfabricConfigCreate /2.0/nwfabric/configure",
         "description": "Install network virtualization components\n\n\nParameters:\n\n",
         "operationId": "nwfabricConfigCreate20NwfabricConfigure",
         "consumes": ["application/xml", "application/json"],
@@ -6074,7 +5871,6 @@
     "/api/2.0/nwfabric/features": {
       "post": {
         "tags": ["Web"],
-        "summary": "nwfabricFeatures /2.0/nwfabric/features",
         "description": "Retrieves all features available on the cluster\n\nParameters:\n\n",
         "operationId": "nwfabricFeatures20NwfabricFeatures",
         "consumes": ["application/xml"],
@@ -6093,7 +5889,6 @@
     "/api/2.0/nwfabric/status": {
       "post": {
         "tags": ["Web"],
-        "summary": "nwfabricStatus /2.0/nwfabric/status",
         "description": "Retrieves the Status of Resources\n\nParameters:\n\n",
         "operationId": "nwfabricStatus20NwfabricStatus",
         "consumes": ["application/xml"],
@@ -6120,7 +5915,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/pools/{pool_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "poolRead /4.0/edges/{{edgeId}}/loadbalancer/config/pools/{{poolID}}",
         "description": "Get backend pool details\n\nParameters:\n\npoolID: Specified pool ID\n\n",
         "operationId": "poolRead40EdgesEdgeIdLoadbalancerConfigPoolsPoolId",
         "consumes": ["application/xml"],
@@ -6154,7 +5948,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/pools": {
       "post": {
         "tags": ["Web"],
-        "summary": "poolsCreate /4.0/edges/{{edgeId}}/loadbalancer/config/pools",
         "description": "Add a load balancer server pool to the Edge\n\nParameters:\n\n",
         "operationId": "poolsCreate40EdgesEdgeIdLoadbalancerConfigPools",
         "consumes": ["application/xml"],
@@ -6189,7 +5982,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/privatenetworks/{network_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "privateNetworkRead /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/privatenetworks/{{networkID}}",
         "description": "Get the specified private network in the SSL VPN service\n\nParameters:\n\nnetworkID: Specified private network\n\n",
         "operationId": "privateNetworkRead40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetwork",
         "consumes": ["application/xml"],
@@ -6223,7 +6015,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/client/networkextension/privatenetworks": {
       "post": {
         "tags": ["Web"],
-        "summary": "privateNetworksCreate /4.0/edges/{{edgeId}}/sslvpn/config/client/networkextension/privatenetworks",
         "description": "Add a private network\n\nParameters:\n\n",
         "operationId": "privateNetworksCreate40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworks",
         "consumes": ["application/xml"],
@@ -6258,7 +6049,6 @@
     "/api/4.0/edges/{edge_id}/routing/config/bgp": {
       "post": {
         "tags": ["Web"],
-        "summary": "routingBGPRead /4.0/edges/{{edgeId}}/routing/config/bgp",
         "description": "Query BGP\n\nParameters:\n\n",
         "operationId": "routingBgpRead40EdgesEdgeIdRoutingConfigBgp",
         "consumes": ["application/xml"],
@@ -6285,7 +6075,6 @@
     "/api/4.0/edges/{edge_id}/routing/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "routingConfigRead /4.0/edges/{{edgeId}}/routing/config",
         "description": "Retrieve routes\n\nParameters:\n\n",
         "operationId": "routingConfigRead40EdgesEdgeIdRoutingConfig",
         "consumes": ["application/xml"],
@@ -6312,7 +6101,6 @@
     "/api/4.0/edges/{edge_id}/routing/config/static": {
       "post": {
         "tags": ["Web"],
-        "summary": "routingConfigStaticRead /4.0/edges/{{edgeId}}/routing/config/static",
         "description": "Read static and default routes\n\nParameters:\n\n",
         "operationId": "routingConfigStaticRead40EdgesEdgeIdRoutingConfigStatic",
         "consumes": ["application/xml"],
@@ -6339,7 +6127,6 @@
     "/api/4.0/edges/{edge_id}/routing/config/global": {
       "post": {
         "tags": ["Web"],
-        "summary": "routingGlobalConfigUpdate /4.0/edges/{{edgeId}}/routing/config/global",
         "description": "Configure global route\n\nParameters:\n\n",
         "operationId": "routingGlobalConfigUpdate40EdgesEdgeIdRoutingConfigGlobal",
         "consumes": ["application/xml"],
@@ -6374,7 +6161,6 @@
     "/api/4.0/edges/{edge_id}/routing/config/isis": {
       "post": {
         "tags": ["Web"],
-        "summary": "routingISISRead /4.0/edges/{{edgeId}}/routing/config/isis",
         "description": "Query ISIS\n\nParameters:\n\n",
         "operationId": "routingIsisRead40EdgesEdgeIdRoutingConfigIsis",
         "consumes": ["application/xml"],
@@ -6401,7 +6187,6 @@
     "/api/4.0/edges/{edge_id}/routing/config/ospf": {
       "post": {
         "tags": ["Web"],
-        "summary": "routingOSPFRead /4.0/edges/{{edgeId}}/routing/config/ospf",
         "description": "Query OSPF config\n\nParameters:\n\n",
         "operationId": "routingOspfRead40EdgesEdgeIdRoutingConfigOspf",
         "consumes": ["application/xml"],
@@ -6428,7 +6213,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/auth/settings/rsaconfigfile": {
       "post": {
         "tags": ["Web"],
-        "summary": "rsaConfigCreate /4.0/edges/{{edgeId}}/sslvpn/config/auth/settings/rsaconfigfile",
         "description": "Upload RSA config file (See \"Generate the Authentication Manager Configuration File\" section of the RSA Authentication Manager Administrator's guide for instructions on how to configure and download the RSA config file from RSA Authentication Manager)\n\nParameters:\n\n",
         "operationId": "rsaConfigCreate40EdgesEdgeIdSslvpnConfigAuthSettingsRsaconfigfile",
         "consumes": ["application/xml"],
@@ -6455,7 +6239,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3redirectsections/{section}/rules/{rule_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "ruleRead /4.0/firewall/globalroot-0/config/layer3redirectsections/{{section}}/rules/{{ruleID}}",
         "description": "Get L3 redirect rule\n\nParameters:\n\nruleID: Specified redirect rule\n\n",
         "operationId": "ruleRead40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleId",
         "consumes": ["application/xml"],
@@ -6489,7 +6272,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3redirectsections/{section}/rules": {
       "post": {
         "tags": ["Web"],
-        "summary": "rulesCreate /4.0/firewall/globalroot-0/config/layer3redirectsections/{{section}}/rules",
         "description": "Add L3 redirect rule\n\nParameters:\n\n",
         "operationId": "rulesCreate40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRules",
         "consumes": ["application/xml"],
@@ -6524,7 +6306,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/script": {
       "post": {
         "tags": ["Web"],
-        "summary": "scriptCreate /4.0/edges/{{edgeId}}/sslvpn/config/script",
         "description": "Configure parameters associated with the uploaded script file\n\nParameters:\n\n",
         "operationId": "scriptCreate40EdgesEdgeIdSslvpnConfigScript",
         "consumes": ["application/xml"],
@@ -6559,7 +6340,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/script/file": {
       "post": {
         "tags": ["Web"],
-        "summary": "scriptFileCreate /4.0/edges/{{edgeId}}/sslvpn/config/script/file",
         "description": "Upload a login/logoff script. Returns a script file ID to configure the parameters\n\nParameters:\n\n",
         "operationId": "scriptFileCreate40EdgesEdgeIdSslvpnConfigScriptFile",
         "consumes": ["application/xml"],
@@ -6586,7 +6366,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/script/{file_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "scriptFileIDRead /4.0/edges/{{edgeId}}/sslvpn/config/script/{{fileID}}",
         "description": "Retrieve parameters associated with the specified script file\n\nParameters:\n\nfileID: Specified script file\n\n",
         "operationId": "scriptFileIdRead40EdgesEdgeIdSslvpnConfigScriptFileId",
         "consumes": ["application/xml"],
@@ -6620,7 +6399,6 @@
     "/api/2.0/services/securitygroup/bulk/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupCreate /2.0/services/securitygroup/bulk/{{scopeId}}",
         "description": "Create a new security group on a global scope\n\nParameters:\n\nscopeId: In the current version the scopeId will always be globalroot-0\n\n",
         "operationId": "secGroupCreate20ServicesSecuritygroupBulkScopeId",
         "consumes": ["application/xml"],
@@ -6655,7 +6433,6 @@
     "/api/3.0/ai/securitygroup": {
       "post": {
         "tags": ["Web"],
-        "summary": "secgroupDetailsRead /3.0/ai/securitygroup",
         "description": "Retrieve list of all observed security groups\n\nParameters:\n\n",
         "operationId": "secgroupDetailsRead30AiSecuritygroup",
         "consumes": ["application/xml"],
@@ -6674,7 +6451,6 @@
     "/api/2.0/services/securitygroup/internal/scope/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupInternalRead /2.0/services/securitygroup/internal/scope/{{scopeId}}",
         "description": "Retrieve all internal security groups on the NSX Manager. These are used internally by the system and should not be created or modified by end users.\n\nParameters:\n\nscopeId: Specified transport zone (scope)\n\n",
         "operationId": "secGroupInternalRead20ServicesSecuritygroupInternalScopeScopeId",
         "consumes": ["application/xml"],
@@ -6701,7 +6477,6 @@
     "/api/2.0/services/securitygroup/{object_id}/translation/ipaddresses": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupIPNodesRead /2.0/services/securitygroup/{{objectId}}/translation/ipaddresses",
         "description": "Retrieve list of IpNode entities that belong to a specific security group.\n\nParameters:\n\n",
         "operationId": "secGroupIpNodesRead20ServicesSecuritygroupObjectIdTranslationIpaddresses",
         "consumes": ["application/xml"],
@@ -6728,7 +6503,6 @@
     "/api/2.0/services/securitygroup/lookup/virtualmachine/{virtual_machine_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupLookupVMRead /2.0/services/securitygroup/lookup/virtualmachine/{{virtualMachineId}}",
         "description": "Retrieve list of security groups that the specified virtual machine belongs to.\n\nParameters:\n\nvirtualMachineId: Specified virtual machine\n\n",
         "operationId": "secGroupLookupVmRead20ServicesSecuritygroupLookupVirtualmachineVirtualMachineId",
         "consumes": ["application/xml"],
@@ -6755,7 +6529,6 @@
     "/api/2.0/services/securitygroup/{object_id}/translation/macaddresses": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupMacNodesRead /2.0/services/securitygroup/{{objectId}}/translation/macaddresses",
         "description": "Retrieve list of MacNode entities that belong to a specific security group.\n\nParameters:\n\n",
         "operationId": "secGroupMacNodesRead20ServicesSecuritygroupObjectIdTranslationMacaddresses",
         "consumes": ["application/xml"],
@@ -6782,7 +6555,6 @@
     "/api/2.0/services/securitygroup/{object_id}/members/{member_moref}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupMemberUpdate /2.0/services/securitygroup/{{objectId}}/members/{{memberMoref}}",
         "description": "Add a new member to specified security group\n\nParameters:\n\nmemberMoref: Security group member\n\n",
         "operationId": "secGroupMemberUpdate20ServicesSecuritygroupObjectIdMembersMemberMoref",
         "consumes": ["application/xml"],
@@ -6816,7 +6588,6 @@
     "/api/2.0/services/securitygroup/{object_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupObjectRead /2.0/services/securitygroup/{{objectId}}",
         "description": "Retrieve all members of the specified security group\n\nParameters:\n\nobjectId: Specified security group\n\n",
         "operationId": "secGroupObjectRead20ServicesSecuritygroupObjectId",
         "consumes": ["application/xml"],
@@ -6843,7 +6614,6 @@
     "/api/2.0/services/policy/policy/securitygroup/{id}/securitypolicies": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupPoliciesRead /2.0/services/policy/policy/securitygroup/{{ID}}/securitypolicies",
         "description": "Retrieve security policies mapped to a security group\n\nParameters:\n\nID: Specified security group ID\n\n",
         "operationId": "secGroupPoliciesRead20ServicesPolicyPolicySecuritygroupIdSecuritypolicies",
         "consumes": ["application/xml"],
@@ -6870,7 +6640,6 @@
     "/api/2.0/services/securitygroup/scope/{scope_id}/memberTypes": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupScopeMembersRead /2.0/services/securitygroup/scope/{{scopeId}}/memberTypes",
         "description": "Retrieve a list of valid elements that can be added to a security group.\n\nParameters:\n\n",
         "operationId": "secGroupScopeMembersRead20ServicesSecuritygroupScopeScopeIdMemberTypes",
         "consumes": ["application/xml"],
@@ -6897,7 +6666,6 @@
     "/api/2.0/services/securitygroup/scope/{scope_id}/members/{member_type}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupScopeMemberTypeRead /2.0/services/securitygroup/scope/{{scopeId}}/members/{{memberType}}",
         "description": "Retrieve members of a specific type under a scope\n\nParameters:\n\nmemberType: Specific member type\n\n",
         "operationId": "secGroupScopeMemberTypeRead20ServicesSecuritygroupScopeScopeIdMembersMemberType",
         "consumes": ["application/xml"],
@@ -6931,7 +6699,6 @@
     "/api/2.0/services/securitygroup/scope/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupScopeRead /2.0/services/securitygroup/scope/{{scopeId}}",
         "description": "List all the security groups created on a specific scope\n\nParameters:\n\nscopeId: scopeId can be globalroot-0 or datacenterID/portgroupID in upgrade use cases\n\n",
         "operationId": "secGroupScopeRead20ServicesSecuritygroupScopeScopeId",
         "consumes": ["application/xml"],
@@ -6958,7 +6725,6 @@
     "/api/2.0/services/securitygroup/bulk/{object_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupUpdate /2.0/services/securitygroup/bulk/{{objectId}}",
         "description": "Update a specific security group\n\nParameters:\n\nobjectId: Security group to modify\n\n",
         "operationId": "secGroupUpdate20ServicesSecuritygroupBulkObjectId",
         "consumes": ["application/xml"],
@@ -6993,7 +6759,6 @@
     "/api/2.0/services/securitygroup/{object_id}/translation/virtualmachines": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupVMNodesRead /2.0/services/securitygroup/{{objectId}}/translation/virtualmachines",
         "description": "Retrieve list of VmNode entities that belong to a specific security group.\n\nParameters:\n\n",
         "operationId": "secGroupVmNodesRead20ServicesSecuritygroupObjectIdTranslationVirtualmachines",
         "consumes": ["application/xml"],
@@ -7020,7 +6785,6 @@
     "/api/2.0/services/securitygroup/{object_id}/translation/vnics": {
       "post": {
         "tags": ["Web"],
-        "summary": "secGroupVnicNodesRead /2.0/services/securitygroup/{{objectId}}/translation/vnics",
         "description": "Retrieve list of VnicNode entities that belong to a specific security group.\n\nParameters:\n\n",
         "operationId": "secGroupVnicNodesRead20ServicesSecuritygroupObjectIdTranslationVnics",
         "consumes": ["application/xml"],
@@ -7047,7 +6811,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3redirectsections/{section}": {
       "post": {
         "tags": ["Web"],
-        "summary": "sectionRead /4.0/firewall/globalroot-0/config/layer3redirectsections/{{section}}",
         "description": "Get L3 redirect section configuration\n\nParameters:\n\nsection: Specify section by ID or name\n\n",
         "operationId": "sectionRead40FirewallGlobalroot0ConfigLayer3redirectsectionsSection",
         "consumes": ["application/xml"],
@@ -7074,7 +6837,6 @@
     "/api/2.0/services/policy/securitygroup/{id}/securityactions": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityActionRead /2.0/services/policy/securitygroup/{{ID}}/securityactions",
         "description": "Query all security actions applicable on a security group\n\nParameters:\n\nID: Specified security group\n\n",
         "operationId": "securityActionRead20ServicesPolicySecuritygroupIdSecurityactions",
         "consumes": ["application/xml"],
@@ -7101,7 +6863,6 @@
     "/api/2.0/services/policy/securitypolicy/{id}/securityactions": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityActionsRead /2.0/services/policy/securitypolicy/{{ID}}/securityactions",
         "description": "Retrieve security actions for a security policy\n\nParameters:\n\n",
         "operationId": "securityActionsRead20ServicesPolicySecuritypolicyIdSecurityactions",
         "consumes": ["application/xml"],
@@ -7128,7 +6889,6 @@
     "/api/2.0/services/policy/securityaction/category/virtualmachines": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityActionVMRead /2.0/services/policy/securityaction/category/virtualmachines",
         "description": "Fetch all vm objects on which security action of a given category and attribute has been applied\n\nParameters:\n\n",
         "operationId": "securityActionVmRead20ServicesPolicySecurityactionCategoryVirtualmachines",
         "consumes": ["application/xml"],
@@ -7162,7 +6922,6 @@
     "/api/2.0/si/deploy": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityFabricCreate /2.0/si/deploy",
         "description": "Deploy security fabric\n\nParameters:\n\n",
         "operationId": "securityFabricCreate20SiDeploy",
         "consumes": ["application/xml"],
@@ -7197,7 +6956,6 @@
     "/api/2.0/services/policy/securitypolicy": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityPolicyCreate /2.0/services/policy/securitypolicy",
         "description": "Create a security policy\n\nParameters:\n\n",
         "operationId": "securityPolicyCreate20ServicesPolicySecuritypolicy",
         "consumes": ["application/xml"],
@@ -7225,7 +6983,6 @@
     "/api/2.0/services/policy/securitypolicy/{id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityPolicyIDRead /2.0/services/policy/securitypolicy/{{ID}}",
         "description": "Retrieve security policy information\n\nParameters:\n\nID: ID of desired security policy (or 'all' to include all security policies for the securityPolicyID read method)\n\n",
         "operationId": "securityPolicyIdRead20ServicesPolicySecuritypolicyId",
         "consumes": ["application/xml"],
@@ -7252,7 +7009,6 @@
     "/api/2.0/services/securitytags/tag": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityTagCreate /2.0/services/securitytags/tag",
         "description": "Create a new security tag\n\nParameters:\n\n",
         "operationId": "securityTagCreate20ServicesSecuritytagsTag",
         "consumes": ["application/xml"],
@@ -7280,7 +7036,6 @@
     "/api/2.0/services/securitytags/tag/{tag_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityTagDelete /2.0/services/securitytags/tag/{{tagId}}",
         "description": "Delete the specified security tag\n\nParameters:\n\ntagId: Specified security tag\n\n",
         "operationId": "securityTagDelete20ServicesSecuritytagsTagTagId",
         "consumes": ["application/xml"],
@@ -7307,7 +7062,6 @@
     "/api/2.0/services/securitytags/tag/{tag_id}/vm/{vm_moid}": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityTagVMAttach /2.0/services/securitytags/tag/{{tagId}}/vm/{{vmMoid}}",
         "description": "Apply a security tag to virtual machine\n\nParameters:\n\nvmMoid: ID of VM\n\n",
         "operationId": "securityTagVmAttach20ServicesSecuritytagsTagTagIdVmVmMoid",
         "consumes": ["application/xml"],
@@ -7341,7 +7095,6 @@
     "/api/2.0/services/securitytags/tag/{tag_id}/vm": {
       "post": {
         "tags": ["Web"],
-        "summary": "securityTagVMsList /2.0/services/securitytags/tag/{{tagId}}/vm",
         "description": "Retrieve the list of vm's that have the specified tag attached to them\n\nParameters:\n\n",
         "operationId": "securityTagVMsList20ServicesSecuritytagsTagTagIdVm",
         "consumes": ["application/xml"],
@@ -7368,7 +7121,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/server": {
       "post": {
         "tags": ["Web"],
-        "summary": "serverSettingsRead /4.0/edges/{{edgeId}}/sslvpn/config/server",
         "description": "Get server settings\n\nParameters:\n\n",
         "operationId": "serverSettingsRead40EdgesEdgeIdSslvpnConfigServer",
         "consumes": ["application/xml"],
@@ -7395,7 +7147,6 @@
     "/api/2.0/services/policy/policy/serviceprovider/firewall": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceComposerDFWSyncRead /2.0/services/policy/policy/serviceprovider/firewall",
         "description": "Query the time since when Service Composer firewall is out of sync with dfw, or synchronize Service Composer firewall with dfw\n\nParameters:\n\n",
         "operationId": "serviceComposerDfwSyncRead20ServicesPolicyPolicyServiceproviderFirewall",
         "consumes": ["application/xml"],
@@ -7414,7 +7165,6 @@
     "/api/2.0/si/deploy/service/{service_id}/dependsOn": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceDependencyRead /2.0/si/deploy/service/{{serviceID}}/dependsOn",
         "description": "Identify service on which the specified service depends on\n\nParameters:\n\n",
         "operationId": "serviceDependencyRead20SiDeployServiceServiceIdDependsOn",
         "consumes": ["application/xml"],
@@ -7441,7 +7191,6 @@
     "/api/2.0/si/deploy/cluster/{cluster_id}/service/{service_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceDetailsRead /2.0/si/deploy/cluster/{{clusterID}}/service/{{serviceID}}",
         "description": "Retrieve detailed information about the service\n\nParameters:\n\nserviceID: Service ID on cluster\n\n",
         "operationId": "serviceDetailsRead20SiDeployClusterClusterIdServiceServiceId",
         "consumes": ["application/xml"],
@@ -7475,7 +7224,6 @@
     "/api/2.0/services/applicationgroup/{applicationgroup_id}/members/{moref}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceGroupMembersCreate /2.0/services/applicationgroup/{{applicationgroupId}}/members/{{moref}}",
         "description": "Add a member to the service group\n\nParameters:\n\nmoref: Management object reference to the member\n\n",
         "operationId": "serviceGroupMembersCreate20ServicesApplicationgroupApplicationgroupIdMembersMoref",
         "consumes": ["application/xml"],
@@ -7509,7 +7257,6 @@
     "/api/2.0/services/applicationgroup/scope/{scope_id}/members": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceGroupMembersRead /2.0/services/applicationgroup/scope/{{scopeId}}/members",
         "description": "Get a list of member elements that can be added to the service groups created on a particular scope.\n\nParameters:\n\nscopeId: globalroot-0 or datacenterId in upgrade use cases\n\n",
         "operationId": "serviceGroupMembersRead20ServicesApplicationgroupScopeScopeIdMembers",
         "consumes": ["application/xml"],
@@ -7536,7 +7283,6 @@
     "/api/2.0/services/applicationgroup/{applicationgroup_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceGroupRead /2.0/services/applicationgroup/{{applicationgroupId}}",
         "description": "Retrieve details about a service group\n\nParameters:\n\napplicationgroupId: Application group ID\n\n",
         "operationId": "serviceGroupRead20ServicesApplicationgroupApplicationgroupId",
         "consumes": ["application/xml"],
@@ -7563,7 +7309,6 @@
     "/api/2.0/services/applicationgroup/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceGroupsCreate /2.0/services/applicationgroup/{{scopeId}}",
         "description": "Create a new service group on the specified scope\n\nParameters:\n\nscopeId: globalroot-0 or datacenterId in upgrade use cases\n\n",
         "operationId": "serviceGroupsCreate20ServicesApplicationgroupScopeId",
         "consumes": ["application/xml"],
@@ -7598,7 +7343,6 @@
     "/api/4.0/firewall/globalroot-0/config/layer3redirect/profiles": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceInsertionProfilesRead /4.0/firewall/globalroot-0/config/layer3redirect/profiles",
         "description": "Retrieve the Service Insertion profiles\n\nParameters:\n\n",
         "operationId": "serviceInsertionProfilesRead40FirewallGlobalroot0ConfigLayer3redirectProfiles",
         "consumes": ["application/xml"],
@@ -7617,7 +7361,6 @@
     "/api/2.0/services/application/{application_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceRead /2.0/services/application/{{applicationId}}",
         "description": "Retrieve details about the specified service\n\nParameters:\n\napplicationId: Specified as returned by a servicesScope POST call\n\n",
         "operationId": "serviceRead20ServicesApplicationApplicationId",
         "consumes": ["application/xml"],
@@ -7644,7 +7387,6 @@
     "/api/2.0/si/deploy/cluster/{cluster_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceRead /2.0/si/deploy/cluster/{{clusterID}}",
         "description": "Retrieve all services deployed along with their status\n\nParameters:\n\nclusterID: Cluster ID\n\n",
         "operationId": "serviceRead20SiDeployClusterClusterId",
         "consumes": ["application/xml"],
@@ -7671,7 +7413,6 @@
     "/api/2.0/si/deploy/service/{service_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "serviceRead /2.0/si/deploy/service/{{serviceID}}",
         "description": "Retrieve all clusters on which the service is installed\n\nParameters:\n\nserviceID: Specified service\n\n",
         "operationId": "serviceRead20SiDeployServiceServiceId",
         "consumes": ["application/xml"],
@@ -7698,7 +7439,6 @@
     "/api/2.0/services/application/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "servicesScopeRead /2.0/services/application/{{scopeId}}",
         "description": "List services that have been created on the scope\n\nParameters:\n\nscopeId: Can be globalroot-0 or datacenterId in upgrade use cases.\n\n",
         "operationId": "servicesScopeRead20ServicesApplicationScopeId",
         "consumes": ["application/xml"],
@@ -7725,7 +7465,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/activesessions/{session_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "sessionDelete /4.0/edges/{{edgeId}}/sslvpn/activesessions/{{sessionID}}",
         "description": "Disconnect an active client\n\nParameters:\n\nsessionID: Specified client session\n\n",
         "operationId": "sessionDelete40EdgesEdgeIdSslvpnActivesessionsSessionId",
         "consumes": ["application/xml"],
@@ -7759,7 +7498,6 @@
     "/api/2.0/endpointsecurity/registration/{vendor_id}/{altitude}/{moid}": {
       "post": {
         "tags": ["Web"],
-        "summary": "solutionActivationStatusRead /2.0/endpointsecurity/registration/{{vendorID}}/{{altitude}}/{{moid}}",
         "description": "Get the solution activation status\n\nParameters:\n\nmoid: managed object reference\n\n",
         "operationId": "solutionActivationStatusRead20EndpointsecurityRegistrationVendorIdAltitudeMoid",
         "consumes": ["application/xml"],
@@ -7800,7 +7538,6 @@
     "/api/2.0/endpointsecurity/registration/{vendor_id}/{altitude}/location": {
       "post": {
         "tags": ["Web"],
-        "summary": "solutionIPPortSet /2.0/endpointsecurity/registration/{{vendorID}}/{{altitude}}/location",
         "description": "Set a solution's IP address and port on the vNIC host\n\nParameters:\n\n",
         "operationId": "solutionIpPortSet20EndpointsecurityRegistrationVendorIdAltitudeLocation",
         "consumes": ["application/xml"],
@@ -7842,7 +7579,6 @@
     "/api/3.0/ai/app/{app_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificAppDetailsRead /3.0/ai/app/{{appID}}",
         "description": "Retrieve details for specific app\n\nParameters:\n\nappID: Specified app ID\n\n",
         "operationId": "specificAppDetailsRead30AiAppAppId",
         "consumes": ["application/xml"],
@@ -7869,7 +7605,6 @@
     "/api/3.0/ai/desktoppool/{desktoppool_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificDesktopPoolRead /3.0/ai/desktoppool/{{desktoppoolID}}",
         "description": "Retrieve specific desktop pool details\n\nParameters:\n\ndesktoppoolID: Specified desktop pool\n\n",
         "operationId": "specificDesktopPoolRead30AiDesktoppoolDesktoppoolId",
         "consumes": ["application/xml"],
@@ -7896,7 +7631,6 @@
     "/api/3.0/ai/directorygroup/{directorygroup_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificDirGroupRead /3.0/ai/directorygroup/{{directorygroupID}}",
         "description": "Retrieve details about a specific directory group\n\nParameters:\n\ndirectorygroupID: Specified directory group\n\n",
         "operationId": "specificDirGroupRead30AiDirectorygroupDirectorygroupId",
         "consumes": ["application/xml"],
@@ -7923,7 +7657,6 @@
     "/api/3.0/ai/host/{host_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificHostDetailsRead /3.0/ai/host/{{hostID}}",
         "description": "Get host details\n\nParameters:\n\nhostID: Specified host ID\n\n",
         "operationId": "specificHostDetailsRead30AiHostHostId",
         "consumes": ["application/xml"],
@@ -7950,7 +7683,6 @@
     "/api/3.0/ai/securitygroup/{secgroup_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificSecgroupDetailsRead /3.0/ai/securitygroup/{{secgroupID}}",
         "description": "Retrieve details about specific security group\n\nParameters:\n\nsecgroupID: Specified security group\n\n",
         "operationId": "specificSecgroupDetailsRead30AiSecuritygroupSecgroupId",
         "consumes": ["application/xml"],
@@ -7977,7 +7709,6 @@
     "/api/3.0/ai/user/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificUserDetailsRead /3.0/ai/user/{{userID}}",
         "description": "Retrieve details for a specific user\n\nParameters:\n\nuserID: User ID\n\n",
         "operationId": "specificUserDetailsRead30AiUserUserId",
         "consumes": ["application/xml"],
@@ -8004,7 +7735,6 @@
     "/api/3.0/ai/vm/{vm_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "specificVMDetailsRead /3.0/ai/vm/{{vmID}}",
         "description": "Retrieve details about a specific virtual machine\n\nParameters:\n\nvmID: VM ID\n\n",
         "operationId": "specificVmDetailsRead30AiVmVmId",
         "consumes": ["application/xml"],
@@ -8031,7 +7761,6 @@
     "/api/4.0/services/spoofguard/policies": {
       "post": {
         "tags": ["Web"],
-        "summary": "spoofGuardPoliciesCreate /4.0/services/spoofguard/policies",
         "description": "Create a SpoofGuard policy to specify the operation mode for networks.\n\nParameters:\n\n",
         "operationId": "spoofGuardPoliciesCreate40ServicesSpoofguardPolicies",
         "consumes": ["application/xml"],
@@ -8059,7 +7788,6 @@
     "/api/4.0/services/spoofguard/policies/{policy_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "spoofGuardPolicyApprove /4.0/services/spoofguard/policies/{{policyID}}",
         "description": "Use query parameters to perform operations on a policy\n\nParameters:\n\npolicyID: \n\n",
         "operationId": "spoofGuardPolicyApprove40ServicesSpoofguardPoliciesPolicyId",
         "consumes": ["application/xml"],
@@ -8101,7 +7829,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/activesessions": {
       "post": {
         "tags": ["Web"],
-        "summary": "sslVPNActiveClientsRead /4.0/edges/{{edgeId}}/sslvpn/activesessions",
         "description": "Retrieve a list of active clients for the SSL VPN session\n\nParameters:\n\n",
         "operationId": "sslVpnActiveClientsRead40EdgesEdgeIdSslvpnActivesessions",
         "consumes": ["application/xml"],
@@ -8128,7 +7855,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "sslVPNCreate /4.0/edges/{{edgeId}}/sslvpn/config",
         "description": "Enable or disable SSL VPN\n\nParameters:\n\n",
         "operationId": "sslVpnCreate40EdgesEdgeIdSslvpnConfig",
         "consumes": ["application/xml"],
@@ -8162,7 +7888,6 @@
     "/api/4.0/edges/{edge_id}/statistics/dashboard/sslvpn": {
       "post": {
         "tags": ["Web"],
-        "summary": "sslVPNStatsRead /4.0/edges/{{edgeId}}/statistics/dashboard/sslvpn",
         "description": "Retrieve SSL VPN statistics on the specified NSX Edge\n\nParameters:\n\n",
         "operationId": "sslVpnStatsRead40EdgesEdgeIdStatisticsDashboardSslvpn",
         "consumes": ["application/xml"],
@@ -8196,7 +7921,6 @@
     "/api/2.0/services/ssoconfig": {
       "post": {
         "tags": ["Web"],
-        "summary": "ssoConfigRead /2.0/services/ssoconfig",
         "description": "Query SSO Details\n\nParameters:\n\n",
         "operationId": "ssoConfigRead20ServicesSsoconfig",
         "consumes": ["application/xml"],
@@ -8215,7 +7939,6 @@
     "/api/2.0/services/ssoconfig/status": {
       "post": {
         "tags": ["Web"],
-        "summary": "ssoStatusRead /2.0/services/ssoconfig/status",
         "description": "Query the SSO configuration status of NSX Manager\n\nParameters:\n\n",
         "operationId": "ssoStatusRead20ServicesSsoconfigStatus",
         "consumes": ["application/xml"],
@@ -8234,7 +7957,6 @@
     "/api/1.0/identity/staticUserMapping/{user_id}/{ip}": {
       "post": {
         "tags": ["Web"],
-        "summary": "staticUserMappingCreate /1.0/identity/staticUserMapping/{{userID}}/{{IP}}",
         "description": "Create static user IP mapping\n\nParameters:\n\nuserID: User ID\n\nIP: IP address\n\n",
         "operationId": "staticUserMappingCreate10IdentityStaticUserMappingUserIdIp",
         "consumes": ["application/xml"],
@@ -8268,7 +7990,6 @@
     "/api/1.0/identity/staticUserMappingsbyIP/{ip}": {
       "post": {
         "tags": ["Web"],
-        "summary": "staticUserMappingsbyIPRead /1.0/identity/staticUserMappingsbyIP/{{IP}}",
         "description": "Query static user IP mapping for specified IP\n\nParameters:\n\nIP: IP address\n\n",
         "operationId": "staticUserMappingsbyIpRead10IdentityStaticUserMappingsbyIpIp",
         "consumes": ["application/xml"],
@@ -8295,7 +8016,6 @@
     "/api/1.0/identity/staticUserMappingsbyUser/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "staticUserMappingsbyUserRead /1.0/identity/staticUserMappingsbyUser/{{userID}}",
         "description": "Query static user IP mapping for specified user\n\nParameters:\n\nuserID: User ID\n\n",
         "operationId": "staticUserMappingsbyUserRead10IdentityStaticUserMappingsbyUserUserId",
         "consumes": ["application/xml"],
@@ -8322,7 +8042,6 @@
     "/api/1.0/identity/staticUserMappings": {
       "post": {
         "tags": ["Web"],
-        "summary": "staticUserMappingsRead /1.0/identity/staticUserMappings",
         "description": "Query static user IP mapping list\n\nParameters:\n\n",
         "operationId": "staticUserMappingsRead10IdentityStaticUserMappings",
         "consumes": ["application/xml"],
@@ -8341,7 +8060,6 @@
     "/api/4.0/edges/{edge_id}/l2vpn/config/statistics": {
       "post": {
         "tags": ["Web"],
-        "summary": "statisticsRead /4.0/edges/{{edgeId}}/l2vpn/config/statistics",
         "description": "Retrieve L2 VPN stats, which has information such as tunnel status, sent bytes, received bytes etc. for the given Edge\n\nParameters:\n\n",
         "operationId": "statisticsRead40EdgesEdgeIdL2vpnConfigStatistics",
         "consumes": ["application/xml"],
@@ -8368,7 +8086,6 @@
     "/api/4.0/edges/{edge_id}/status": {
       "post": {
         "tags": ["Web"],
-        "summary": "statusRead /4.0/edges/{{edgeId}}/status",
         "description": "Retrieve the status of the specified Edge\n\nParameters:\n\n",
         "operationId": "statusRead40EdgesEdgeIdStatus",
         "consumes": ["application/xml"],
@@ -8416,7 +8133,6 @@
     "/api/2.0/nwfabric/status/alleligible/{resource_type}": {
       "post": {
         "tags": ["Web"],
-        "summary": "statusResourceTypeRead /2.0/nwfabric/status/alleligible/{{resourceType}}",
         "description": "Query status of resources by criterion\n\nParameters:\n\nresourceType: Valid resource type\n\n",
         "operationId": "statusResourceTypeRead20NwfabricStatusAlleligibleResourceType",
         "consumes": ["application/xml"],
@@ -8443,7 +8159,6 @@
     "/api/1.0/appliance-management/summary/system": {
       "post": {
         "tags": ["Web"],
-        "summary": "summaryInfoRead /1.0/appliance-management/summary/system",
         "description": "Retrieve system summary info such as address, dns name, version, CPU, memory and storage\n\nParameters:\n\n",
         "operationId": "summaryInfoRead10ApplianceManagementSummarySystem",
         "consumes": ["application/xml"],
@@ -8462,7 +8177,6 @@
     "/api/4.0/edges/{edge_id}/summary": {
       "post": {
         "tags": ["Web"],
-        "summary": "summaryRead /4.0/edges/{{edgeId}}/summary",
         "description": "Retrieve details about the specified Edge\n\nParameters:\n\n",
         "operationId": "summaryRead40EdgesEdgeIdSummary",
         "consumes": ["application/xml"],
@@ -8489,7 +8203,6 @@
     "/api/1.0/sam/syslog/disable": {
       "post": {
         "tags": ["Web"],
-        "summary": "syslogDisable /1.0/sam/syslog/disable",
         "description": "Disable syslog support\n\nParameters:\n\n",
         "operationId": "syslogDisable10SamSyslogDisable",
         "consumes": ["application/xml"],
@@ -8508,7 +8221,6 @@
     "/api/1.0/sam/syslog/enable": {
       "post": {
         "tags": ["Web"],
-        "summary": "syslogEnable /1.0/sam/syslog/enable",
         "description": "Enable syslog support\n\nParameters:\n\n",
         "operationId": "syslogEnable10SamSyslogEnable",
         "consumes": ["application/xml"],
@@ -8527,7 +8239,6 @@
     "/api/4.0/edges/{edge_id}/syslog/config": {
       "post": {
         "tags": ["Web"],
-        "summary": "syslogRead /4.0/edges/{{edgeId}}/syslog/config",
         "description": "Query syslog servers\n\nParameters:\n\n",
         "operationId": "syslogRead40EdgesEdgeIdSyslogConfig",
         "consumes": ["application/xml"],
@@ -8554,7 +8265,6 @@
     "/api/1.0/appliance-management/system/cpuinfo": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemCPUInfo /1.0/appliance-management/system/cpuinfo",
         "description": "Query CPU information\n\nParameters:\n\n",
         "operationId": "systemCpuInfo10ApplianceManagementSystemCpuinfo",
         "consumes": ["application/xml"],
@@ -8573,7 +8283,6 @@
     "/api/2.0/systemevent": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemEventsRead /2.0/systemevent",
         "description": "Get NSX Manager system events\n\nParameters:\n\n",
         "operationId": "systemEventsRead20Systemevent",
         "consumes": ["application/xml"],
@@ -8607,7 +8316,6 @@
     "/api/1.0/appliance-management/system/locale": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemLocaleRead /1.0/appliance-management/system/locale",
         "description": "Retrieve locale info\n\nParameters:\n\n",
         "operationId": "systemLocaleRead10ApplianceManagementSystemLocale",
         "consumes": ["application/xml"],
@@ -8626,7 +8334,6 @@
     "/api/1.0/appliance-management/system/meminfo": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemMemoryInfo /1.0/appliance-management/system/meminfo",
         "description": "Query memory\n\nParameters:\n\n",
         "operationId": "systemMemoryInfo10ApplianceManagementSystemMeminfo",
         "consumes": ["application/xml"],
@@ -8645,7 +8352,6 @@
     "/api/1.0/appliance-management/system/restart": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemReboot /1.0/appliance-management/system/restart",
         "description": "Reboot the appliance manager\n\nParameters:\n\n",
         "operationId": "systemReboot10ApplianceManagementSystemRestart",
         "consumes": ["application/xml"],
@@ -8664,7 +8370,6 @@
     "/api/1.0/appliance-management/system/storageinfo": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemStorageInfo /1.0/appliance-management/system/storageinfo",
         "description": "Query storage\n\nParameters:\n\n",
         "operationId": "systemStorageInfo10ApplianceManagementSystemStorageinfo",
         "consumes": ["application/xml"],
@@ -8683,7 +8388,6 @@
     "/api/1.0/appliance-management/system/syslogserver": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemSyslogServerRead /1.0/appliance-management/system/syslogserver",
         "description": "Retrieve syslog servers\n\nParameters:\n\n",
         "operationId": "systemSyslogServerRead10ApplianceManagementSystemSyslogserver",
         "consumes": ["application/xml"],
@@ -8702,7 +8406,6 @@
     "/api/1.0/appliance-management/system/timesettings": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemTimeRead /1.0/appliance-management/system/timesettings",
         "description": "Retrieve time settings\n\nParameters:\n\n",
         "operationId": "systemTimeRead10ApplianceManagementSystemTimesettings",
         "consumes": ["application/xml"],
@@ -8721,7 +8424,6 @@
     "/api/1.0/appliance-management/system/uptime": {
       "post": {
         "tags": ["Web"],
-        "summary": "systemUptime /1.0/appliance-management/system/uptime",
         "description": "Query appliance manager uptime\n\nParameters:\n\n",
         "operationId": "systemUptime10ApplianceManagementSystemUptime",
         "consumes": ["application/xml"],
@@ -8740,7 +8442,6 @@
     "/api/2.0/services/taskservice/job": {
       "post": {
         "tags": ["Web"],
-        "summary": "taskFrameworkCriteria /2.0/services/taskservice/job",
         "description": "Query job instances by criterion\n\nParameters:\n\n",
         "operationId": "taskFrameworkCriteria20ServicesTaskserviceJob",
         "consumes": ["application/xml"],
@@ -8788,7 +8489,6 @@
     "/api/2.0/services/taskservice/job/{job_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "taskFrameworkJobsRead /2.0/services/taskservice/job/{{jobId}}",
         "description": "Retrieve all job instances for the specified job ID\n\nParameters:\n\njobId: Specified job Id\n\n",
         "operationId": "taskFrameworkJobsRead20ServicesTaskserviceJobJobId",
         "consumes": ["application/xml"],
@@ -8815,7 +8515,6 @@
     "/api/1.0/appliance-management/techsupportlogs/{component_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "techLogsCreate /1.0/appliance-management/techsupportlogs/{{componentID}}",
         "description": "Generate tech support logs\n\nParameters:\n\ncomponentID: Specified component to generate tech support logs\n\n",
         "operationId": "techLogsCreate10ApplianceManagementTechsupportlogsComponentId",
         "consumes": ["application/xml"],
@@ -8842,7 +8541,6 @@
     "/api/1.0/appliance-management/techsupportlogs/{filename}": {
       "post": {
         "tags": ["Web"],
-        "summary": "techLogsDownload /1.0/appliance-management/techsupportlogs/{{filename}}",
         "description": "Download tech support logs\n\nParameters:\n\nfilename: Name of log file to download\n\n",
         "operationId": "techLogsDownload10ApplianceManagementTechsupportlogsFilename",
         "consumes": ["application/xml"],
@@ -8869,7 +8567,6 @@
     "/api/4.0/edges/{edge_id}/techsupportlogs": {
       "post": {
         "tags": ["Web"],
-        "summary": "techSupportLogsRead /4.0/edges/{{edgeId}}/techsupportlogs",
         "description": "Retrieve the tech support logs for Edge\n\nParameters:\n\n",
         "operationId": "techSupportLogsRead40EdgesEdgeIdTechsupportlogs",
         "consumes": ["application/xml"],
@@ -8896,7 +8593,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/acceleration": {
       "post": {
         "tags": ["Web"],
-        "summary": "undefined /4.0/edges/{{edgeId}}/loadbalancer/acceleration",
         "description": "\n\nParameters:\n\n",
         "operationId": "undefined40EdgesEdgeIdLoadbalancerAcceleration",
         "consumes": ["application/xml"],
@@ -8930,7 +8626,6 @@
     "/api/1.0/appliance-management/upgrade/uploadbundle/{component_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "upgradeBundleUpload /1.0/appliance-management/upgrade/uploadbundle/{{componentID}}",
         "description": "Upload upgrade bundle\n\nParameters:\n\ncomponentID: Component ID\n\n",
         "operationId": "upgradeBundleUpload10ApplianceManagementUpgradeUploadbundleComponentId",
         "consumes": ["application/xml"],
@@ -8957,7 +8652,6 @@
     "/api/1.0/appliance-management/upgrade/start/{component_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "upgradeStart /1.0/appliance-management/upgrade/start/{{componentID}}",
         "description": "Start upgrade process\n\nParameters:\n\ncomponentID: Component ID\n\n",
         "operationId": "upgradeStart10ApplianceManagementUpgradeStartComponentId",
         "consumes": ["application/xml"],
@@ -8984,7 +8678,6 @@
     "/api/1.0/appliance-management/status/{component_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "upgradeStatus /1.0/appliance-management/status/{{componentID}}",
         "description": "Query upgrade status\n\nParameters:\n\ncomponentID: Component ID\n\n",
         "operationId": "upgradeStatus10ApplianceManagementStatusComponentId",
         "consumes": ["application/xml"],
@@ -9011,7 +8704,6 @@
     "/api/4.0/edges/{edge_id}/statistics/interfaces/uplink": {
       "post": {
         "tags": ["Web"],
-        "summary": "uplinkVNICStatsRead /4.0/edges/{{edgeId}}/statistics/interfaces/uplink",
         "description": "Get uplink interface statistics\n\nParameters:\n\n",
         "operationId": "uplinkVnicStatsRead40EdgesEdgeIdStatisticsInterfacesUplink",
         "consumes": ["application/xml"],
@@ -9038,7 +8730,6 @@
     "/api/3.0/ai/records": {
       "post": {
         "tags": ["Web"],
-        "summary": "userActivityRead /3.0/ai/records",
         "description": "Get aggregated user activity\n\nParameters:\n\n",
         "operationId": "userActivityRead30AiRecords",
         "consumes": ["application/xml"],
@@ -9107,7 +8798,6 @@
     "/api/3.0/ai/userdetails": {
       "post": {
         "tags": ["Web"],
-        "summary": "userDetailsRead /3.0/ai/userdetails",
         "description": "Retrieve user detail records in accordance with given query parameters\n\nParameters:\n\n",
         "operationId": "userDetailsRead30AiUserdetails",
         "consumes": ["application/xml"],
@@ -9176,7 +8866,6 @@
     "/api/3.0/ai/directorygroup/user/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "userDirGroupRead /3.0/ai/directorygroup/user/{{userID}}",
         "description": "Retrieve AD groups that user belongs to\n\nParameters:\n\nuserID: User ID\n\n",
         "operationId": "userDirGroupRead30AiDirectorygroupUserUserId",
         "consumes": ["application/xml"],
@@ -9203,7 +8892,6 @@
     "/api/1.0/identity/directoryGroupsForUser/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "userDirGroupsRead /1.0/identity/directoryGroupsForUser/{{userID}}",
         "description": "Query set of Windows Domain Groups (AD Groups) to which the specified user belongs\n\nParameters:\n\nuserID: User ID\n\n",
         "operationId": "userDirGroupsRead10IdentityDirectoryGroupsForUserUserId",
         "consumes": ["application/xml"],
@@ -9230,7 +8918,6 @@
     "/api/1.0/identity/userIpMapping": {
       "post": {
         "tags": ["Web"],
-        "summary": "userIpMappingRead /1.0/identity/userIpMapping",
         "description": "Query user-to-ip mapping list from database\n\nParameters:\n\n",
         "operationId": "userIpMappingRead10IdentityUserIpMapping",
         "consumes": ["application/xml"],
@@ -9249,7 +8936,6 @@
     "/api/2.0/services/usermgmt/roles": {
       "post": {
         "tags": ["Web"],
-        "summary": "userMgmtRoleRead /2.0/services/usermgmt/roles",
         "description": "Read all possible roles in NSX Manager\n\nParameters:\n\n",
         "operationId": "userMgmtRoleRead20ServicesUsermgmtRoles",
         "consumes": ["application/xml"],
@@ -9268,7 +8954,6 @@
     "/api/2.0/services/usermgmt/role/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "userMgmtRoleRead /2.0/services/usermgmt/role/{{userId}}",
         "description": "Retrieve a user's role (possible roles are super_user, vshield_admin, enterprise_admin, security_admin, and audit)\n\nParameters:\n\nuserId: user to retrieve role information from\n\n",
         "operationId": "userMgmtRoleRead20ServicesUsermgmtRoleUserId",
         "consumes": ["application/xml"],
@@ -9295,7 +8980,6 @@
     "/api/2.0/services/usermgmt/enablestate/{value}": {
       "post": {
         "tags": ["Web"],
-        "summary": "userMgmtStateUpdate /2.0/services/usermgmt/enablestate/{{value}}",
         "description": "Enable or disable a user account\n\nParameters:\n\nvalue: value can be 0 to disable, or 1 to enable\n\n",
         "operationId": "userMgmtStateUpdate20ServicesUsermgmtEnablestateValue",
         "consumes": ["application/xml"],
@@ -9322,7 +9006,6 @@
     "/api/2.0/services/usermgmt/user/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "userMgmtUserRead /2.0/services/usermgmt/user/{{userId}}",
         "description": "Get information about a user\n\nParameters:\n\nuserId: user ID\n\n",
         "operationId": "userMgmtUserRead20ServicesUsermgmtUserUserId",
         "consumes": ["application/xml"],
@@ -9349,7 +9032,6 @@
     "/api/2.0/services/usermgmt/users/vsm": {
       "post": {
         "tags": ["Web"],
-        "summary": "userNSXManagerInfoRead /2.0/services/usermgmt/users/vsm",
         "description": "Get information about users who have been assigned a NSX Manager role (local users as well as vCenter users with NSX Manager role)\n\nParameters:\n\n",
         "operationId": "userNsxManagerInfoRead20ServicesUsermgmtUsersVsm",
         "consumes": ["application/xml"],
@@ -9368,7 +9050,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/auth/localserver/users/{user_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "userRead /4.0/edges/{{edgeId}}/sslvpn/config/auth/localserver/users/{{userID}}",
         "description": "Get information about a specified user\n\nParameters:\n\nuserID: \n\n",
         "operationId": "userRead40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersUserId",
         "consumes": ["application/xml"],
@@ -9402,7 +9083,6 @@
     "/api/2.0/services/usermgmt/scopingobjects": {
       "post": {
         "tags": ["Web"],
-        "summary": "userScopingObjectsRead /2.0/services/usermgmt/scopingobjects",
         "description": "Retrieve a list of objects that can be used to define a user's access scope\n\nParameters:\n\n",
         "operationId": "userScopingObjectsRead20ServicesUsermgmtScopingobjects",
         "consumes": ["application/xml"],
@@ -9421,7 +9101,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/auth/localserver/users": {
       "post": {
         "tags": ["Web"],
-        "summary": "usersCreate /4.0/edges/{{edgeId}}/sslvpn/config/auth/localserver/users",
         "description": "Add a new portal user\n\nParameters:\n\n",
         "operationId": "usersCreate40EdgesEdgeIdSslvpnConfigAuthLocalserverUsers",
         "consumes": ["application/xml"],
@@ -9456,7 +9135,6 @@
     "/api/2.0/services/vcconfig": {
       "post": {
         "tags": ["Web"],
-        "summary": "vCenterConfigRead /2.0/services/vcconfig",
         "description": "Get vCenter Server configuration details on NSX Manager\n\nParameters:\n\n",
         "operationId": "vCenterConfigRead20ServicesVcconfig",
         "consumes": ["application/xml"],
@@ -9475,7 +9153,6 @@
     "/api/2.0/services/vcconfig/status": {
       "post": {
         "tags": ["Web"],
-        "summary": "vCenterStatusRead /2.0/services/vcconfig/status",
         "description": "Get default vCenter Server connection status\n\nParameters:\n\n",
         "operationId": "vCenterStatusRead20ServicesVcconfigStatus",
         "consumes": ["application/xml"],
@@ -9494,7 +9171,6 @@
     "/api/2.0/vdn/config/vxlan/udp/port": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnConfigUDPShow /2.0/vdn/config/vxlan/udp/port",
         "description": "View configured UDP port for VXLAN\n\nParameters:\n\n",
         "operationId": "vdnConfigUdpShow20VdnConfigVxlanUdpPort",
         "consumes": ["application/xml"],
@@ -9513,7 +9189,6 @@
     "/api/2.0/vdn/config/vxlan/udp/port/{port_number}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnConfigUDPUpdate /2.0/vdn/config/vxlan/udp/port/{{portNumber}}",
         "description": "Updates the UDP Port used for VXLAN\n\nParameters:\n\nportNumber: A valid UDP Port for VXLAN\n\n",
         "operationId": "vdnConfigUdpUpdate20VdnConfigVxlanUdpPortPortNumber",
         "consumes": ["application/xml"],
@@ -9540,7 +9215,6 @@
     "/api/2.0/vdn/config/multicasts": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnMulticastPoolAdd /2.0/vdn/config/multicasts",
         "description": "Adds a multicast range for logical switches\n\nParameters:\n\n",
         "operationId": "vdnMulticastPoolAdd20VdnConfigMulticasts",
         "consumes": ["application/xml"],
@@ -9568,7 +9242,6 @@
     "/api/2.0/vdn/config/multicasts/{multicast_addresss_range_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnMulticastPoolShow /2.0/vdn/config/multicasts/{{multicastAddresssRangeId}}",
         "description": "Retrieve details of an individual Multicast range Pool\n\nParameters:\n\nmulticastAddresssRangeId: A valid multicast Pool range Id\n\n",
         "operationId": "vdnMulticastPoolShow20VdnConfigMulticastsMulticastAddresssRangeId",
         "consumes": ["application/xml"],
@@ -9595,7 +9268,6 @@
     "/api/2.0/vdn/scopes/{scope_id}/attributes": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnScopeAttribUpdate /2.0/vdn/scopes/{{scopeId}}/attributes",
         "description": "update the attributes of a transport zone (e.g. Name, description)\n\nParameters:\n\n",
         "operationId": "vdnScopeAttribUpdate20VdnScopesScopeIdAttributes",
         "consumes": ["application/xml"],
@@ -9630,7 +9302,6 @@
     "/api/2.0/vdn/scopes/{scope_id}/conn-check/multicast": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnScopeConnCheck /2.0/vdn/scopes/{{scopeId}}/conn-check/multicast",
         "description": "Test multicast group connectivity in a transport zone\n\nParameters:\n\n",
         "operationId": "vdnScopeConnCheck20VdnScopesScopeIdConnCheckMulticast",
         "consumes": ["application/xml"],
@@ -9665,7 +9336,6 @@
     "/api/2.0/vdn/scopes/{scope_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnScopeProperties /2.0/vdn/scopes/{{scopeId}}",
         "description": "Retrieve the properties of an existing network scope\n\nParameters:\n\nscopeId: A valid scope Id\n\n",
         "operationId": "vdnScopeProperties20VdnScopesScopeId",
         "consumes": ["application/xml"],
@@ -9692,7 +9362,6 @@
     "/api/2.0/vdn/scopes": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnScopesList /2.0/vdn/scopes",
         "description": "Retrieve a list of all known VDN Scopes\n\nParameters:\n\n",
         "operationId": "vdnScopesList20VdnScopes",
         "consumes": ["application/xml"],
@@ -9711,7 +9380,6 @@
     "/api/2.0/vdn/config/segments": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnSegmentPoolAdd /2.0/vdn/config/segments",
         "description": "Add a segment ID Pool\n\nParameters:\n\n",
         "operationId": "vdnSegmentPoolAdd20VdnConfigSegments",
         "consumes": ["application/xml"],
@@ -9739,7 +9407,6 @@
     "/api/2.0/vdn/config/segments/{segment_pool_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdnSegmentPoolShow /2.0/vdn/config/segments/{{segmentPoolId}}",
         "description": "Retrieve details of an individual segment ID Pool\n\nParameters:\n\nsegmentPoolId: A valid segment Pool Id\n\n",
         "operationId": "vdnSegmentPoolShow20VdnConfigSegmentsSegmentPoolId",
         "consumes": ["application/xml"],
@@ -9766,7 +9433,6 @@
     "/api/2.0/vdn/switches/datacenter/{datacenter_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdsListInDc /2.0/vdn/switches/datacenter/{{datacenterID}}",
         "description": "Lists all VDS's in a specified vSphere Datacenter Object\n\nParameters:\n\ndatacenterID: A valid Datacenter Id (e.g. datacenter-4)\n\n",
         "operationId": "vdsListInDc20VdnSwitchesDatacenterDatacenterId",
         "consumes": ["application/xml"],
@@ -9793,7 +9459,6 @@
     "/api/2.0/vdn/switches": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdsPrepare /2.0/vdn/switches",
         "description": "prepares a pre-configured vds with teaming and MTU options, MTU must be 1600 or higher\n\nParameters:\n\n",
         "operationId": "vdsPrepare20VdnSwitches",
         "consumes": ["application/xml"],
@@ -9821,7 +9486,6 @@
     "/api/2.0/vdn/switches/{vds_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vdsShow /2.0/vdn/switches/{{vdsId}}",
         "description": "Retrieve a specific vds by specific switchId (e.g. dvs-26)\n\nParameters:\n\nvdsId: A valid switch (VDS) Id (e.g. dvs-26)\n\n",
         "operationId": "vdsShow20VdnSwitchesVdsId",
         "consumes": ["application/xml"],
@@ -9848,7 +9512,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/virtualservers/{virtualserver_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "virtualServerRead /4.0/edges/{{edgeId}}/loadbalancer/config/virtualservers/{{virtualserverID}}",
         "description": "Retrieve virtual server details\n\nParameters:\n\nvirtualserverID: Specified virtual server ID\n\n",
         "operationId": "virtualServerRead40EdgesEdgeIdLoadbalancerConfigVirtualserversVirtualserverId",
         "consumes": ["application/xml"],
@@ -9882,7 +9545,6 @@
     "/api/4.0/edges/{edge_id}/loadbalancer/config/virtualservers": {
       "post": {
         "tags": ["Web"],
-        "summary": "virtualServersCreate /4.0/edges/{{edgeId}}/loadbalancer/config/virtualservers",
         "description": "Add a virtual server\n\nParameters:\n\n",
         "operationId": "virtualServersCreate40EdgesEdgeIdLoadbalancerConfigVirtualservers",
         "consumes": ["application/xml"],
@@ -9917,7 +9579,6 @@
     "/api/2.0/services/policy/virtualmachine/{id}/securityactions": {
       "post": {
         "tags": ["Web"],
-        "summary": "vmApplicableSecurityAction /2.0/services/policy/virtualmachine/{{ID}}/securityactions",
         "description": "Fetch the security actions applicable on a virtual machine\n\nParameters:\n\nID: VM ID\n\n",
         "operationId": "vmApplicableSecurityAction20ServicesPolicyVirtualmachineIdSecurityactions",
         "consumes": ["application/xml"],
@@ -9944,7 +9605,6 @@
     "/api/3.0/ai/vm": {
       "post": {
         "tags": ["Web"],
-        "summary": "vmDetailsRead /3.0/ai/vm",
         "description": "Retrieve list of all discovered vm's\n\nParameters:\n\n",
         "operationId": "vmDetailsRead30AiVm",
         "consumes": ["application/xml"],
@@ -9963,7 +9623,6 @@
     "/api/4.0/edges/{edge_id}/statistics/dashboard/interface": {
       "post": {
         "tags": ["Web"],
-        "summary": "vnicDashStatsRead /4.0/edges/{{edgeId}}/statistics/dashboard/interface",
         "description": "Retrieve dashboard statistics between the specified start and end times.\n\nParameters:\n\n",
         "operationId": "vnicDashStatsRead40EdgesEdgeIdStatisticsDashboardInterface",
         "consumes": ["application/xml"],
@@ -9997,7 +9656,6 @@
     "/api/4.0/edges/{edge_id}/vnics/{index}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vnicRead /4.0/edges/{{edgeId}}/vnics/{{index}}",
         "description": "Retrieve interface\n\nParameters:\n\nindex: Specified interface\n\n",
         "operationId": "vnicRead40EdgesEdgeIdVnicsIndex",
         "consumes": ["application/xml"],
@@ -10031,7 +9689,6 @@
     "/api/4.0/edges/{edge_id}/vnics": {
       "post": {
         "tags": ["Web"],
-        "summary": "vnicsCreate /4.0/edges/{{edgeId}}/vnics",
         "description": "Add an interface or sub interface\n\nParameters:\n\n",
         "operationId": "vnicsCreate40EdgesEdgeIdVnics",
         "consumes": ["application/xml"],
@@ -10073,7 +9730,6 @@
     "/api/4.0/edges/{edge_id}/statistics/interfaces": {
       "post": {
         "tags": ["Web"],
-        "summary": "vnicStatsRead /4.0/edges/{{edgeId}}/statistics/interfaces",
         "description": "Get interface statistics\n\nParameters:\n\n",
         "operationId": "vnicStatsRead40EdgesEdgeIdStatisticsInterfaces",
         "consumes": ["application/xml"],
@@ -10100,7 +9756,6 @@
     "/api/2.0/endpointsecurity/activation/{vendor_id}/{altitude}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionActivate /2.0/endpointsecurity/activation/{{vendorID}}/{{altitude}}",
         "description": "Activate a solution that has been registered and located\n\nParameters:\n\nvendorID: VMware-assigned ID for the vendor\n\naltitude: VMware-assigned number to uniquely identify a solution. Describes the type of solution and the order in which the solution receives events relative to other solutions on the same host\n\n",
         "operationId": "vShieldSolutionActivate20EndpointsecurityActivationVendorIdAltitude",
         "consumes": ["application/xml"],
@@ -10142,7 +9797,6 @@
     "/api/2.0/endpointsecurity/activation/{vendor_id}/{solution_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionActivatedVMsRead /2.0/endpointsecurity/activation/{{vendorID}}/{{solutionID}}",
         "description": "Get a list of activated security vm's for the specified solution\n\nParameters:\n\nvendorID: VMware-assigned ID for the vendor\n\nsolutionID: solution ID\n\n",
         "operationId": "vShieldSolutionActivatedVMsRead20EndpointsecurityActivationVendorIdSolutionId",
         "consumes": ["application/xml"],
@@ -10176,7 +9830,6 @@
     "/api/2.0/endpointsecurity/activation": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionActivationRead /2.0/endpointsecurity/activation",
         "description": "Retrieve activation information for all activated security vm's on the specified host\n\nParameters:\n\n",
         "operationId": "vShieldSolutionActivationRead20EndpointsecurityActivation",
         "consumes": ["application/xml"],
@@ -10203,7 +9856,6 @@
     "/api/2.0/endpointsecurity/registration/{vendor_id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionCreate /2.0/endpointsecurity/registration/{{vendorID}}",
         "description": "Register an antivirus solution\n\nParameters:\n\nvendorID: VMware-assigned ID for the vendor\n\n",
         "operationId": "vShieldSolutionCreate20EndpointsecurityRegistrationVendorId",
         "consumes": ["application/xml"],
@@ -10238,7 +9890,6 @@
     "/api/2.0/endpointsecurity/activation/{vendor_id}/{altitude}/{moid}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionDeactivate /2.0/endpointsecurity/activation/{{vendorID}}/{{altitude}}/{{moid}}",
         "description": "Deactivate a solution on a host\n\nParameters:\n\nmoid: Managed object reference of VM\n\n",
         "operationId": "vShieldSolutionDeactivate20EndpointsecurityActivationVendorIdAltitudeMoid",
         "consumes": ["application/xml"],
@@ -10279,7 +9930,6 @@
     "/api/2.0/endpointsecurity/registration/{vendor_id}/{altitude}": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionInfoRead /2.0/endpointsecurity/registration/{{vendorID}}/{{altitude}}",
         "description": "Get registration information for a given solution\n\nParameters:\n\naltitude: VMware-assigned number to uniquely identify a solution. Describes the type of solution and the order in which the solution receives events relative to other solutions on the same host\n\n",
         "operationId": "vShieldSolutionInfoRead20EndpointsecurityRegistrationVendorIdAltitude",
         "consumes": ["application/xml"],
@@ -10313,7 +9963,6 @@
     "/api/2.0/endpointsecurity/registration/{vendor_id}/solutions": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldSolutionsInfoRead /2.0/endpointsecurity/registration/{{vendorID}}/solutions",
         "description": "Retrieve registration information for all registered solutions for a vendor\n\nParameters:\n\n",
         "operationId": "vShieldSolutionsInfoRead20EndpointsecurityRegistrationVendorIdSolutions",
         "consumes": ["application/xml"],
@@ -10340,7 +9989,6 @@
     "/api/2.0/endpointsecurity/registration": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldVendorCreate /2.0/endpointsecurity/registration",
         "description": "Register a vendor\n\nParameters:\n\n",
         "operationId": "vShieldVendorCreate20EndpointsecurityRegistration",
         "consumes": ["application/xml"],
@@ -10368,7 +10016,6 @@
     "/api/2.0/endpointsecurity/registration/vendors": {
       "post": {
         "tags": ["Web"],
-        "summary": "vShieldVendorsInfoRead /2.0/endpointsecurity/registration/vendors",
         "description": "Retrieve the list of all registered vendors\n\nParameters:\n\n",
         "operationId": "vShieldVendorsInfoRead20EndpointsecurityRegistrationVendors",
         "consumes": ["application/xml"],
@@ -10387,7 +10034,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/webresources/{id}": {
       "post": {
         "tags": ["Web"],
-        "summary": "webResourceRead /4.0/edges/{{edgeId}}/sslvpn/config/webresources/{{id}}",
         "description": "Get the specified web access server\n\nParameters:\n\nid: ID of specified web access server\n\n",
         "operationId": "webResourceRead40EdgesEdgeIdSslvpnConfigWebresourcesId",
         "consumes": ["application/xml"],
@@ -10421,7 +10067,6 @@
     "/api/4.0/edges/{edge_id}/sslvpn/config/webresources": {
       "post": {
         "tags": ["Web"],
-        "summary": "webResourcesCreate /4.0/edges/{{edgeId}}/sslvpn/config/webresources",
         "description": "Add portal web resource\n\nParameters:\n\n",
         "operationId": "webResourcesCreate40EdgesEdgeIdSslvpnConfigWebresources",
         "consumes": ["application/xml"],
