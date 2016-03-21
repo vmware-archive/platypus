@@ -9,7 +9,7 @@
       "url": "grantorchard.com"
     }
   },
-  "host": "host.name",
+  "host": "platypus_host",
   "basePath": "/",
   "paths": {
     "/catalog-service/api/consumer/resources/{id}/icon": {

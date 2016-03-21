@@ -7,9 +7,10 @@
       "name": "Grant Orchard",
       "email": "gorchard@vmware.com",
       "url": "grantorchard.com"
+  	}
   },
-  "host": "host.name",
-  "basePath": null,
+  "host": "platypus_host",
+  "basePath": "/",
   "schemes": ["https"],
   "paths": {
     "/api/4.0/edges/{edge_id}/sslvpn/config/advancedconfig": {

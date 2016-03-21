@@ -9,8 +9,8 @@
       "url": "cloudcanuck.ca"
     }
   },
-  "host": "host.name",
-  "basePath": "",
+  "host": "platypus_host",
+  "basePath": "/",
   "paths": {
     "/suite-api/api/": {},
     "/suite-api/api/api": {},

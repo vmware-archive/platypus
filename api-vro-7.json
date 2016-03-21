@@ -9,8 +9,8 @@
       "url": "storagegumbo.com"
     }
   },
-  "host": "host.name",
-  "basePath": "",
+  "host": "platypus_host",
+  "basePath": "/",
   "paths": {
     "/vco/": {
       "get": {
