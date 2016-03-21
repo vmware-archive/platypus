@@ -1,5 +1,5 @@
 ## Project Platypus
-<img src="platypus.svg" width="150">
+![](platypus.jpg)
 
 Platypus is an initiative to improve documentation across a number of VMware's products (see [Supported Products](#supported-products)) as described using [Open API](https://openapis.org/) and [Swagger UI](http://swagger.io/swagger-ui/). This allows everyone to easily consume, and enhance VMware's REST API's & their usage.
 
