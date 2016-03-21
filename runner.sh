@@ -12,6 +12,11 @@ if [ -z ${VERSION} ]; then
   export VERSION="7"
 fi
 
+if [ -z ${APIHOST} ]; then
+  echo "APIHOST not set, defaulting to localhost."
+  export APIHOST="localhost"
+fi
+
 # check the file actually exists
 API_FILE="api-$PRODUCT-$VERSION.json"
 API_FILE=${API_FILE,,}
@@ -22,6 +27,7 @@ if [ ! -f $API_FILE ]; then
 fi
 
 sed -i -e "s|http://petstore.swagger.io/v2/swagger.json|api-$PRODUCT-$VERSION.json|g" /app/dist/index.html
+sed -i -e "s|platypus_host|$APIHOST|g" app/dist/api-$PRODUCT-$VERSION.json
 
 echo "starting your swaggerness"
 /app/node_modules/gulp/bin/gulp.js serve
