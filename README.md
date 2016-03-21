@@ -6,7 +6,7 @@
 
 `docker run --rm --name platypus -p 80:8080 vmware/platypus`
 
-## Specify PRODUCT & VERSION
+## Specify PRODUCT & VERSION to default to
 
 `docker run --name platypus --rm -p 80:8080 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
 
