@@ -9,6 +9,7 @@
       "url": "cloudcanuck.ca"
     }
   },
+  "host": "host.name",
   "basePath": "",
   "paths": {
     "/suite-api/api/": {},

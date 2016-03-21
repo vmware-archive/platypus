@@ -9,6 +9,7 @@
       "url": "storagegumbo.com"
     }
   },
+  "host": "host.name",
   "basePath": "",
   "paths": {
     "/vco/": {
