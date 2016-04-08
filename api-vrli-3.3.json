@@ -30,12 +30,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -46,17 +41,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -64,12 +49,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/ad/test": {
@@ -82,17 +62,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -100,12 +70,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/ad": {
@@ -126,12 +91,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -142,17 +102,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -160,12 +110,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/adgroups/{type}/{domain}/{name}/capabilities": {
@@ -180,28 +125,26 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -211,12 +154,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -229,22 +167,6 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
@@ -253,13 +175,18 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "type",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -269,12 +196,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -287,22 +209,6 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
@@ -311,13 +217,18 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "type",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -327,12 +238,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -345,28 +251,26 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -376,12 +280,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/adgroups/{type}/{domain}/{name}/datasets": {
@@ -396,20 +295,18 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "domain",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           },
           {
             "name": "name",
@@ -427,12 +324,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -445,20 +337,18 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "domain",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           },
           {
             "name": "name",
@@ -467,15 +357,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -485,12 +366,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -503,20 +379,18 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "domain",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           },
           {
             "name": "name",
@@ -525,15 +399,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -543,12 +408,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -561,20 +421,18 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "domain",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           },
           {
             "name": "name",
@@ -592,12 +450,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/adgroups/{type}/{domain}/{name}/groups": {
@@ -612,28 +465,26 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -643,12 +494,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -661,22 +507,6 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
@@ -685,13 +515,18 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "type",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -701,12 +536,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -719,22 +549,6 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
@@ -743,13 +557,18 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "type",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -759,12 +578,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -777,28 +591,26 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "domain",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "name",
             "in": "path",
             "required": true,
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -808,12 +620,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/adgroups/{type}/{domain}/{name}": {
@@ -840,8 +647,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "domain",
@@ -867,12 +673,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -889,8 +690,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "domain",
@@ -907,15 +707,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -925,12 +716,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -947,8 +733,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "domain",
@@ -971,12 +756,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -993,8 +773,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "domain",
@@ -1020,12 +799,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/adgroups": {
@@ -1055,12 +829,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -1071,17 +840,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1089,12 +848,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/config/{agentId}": {
@@ -1132,12 +886,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/config": {
@@ -1150,17 +899,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1168,12 +907,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/groups/{cpNameSpace}/{groupName}": {
@@ -1208,12 +942,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/groups/{groupName}": {
@@ -1234,15 +963,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -1252,12 +972,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -1290,12 +1005,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/groups": {
@@ -1316,12 +1026,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -1332,17 +1037,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1350,12 +1045,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/packages/files/{fileName}": {
@@ -1385,12 +1075,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -1415,12 +1100,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/packages/info/{packageType}": {
@@ -1467,12 +1147,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/packages/types/{packageType}": {
@@ -1511,12 +1186,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/packages": {
@@ -1529,17 +1199,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1547,12 +1207,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/search": {
@@ -1565,17 +1220,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1583,12 +1228,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent/status/{agentId}": {
@@ -1618,12 +1258,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -1642,15 +1277,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -1660,12 +1286,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/agent": {
@@ -1686,12 +1307,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/aggregated-events/*path": {
@@ -1721,12 +1337,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/aggregated-events": {
@@ -1756,12 +1367,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/appliance/support-bundles/{id}": {
@@ -1800,12 +1406,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -1830,12 +1431,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/appliance/support-bundles": {
@@ -1848,17 +1444,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1866,12 +1452,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/archiving/config": {
@@ -1892,12 +1473,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -1908,17 +1484,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1926,12 +1492,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/archiving/test": {
@@ -1944,17 +1505,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1962,12 +1513,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/archiving": {
@@ -1988,12 +1534,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -2004,17 +1545,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -2022,12 +1553,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/auth-providers": {
@@ -2048,12 +1574,7 @@
               "$ref": "#/definitions/AuthProvidersresponse"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/cassandra/sstables/{table}/nodes/local": {
@@ -2072,8 +1593,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -2083,12 +1603,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/cassandra/sstables/{table}": {
@@ -2109,15 +1624,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -2127,12 +1633,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/cassandra/version": {
@@ -2153,12 +1654,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -2169,17 +1665,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -2187,12 +1673,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/config/data": {
@@ -2213,12 +1694,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -2229,17 +1705,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -2247,12 +1713,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/config": {
@@ -2282,12 +1743,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "Sets a new internal cluster configuration.\nConfiguration is replicated internally to all cluster members.\nSome configuration options require a service restart to take effect.\nOption values modified using one of these methods are not checked for validity.\nConfirm all changes before applying them.\n",
@@ -2313,7 +1769,7 @@
             "required": true,
             "x-is-map": false,
             "schema": {
-              "$ref": "#/definitions/Configrequest"
+              "$ref": "#/definitions/anonymousRepresentation"
             }
           }
         ],
@@ -2327,12 +1783,7 @@
           "400": {
             "description": "Failed to apply configuration changes, either because of a parse error\nor invalid configuration options.\n"
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/contentpacks/{contentPackNamespace}": {
@@ -2362,12 +1813,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -2392,12 +1838,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/contentpacks": {
@@ -2418,12 +1859,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -2442,15 +1878,6 @@
             "x-is-map": false,
             "type": "boolean",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -2460,12 +1887,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/datasets/{dataSetId}": {
@@ -2503,12 +1925,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -2535,15 +1952,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -2553,12 +1961,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -2583,12 +1986,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -2624,12 +2022,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/datasets": {
@@ -2659,12 +2052,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -2683,15 +2071,6 @@
             "x-is-map": false,
             "type": "boolean",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -2701,12 +2080,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/deployment/approve": {
@@ -2719,17 +2093,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -2737,12 +2101,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/deployment/join": {
@@ -2755,17 +2114,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -2773,12 +2122,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/deployment/new": {
@@ -2791,17 +2135,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -2809,12 +2143,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/deployment/{nodeGuid}": {
@@ -2841,12 +2170,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/diag/checks": {
@@ -2867,12 +2191,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/diag/results/summary": {
@@ -2893,12 +2212,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/diag/results": {
@@ -2919,12 +2233,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/diag/results.vcenter.xml": {
@@ -2945,12 +2254,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/events/*path": {
@@ -2980,12 +2284,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/events/flush/{agentId}": {
@@ -3006,15 +2305,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3024,12 +2314,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/events/ingest/{agentId}": {
@@ -3050,15 +2335,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3068,12 +2344,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/events": {
@@ -3111,12 +2382,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/forwarding/destinations/{destinationId}": {
@@ -3146,12 +2412,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -3176,12 +2437,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/forwarding/destinations": {
@@ -3211,12 +2467,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -3227,17 +2478,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -3245,12 +2486,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -3261,17 +2497,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -3279,12 +2505,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/forwarding/test": {
@@ -3297,17 +2518,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -3315,12 +2526,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/forwarding": {
@@ -3350,12 +2556,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -3366,17 +2567,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -3384,12 +2575,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -3400,17 +2586,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -3418,12 +2594,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -3448,12 +2619,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/groups/{groupId}/adgroups": {
@@ -3483,12 +2649,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -3507,15 +2668,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3525,12 +2677,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -3558,12 +2705,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/groups/{groupId}/capabilities": {
@@ -3593,12 +2735,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -3617,15 +2754,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3635,12 +2763,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -3659,15 +2782,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3677,12 +2791,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -3710,12 +2819,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/groups/{groupId}/datasets": {
@@ -3745,12 +2849,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -3769,15 +2868,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3787,12 +2877,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -3811,15 +2896,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3829,12 +2905,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -3862,12 +2933,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/groups/{groupId}/users": {
@@ -3897,12 +2963,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -3921,15 +2982,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -3939,12 +2991,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -3972,12 +3019,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/groups/{groupId}": {
@@ -4015,12 +3057,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4047,15 +3084,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -4065,12 +3093,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -4095,12 +3118,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -4136,12 +3154,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/groups": {
@@ -4171,12 +3184,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4187,17 +3195,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -4205,12 +3203,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/hosts": {
@@ -4223,17 +3216,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -4241,12 +3224,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/ilb/status": {
@@ -4267,12 +3245,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/ilb": {
@@ -4293,12 +3266,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4309,17 +3277,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -4327,12 +3285,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/internal/agent/autoupdate": {
@@ -4353,12 +3306,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4369,17 +3317,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -4387,12 +3325,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/internal/cluster/action": {
@@ -4405,17 +3338,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -4423,12 +3346,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/internal/force-error/{errorType}": {
@@ -4458,12 +3376,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/internal/force-error-auth/{errorType}": {
@@ -4493,12 +3406,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/internal/ping": {
@@ -4519,12 +3427,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/clients": {
@@ -4545,12 +3448,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/item/{clientId}/{sourceId}": {
@@ -4588,12 +3486,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4620,15 +3513,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -4638,12 +3522,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -4676,12 +3555,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -4717,12 +3591,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/items/{clientId}": {
@@ -4752,12 +3621,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/lookup/{hostname}": {
@@ -4787,12 +3651,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/settings": {
@@ -4813,12 +3672,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4829,17 +3683,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -4847,12 +3691,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -4871,12 +3710,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/source/{sourceId}": {
@@ -4906,12 +3740,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -4930,15 +3759,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -4948,12 +3768,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -4978,12 +3793,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -5011,12 +3821,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/source": {
@@ -5029,17 +3834,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5047,12 +3842,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/inventory/sources": {
@@ -5073,12 +3863,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/licenses/{licenseId}": {
@@ -5105,12 +3890,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/licenses": {
@@ -5131,12 +3911,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -5147,17 +3922,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5165,12 +3930,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/load-balancer/status": {
@@ -5191,12 +3951,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/load-balancer": {
@@ -5217,12 +3972,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -5233,17 +3983,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5251,12 +3991,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/marketplace/index": {
@@ -5277,12 +4012,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -5293,17 +4023,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5311,12 +4031,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/messages/flush/{agentId}": {
@@ -5337,15 +4052,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -5355,12 +4061,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/messages/ingest/{agentId}": {
@@ -5381,15 +4082,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -5399,12 +4091,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/notification/channels": {
@@ -5425,12 +4112,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -5441,17 +4123,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5459,12 +4131,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/notifications": {
@@ -5485,12 +4152,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -5501,17 +4163,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5519,12 +4171,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/all/timerange": {
@@ -5545,12 +4192,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/compare/token": {
@@ -5571,12 +4213,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -5587,17 +4224,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5605,12 +4232,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/compare/{cancel_token}": {
@@ -5637,12 +4259,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/compare": {
@@ -5655,17 +4272,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5673,12 +4280,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/token/new": {
@@ -5699,12 +4301,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/{request_token}": {
@@ -5731,12 +4328,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries/{routing_token}": {
@@ -5775,12 +4367,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/queries": {
@@ -5801,12 +4388,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -5817,17 +4399,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5835,12 +4407,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/scripts/nodes/local": {
@@ -5862,15 +4429,6 @@
             "type": "integer",
             "format": "int64",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -5880,12 +4438,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/scripts/nodes/{nodeId}": {
@@ -5915,15 +4468,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -5933,12 +4477,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/scripts/nodes": {
@@ -5960,15 +4499,6 @@
             "type": "integer",
             "format": "int64",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -5978,12 +4508,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/sessions/current": {
@@ -6004,12 +4529,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/sessions": {
@@ -6030,12 +4550,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "Signs into Log Insight with the given credentials, created and returns a\nnew session.\n",
@@ -6053,7 +4568,7 @@
             "required": true,
             "x-is-map": false,
             "schema": {
-              "$ref": "#/definitions/Sessionsrequest"
+              "$ref": "#/definitions/anonymousRepresentation2"
             }
           }
         ],
@@ -6070,12 +4585,7 @@
           "503": {
             "description": "Log Insight did not have its initial configuration set up yet."
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/short/{token}": {
@@ -6105,12 +4615,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/short": {
@@ -6123,17 +4628,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -6141,12 +4636,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/ssl/force": {
@@ -6159,17 +4649,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -6177,12 +4657,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/stats/groups/{statGroup}/types/{statType}/names/{statName}/events": {
@@ -6201,16 +4676,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "statType",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "statName",
@@ -6221,13 +4687,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "statType",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -6237,12 +4701,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/stats/groups/{statGroup}/types/{statType}/names/{statName}": {
@@ -6261,16 +4720,14 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "statType",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "statName",
@@ -6288,12 +4745,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -6310,16 +4762,14 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "statType",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "statName",
@@ -6337,12 +4787,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/time/config": {
@@ -6363,12 +4808,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -6379,17 +4819,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -6397,12 +4827,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/time/test": {
@@ -6415,17 +4840,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -6433,12 +4848,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/time/testservers": {
@@ -6451,17 +4861,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -6469,12 +4869,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/time": {
@@ -6495,12 +4890,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/local": {
@@ -6521,12 +4911,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/eula": {
@@ -6547,15 +4932,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -6565,12 +4941,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/nodes/{node}": {
@@ -6589,8 +4960,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "node",
@@ -6608,12 +4978,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -6630,8 +4995,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "node",
@@ -6640,15 +5004,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -6658,12 +5013,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/rollback/local": {
@@ -6682,8 +5032,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -6693,12 +5042,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -6715,17 +5059,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -6735,12 +5069,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/rollback/services/local": {
@@ -6759,8 +5088,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -6770,12 +5098,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/rollback/services/{service}/local": {
@@ -6790,14 +5113,6 @@
         ],
         "parameters": [
           {
-            "name": "version",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "service",
             "in": "path",
             "required": true,
@@ -6806,13 +5121,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "version",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -6822,12 +5135,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -6840,7 +5148,7 @@
         ],
         "parameters": [
           {
-            "name": "version",
+            "name": "service",
             "in": "path",
             "required": true,
             "x-is-map": false,
@@ -6848,12 +5156,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "service",
+            "name": "version",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -6863,12 +5170,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/rollback/services": {
@@ -6887,17 +5189,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -6907,12 +5199,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/rollback": {
@@ -6942,12 +5229,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -6966,15 +5248,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -6984,12 +5257,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/snapshot/local": {
@@ -7016,8 +5284,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -7027,12 +5294,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7049,17 +5311,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -7069,12 +5321,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/snapshot": {
@@ -7112,12 +5359,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7136,15 +5378,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7154,12 +5387,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}/verified": {
@@ -7189,12 +5417,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades/{version}": {
@@ -7224,12 +5447,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/upgrades": {
@@ -7250,12 +5468,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7266,17 +5479,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -7284,12 +5487,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/self/snapshots/{snapshotId}/position": {
@@ -7310,15 +5508,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7328,12 +5517,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/self/snapshots/{snapshotId}": {
@@ -7354,15 +5538,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7372,12 +5547,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -7402,12 +5572,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -7435,12 +5600,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/self/snapshots": {
@@ -7461,12 +5621,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7477,17 +5632,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -7495,12 +5640,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -7516,12 +5656,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/capabilities/{capability}": {
@@ -7536,7 +5671,7 @@
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "capability",
             "in": "path",
             "required": true,
             "x-is-map": false,
@@ -7544,12 +5679,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "capability",
+            "name": "userId",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -7559,12 +5693,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/capabilities": {
@@ -7594,12 +5723,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -7618,15 +5742,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7636,12 +5751,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7660,15 +5770,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7678,12 +5779,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -7711,12 +5807,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/datasets": {
@@ -7746,12 +5837,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -7770,15 +5856,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7788,12 +5865,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7812,15 +5884,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7830,12 +5893,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -7863,12 +5921,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/groups": {
@@ -7898,12 +5951,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -7922,15 +5970,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7940,12 +5979,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -7964,15 +5998,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -7982,12 +6007,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -8015,12 +6035,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/snapshots/{snapshotId}/position": {
@@ -8039,8 +6054,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "snapshotId",
@@ -8049,15 +6063,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -8067,12 +6072,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/snapshots/{snapshotId}": {
@@ -8087,14 +6087,6 @@
         ],
         "parameters": [
           {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "snapshotId",
             "in": "path",
             "required": true,
@@ -8103,13 +6095,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "userId",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -8119,12 +6109,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -8137,7 +6122,7 @@
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "snapshotId",
             "in": "path",
             "required": true,
             "x-is-map": false,
@@ -8145,24 +6130,18 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "snapshotId",
+            "name": "userId",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -8175,7 +6154,7 @@
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "snapshotId",
             "in": "path",
             "required": true,
             "x-is-map": false,
@@ -8183,12 +6162,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "snapshotId",
+            "name": "userId",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -8198,12 +6176,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}/snapshots": {
@@ -8233,12 +6206,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -8257,15 +6225,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -8275,12 +6234,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -8305,12 +6259,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users/{userId}": {
@@ -8348,12 +6297,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -8372,15 +6316,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -8390,12 +6325,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -8420,12 +6350,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -8453,12 +6378,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/users": {
@@ -8488,12 +6408,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -8504,17 +6419,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -8522,12 +6427,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/version": {
@@ -8548,12 +6448,7 @@
               "$ref": "#/definitions/Versionresponse"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vidm/config": {
@@ -8566,17 +6461,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -8584,12 +6469,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vidm/state": {
@@ -8610,12 +6490,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vidm/status": {
@@ -8636,12 +6511,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vidm": {
@@ -8654,17 +6524,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -8672,12 +6532,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vrops/servers/{hostname}": {
@@ -8707,12 +6562,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -8731,15 +6581,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -8749,12 +6590,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -8773,15 +6609,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -8791,12 +6618,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -8821,12 +6643,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vrops/servers": {
@@ -8847,12 +6664,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -8863,17 +6675,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -8881,12 +6683,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vrops/testconnection": {
@@ -8899,17 +6696,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -8917,12 +6704,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vrops/{hostname}": {
@@ -8952,12 +6734,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -8976,15 +6753,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -8994,12 +6762,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9018,15 +6781,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9036,12 +6790,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -9066,12 +6815,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vrops": {
@@ -9092,12 +6836,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9108,17 +6847,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -9126,12 +6855,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vropspacks/{vropsPackNamespace}": {
@@ -9161,12 +6885,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -9199,12 +6918,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vropspacks": {
@@ -9225,12 +6939,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9257,15 +6966,6 @@
             "x-is-map": false,
             "type": "boolean",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9275,12 +6975,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/servers/{hostname}/hosts": {
@@ -9310,12 +7005,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9334,15 +7024,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9352,12 +7033,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -9385,12 +7061,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/servers/{hostname}": {
@@ -9420,12 +7091,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9444,15 +7110,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9462,12 +7119,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -9492,12 +7144,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -9525,12 +7172,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/servers/{vSphereHostname}/hosts/{esxiHost}": {
@@ -9549,8 +7191,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "esxiHost",
@@ -9568,12 +7209,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9590,8 +7226,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "esxiHost",
@@ -9600,15 +7235,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9618,12 +7244,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -9640,8 +7261,7 @@
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           },
           {
             "name": "esxiHost",
@@ -9659,12 +7279,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/servers": {
@@ -9685,12 +7300,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9701,17 +7311,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -9719,12 +7319,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/testconnection": {
@@ -9737,17 +7332,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -9755,12 +7340,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/{hostname}/hosts": {
@@ -9790,12 +7370,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -9814,15 +7389,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9832,12 +7398,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -9865,12 +7426,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/{hostname}": {
@@ -9900,12 +7456,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "put": {
         "description": "TODO: add a description",
@@ -9924,15 +7475,6 @@
             "x-is-map": false,
             "type": "string",
             "description": "TODO: add a description"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -9942,12 +7484,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "delete": {
         "description": "TODO: add a description",
@@ -9972,12 +7509,7 @@
           "200": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -10005,12 +7537,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere/{vSphereHostname}/hosts/{esxiHost}": {
@@ -10025,7 +7552,7 @@
         ],
         "parameters": [
           {
-            "name": "vSphereHostname",
+            "name": "esxiHost",
             "in": "path",
             "required": true,
             "x-is-map": false,
@@ -10033,12 +7560,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "esxiHost",
+            "name": "vSphereHostname",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -10048,12 +7574,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -10066,14 +7587,6 @@
         ],
         "parameters": [
           {
-            "name": "vSphereHostname",
-            "in": "path",
-            "required": true,
-            "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
-          },
-          {
             "name": "esxiHost",
             "in": "path",
             "required": true,
@@ -10082,13 +7595,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "body",
-            "in": "body",
+            "name": "vSphereHostname",
+            "in": "path",
             "required": true,
             "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -10098,12 +7609,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "patch": {
         "description": "TODO: add a description",
@@ -10116,7 +7622,7 @@
         ],
         "parameters": [
           {
-            "name": "vSphereHostname",
+            "name": "esxiHost",
             "in": "path",
             "required": true,
             "x-is-map": false,
@@ -10124,12 +7630,11 @@
             "description": "TODO: add a description"
           },
           {
-            "name": "esxiHost",
+            "name": "vSphereHostname",
             "in": "path",
             "required": true,
             "x-is-map": false,
-            "type": "string",
-            "description": "TODO: add a description"
+            "type": "string"
           }
         ],
         "responses": {
@@ -10139,12 +7644,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     },
     "/vsphere": {
@@ -10165,12 +7665,7 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "TODO: add a description",
@@ -10181,17 +7676,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "x-is-map": false,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -10199,13 +7684,110 @@
               "type": "object"
             }
           }
-        },
-        "security": [
-          {
-            "Authorization": []
-          }
-        ]
+        }
       }
     }
   },
+  "definitions": {
+    "AuthProvidersresponse": {
+      "title": "Auth Providers response",
+      "type": "object",
+      "properties": {
+        "providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "providers"
+      ]
+    },
+    "anonymousRepresentation": {
+      "title": "anonymousRepresentation",
+      "type": "object",
+      "properties": {
+        "configBlob": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "configBlob"
+      ]
+    },
+    "Configresponse": {
+      "title": "Config response",
+      "type": "object",
+      "properties": {
+        "restartRequired": {
+          "type": "boolean"
+        },
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "restartRequired",
+        "success"
+      ]
+    },
+    "anonymousRepresentation2": {
+      "title": "anonymousRepresentation2",
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "provider",
+        "password"
+      ]
+    },
+    "Sessionsresponse": {
+      "title": "Sessions response",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "sessionId": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "required": [
+        "userId",
+        "sessionId",
+        "ttl"
+      ]
+    },
+    "Versionresponse": {
+      "title": "Version response",
+      "type": "object",
+      "properties": {
+        "releaseName": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "releaseName",
+        "version"
+      ]
+    }
+  }
 }
