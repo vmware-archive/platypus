@@ -10,7 +10,24 @@
     }
   },
   "host": "platypus_host",
-  "basePath": "/",
+  "basePath": "/api/%7Bversion%7D",
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "description": "The word 'Bearer' followed by a single space and a session ID\nreturned from the `POST /api/v1/sessions` API.  The bearer token is\nan opaque string and should be sent as-is.\n",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/ad/config": {
       "get": {
