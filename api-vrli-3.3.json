@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.2",
+    "version": "2.0",
     "title": "VMware vRealize Log Insight 3.3",
     "contact": {
       "name": "Paul Gifford",
@@ -10,7 +10,7 @@
     }
   },
   "host": "platypus_host",
-  "basePath": "/api/",
+  "basePath": "/api/{version}",
   "paths": {
     "/ad/config": {
       "get": {
