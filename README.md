@@ -19,8 +19,9 @@ Platypus is an initiative to improve documentation across a number of VMware's p
 | ------------- | :---:         | :---:   |
 | vRA           | 7             | 3311738 |
 | vROPs         | 6.2           | 3445568 |
+| vRLI          | 3.3           | 3571626 |
 | vRO           | 7             | 3310032 |
-| NSX			| 6.2			| 		  |
+| NSX			      | 6.2		       	|    		  |
 
 
 _**or**_
