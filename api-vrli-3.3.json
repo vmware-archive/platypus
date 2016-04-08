@@ -1,33 +1,16 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "",
-    "title": "Log Insight",
-    "description": "The Log Insight REST API provides programmatic access to Log Insight and to\nthe data it collects.  You can use the API to insert events into the Log\nInsight data store, to query for events and to change the Log Insight\nconfiguration.  You can also use the API to install or upgrade Log Insight.\n\nTo use the Log Insight REST API you will need to send HTTPS requests from\nyour client application.  Log Insight requires authenticated access for\nmost API calls.  Use user credentials that Log Insight is set up to accept.\nLog Insight provides a variety of REST APIs.\n## About Authorization\nMost Log Insight APIs require authentication.  Your application can use the\nsessions API to sign into Log Insight and obtain a session ID.  The\napplication can then pass that session ID in the `Authorization` header of\nsubsequent API calls to have them authorized.\n## About Session ID's\nA session ID can be obtained from the `POST /api/v1/sessions` API by\nproviding valid credentials.  The session ID can then be used to\nauthenticate subsequent API requests.  Session ID's are sequences of\nletters, numbers and other characters.  They don't have any particular\nmeaning.  Each session ID can be used to authenticate API requests until it\nexpires.  The time-to-live (TTL) of a session ID is provided in the\nresponse to the `POST /api/v1/sessions` API.\n## How to authenticate to Log Insight\nUse the `POST /api/v1/sessions` API to sign into Log Insight.  For\nexample:\n\n    POST /api/v1/sessions HTTP/1.1\n    Accept: application/json\n    Content-Type: application/json\n    User-Agent: YourAppName/1.0\n\n    {\n        \"username\": \"username\",\n        \"password\": \"password\",\n        \"provider\": \"local\"\n    }\n\nThe API response contains a session ID that you can use with subsequent API\nrequests:\n\n    HTTP/1.1 200 OK\n    Content-Type: application/json\n\n    {\n      \"userId\": \"cc251b9f-b4d0-437d-86de-8ac560d45e55\",\n      \"sessionId\": \"80Lmue52xwIgDiQMu7as9jLdLFFs+Hn3HI2WP0fx6kH0ApL\",\n      \"ttl\": 1800\n    }\n## How to send authorized requests\nTo send an authorized API request, add the `Authorization` header to the\nrequest.  Set the value of the header to the word `Bearer`, followed by a\nsingle space character, and then followed by the session ID returned from\nthe `POST /api/v1/sessions` request.\n\n    GET /api/v1/time\n    User-Agent: YourAppName/1.0\n    Authorization: Bearer 80Lmue52xwIgDiQMu7as9jLdLFFs+Hn3HI2WP0fx6kH0ApL\n## About the query API\n## Limits to what can be queried\n## Querying for events\n## Querying for groups of events\n## Specifying constraints\n## Combining constraints",
-    "license": {
-      "name": "MIT",
-      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    "version": "1.2",
+    "title": "VMware vRealize Log Insight 3.3",
+    "contact": {
+      "name": "Paul Gifford",
+      "email": "pgifford@vmware.com",
+      "url": "cloudcanuck.ca"
     }
   },
-  "host": "127.0.0.1:9543",
-  "basePath": "/api/%7Bversion%7D",
-  "securityDefinitions": {
-    "Authorization": {
-      "type": "apiKey",
-      "description": "The word 'Bearer' followed by a single space and a session ID\nreturned from the `POST /api/v1/sessions` API.  The bearer token is\nan opaque string and should be sent as-is.\n",
-      "name": "Authorization",
-      "in": "header"
-    }
-  },
-  "schemes": [
-    "https"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "host": "platypus_host",
+  "basePath": "/api/v1",
   "paths": {
     "/ad/config": {
       "get": {
@@ -10225,106 +10208,4 @@
       }
     }
   },
-  "definitions": {
-    "AuthProvidersresponse": {
-      "title": "Auth Providers response",
-      "type": "object",
-      "properties": {
-        "providers": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "required": [
-        "providers"
-      ]
-    },
-    "Configrequest": {
-      "title": "Config request",
-      "type": "object",
-      "properties": {
-        "configBlob": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "configBlob"
-      ]
-    },
-    "Configresponse": {
-      "title": "Config response",
-      "type": "object",
-      "properties": {
-        "restartRequired": {
-          "type": "boolean"
-        },
-        "success": {
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "restartRequired",
-        "success"
-      ]
-    },
-    "Sessionsrequest": {
-      "title": "Sessions request",
-      "type": "object",
-      "properties": {
-        "username": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        },
-        "provider": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "username",
-        "password",
-        "provider"
-      ]
-    },
-    "Sessionsresponse": {
-      "title": "Sessions response",
-      "type": "object",
-      "properties": {
-        "userId": {
-          "type": "string"
-        },
-        "sessionId": {
-          "type": "string"
-        },
-        "ttl": {
-          "type": "integer",
-          "format": "int64"
-        }
-      },
-      "required": [
-        "userId",
-        "sessionId",
-        "ttl"
-      ]
-    },
-    "Versionresponse": {
-      "title": "Version response",
-      "type": "object",
-      "properties": {
-        "releaseName": {
-          "type": "string"
-        },
-        "version": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "releaseName",
-        "version"
-      ]
-    }
-  }
 }
