@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "specifying your environment .. "
 
@@ -19,19 +19,18 @@ fi
 
 # check the file actually exists
 API_FILE="api-$PRODUCT-$VERSION.json"
-API_FILE=${API_FILE,,}
 
 if [ ! -f $API_FILE ]; then
   echo "API Definition [ $API_FILE ] not found. Aborting"
   exit 1
 fi
 
-sed -i -e "s|http://petstore.swagger.io/v2/swagger.json|api-$PRODUCT-$VERSION.json|g" /app/dist/index.html
-sed -i -e "s|platypus_host|$API_HOST|g" app/dist/api-$PRODUCT-$VERSION.json
-sed -i -e 's,http://swagger.io,https://github.com/vmware/platypus,g' ./index.html
-sed -i -e 's,>swagger<,>platypus<,g' ./index.html
+sed -i -e "s|http://petstore.swagger.io/v2/swagger.json|api-$PRODUCT-$VERSION.json|g" index.html
+sed -i -e "s|platypus_host|$API_HOST|g" api-$PRODUCT-$VERSION.json
+sed -i -e 's,http://swagger.io,https://github.com/vmware/platypus,g' index.html
+sed -i -e 's,>swagger<,>platypus<,g' index.html
 sed -i -e 's,89bf04,01BFBF,g' ./css/screen.css
 sed -i -e 's,20px 0 20px 40px;,20px 0 20px 60px;,g' ./css/screen.css
 
 echo "starting your swaggerness"
-/app/node_modules/gulp/bin/gulp.js serve
+nginx -g 'daemon off;'

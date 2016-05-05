@@ -1,34 +1,30 @@
 #
-# used for Grant Orchard's - Project Platypus
-# for the make benefit of vRA API Swagger Documentation
+# used for Project Platypus; for the make benefit
+# of VMware API's Documentation using Swagger
 #
 # as seen on http://github.com/vmware/platypus
+# 
+
 #
-# must be used in conjuction with the Swagger UI
-#
-# hacky way of injecting the api definition below
+# hacky way of injecting the API definition
 #
 
-FROM vmware/node:4.2.4
+FROM alpine:3.3
 
 MAINTAINER Roman Tarnavski
 
-RUN tdnf install -y sed
+RUN apk add --update sed nginx
 
-WORKDIR /app
+WORKDIR /usr/share/nginx/html/
 
-COPY ./ui /app
+ADD ./ui/dist/ /usr/share/nginx/html
 
-COPY ./logo_small.png /app/dist/images/logo_small.png
+COPY ./logo_small.png /usr/share/nginx/html/images/logo_small.png
 
-RUN npm install
+EXPOSE 80
 
-EXPOSE 8080
+COPY "api-*.json" /usr/share/nginx/html/
 
-COPY "api-*.json" /app/dist/
+COPY "runner.sh" /usr/share/nginx/html/
 
-COPY "runner.sh" /app/dist/
-
-WORKDIR /app/dist/
-
-ENTRYPOINT ["/app/dist/runner.sh"]
+ENTRYPOINT ["/usr/share/nginx/html/runner.sh"]

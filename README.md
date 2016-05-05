@@ -5,11 +5,11 @@ Platypus is an initiative to improve documentation across a number of VMware's p
 
 ## Just Run it
 
-`docker run --rm --name platypus -p 80:8080 vmware/platypus`
+`docker run --rm --name platypus -p 80:80 vmware/platypus`
 
 ## Specify PRODUCT & VERSION
 
-`docker run --name platypus --rm -p 80:8080 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
+`docker run --name platypus --rm -p 80:80 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
 
 > replace vRA and version with product of your choice
 
