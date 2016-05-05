@@ -32,12 +32,11 @@ clone this repo, and then:
 
 `git submodule update --init --recursive` to make sure you obtain the Swagger-UI code-base
 
-#### Build it
+#### Build and run
 
-Replace `[vmware/platypus]` with your choice of a
+`docker build -t platypus .`
 
-`docker build -t vmware/platypus .`
-
+`docker run -p 80:80 platypus`
 
 ## Contribution
 
