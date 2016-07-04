@@ -940,10 +940,10 @@
         "operationId": "/api/authorization/roles/{roleId}/permissions/admin"
       }
     },
-    "/content-management/api/packages/validate": {
+    "/content-management-service/api/packages/validate": {
       "post": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -3167,10 +3167,10 @@
         "operationId": "/api/forms/{formId}/{bindingId}/{elementId}/values"
       }
     },
-    "/content-management/api/packages/{id}/contents": {
+    "/content-management-service/api/packages/{id}/contents": {
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -3466,10 +3466,10 @@
         "operationId": "/api/requests/hierarchy/{blueprintId}/schema/update"
       }
     },
-    "/content-management/api/provider/contenttypes/{id}": {
+    "/content-management-service/api/provider/contenttypes/{id}": {
       "put": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -3486,7 +3486,7 @@
       },
       "delete": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -3498,7 +3498,7 @@
       },
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -6666,10 +6666,10 @@
         "operationId": "/api/load-balancers/types"
       }
     },
-    "/content-management/api/packages/{id}/validate": {
+    "/content-management-service/api/packages/{id}/validate": {
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -6720,10 +6720,10 @@
         "operationId": "/api/networks/{id}"
       }
     },
-    "/content-management/api/provider/contents/{contentTypeId}/{id}": {
+    "/content-management-service/api/provider/contents/{contentTypeId}/{id}": {
       "delete": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -6740,7 +6740,7 @@
       },
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -6835,10 +6835,10 @@
         "operationId": "/services/types/{serviceTypeId}/endpoints/{endpointTypeId}"
       }
     },
-    "/content-management/api/contents/{contentTypeId}/{contentId}/data": {
+    "/content-management-service/api/contents/{contentTypeId}/{contentId}/data": {
       "post": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -11445,10 +11445,10 @@
         "operationId": "/api/info/approvalrequests/{requestId}"
       }
     },
-    "/content-management/api/provider/contenttypes": {
+    "/content-management-service/api/provider/contenttypes": {
       "post": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "description": "Request body",
@@ -11460,7 +11460,7 @@
       },
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -12008,10 +12008,10 @@
         "operationId": "/api/tenants/{tenantId}/subtenants/{id}/principals"
       }
     },
-    "/content-management/api/provider/contents": {
+    "/content-management-service/api/provider/contents": {
       "post": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "description": "Request body",
@@ -20281,10 +20281,10 @@
         "operationId": "/api/icons/images/{id}"
       }
     },
-    "/content-management/api/packages/{id}": {
+    "/content-management-service/api/packages/{id}": {
       "put": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -20301,7 +20301,7 @@
       },
       "delete": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -20313,7 +20313,7 @@
       },
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -20563,10 +20563,10 @@
         "operationId": "/api/authorization/tenants/{tenantId}/authorities/permissions"
       }
     },
-    "/content-management/api/contents": {
+    "/content-management-service/api/contents": {
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -21613,10 +21613,10 @@
         "operationId": "/api/softwarecomponenttypes/{id}/status"
       }
     },
-    "/content-management/api/contents/{id}/data": {
+    "/content-management-service/api/contents/{id}/data": {
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -22765,10 +22765,10 @@
         "operationId": "/api/data-service/schema/{classId}/instances/{id}"
       }
     },
-    "/content-management/api/contents/{id}": {
+    "/content-management-service/api/contents/{id}": {
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": true,
@@ -23353,10 +23353,10 @@
         "operationId": "/api/reservations/sync/{providerServiceTypeId}"
       }
     },
-    "/content-management/api/packages": {
+    "/content-management-service/api/packages": {
       "post": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
@@ -23388,7 +23388,7 @@
       },
       "get": {
         "tags": [
-          "content-management"
+          "content-management-service"
         ],
         "parameters": [{
           "required": false,
