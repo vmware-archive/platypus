@@ -5,11 +5,11 @@ Platypus is an initiative to improve documentation across a number of VMware's p
 
 ## Just Run it
 
-`docker run --rm --name platypus -p 80:8080 vmware/platypus`
+`docker run --rm --name platypus -p 80:80 vmware/platypus`
 
 ## Specify PRODUCT & VERSION
 
-`docker run --name platypus --rm -p 80:8080 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
+`docker run --name platypus --rm -p 80:80 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
 
 > replace vRA and version with product of your choice
 
@@ -19,8 +19,9 @@ Platypus is an initiative to improve documentation across a number of VMware's p
 | ------------- | :---:         | :---:   |
 | vRA           | 7             | 3311738 |
 | vROPs         | 6.2           | 3445568 |
+| vRLI          | 3.3           | 3571626 |
 | vRO           | 7             | 3310032 |
-| NSX			| 6.2			| 		  |
+| NSX			      | 6.2		       	|    		  |
 
 
 _**or**_
@@ -31,12 +32,11 @@ clone this repo, and then:
 
 `git submodule update --init --recursive` to make sure you obtain the Swagger-UI code-base
 
-#### Build it
+#### Build and run
 
-Replace `[vmware/platypus]` with your choice of a
+`docker build -t platypus .`
 
-`docker build -t vmware/platypus .`
-
+`docker run -p 80:80 platypus`
 
 ## Contribution
 

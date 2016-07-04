@@ -1,0 +1,7793 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.2",
+    "title": "VMware vRealize Log Insight 3.3",
+    "contact": {
+      "name": "Paul Gifford",
+      "email": "pgifford@vmware.com",
+      "url": "cloudcanuck.ca"
+    }
+  },
+  "host": "platypus_host",
+  "basePath": "/api/v1",
+  "paths": {
+    "/ad/config": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ad"
+        ],
+        "operationId": "Get_AdConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ad"
+        ],
+        "operationId": "Create_AdConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/ad/test": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ad"
+        ],
+        "operationId": "Create_AdTest_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/ad": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ad"
+        ],
+        "operationId": "Get_Ad_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ad"
+        ],
+        "operationId": "Create_Ad_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/adgroups/{type}/{domain}/{name}/capabilities": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Get_AdgroupsNameCapabilitiesByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameCapabilitiesByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Create_AdgroupsNameCapabilitiesByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameCapabilitiesByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/adgroups/{type}/{domain}/{name}/datasets": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Get_AdgroupsNameDatasetsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameDatasetsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Create_AdgroupsNameDatasetsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameDatasetsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/adgroups/{type}/{domain}/{name}/groups": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Get_AdgroupsNameGroupsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameGroupsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Create_AdgroupsNameGroupsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameGroupsByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/adgroups/{type}/{domain}/{name}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Get_AdgroupsNameByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDataSets",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Create_AdgroupsNameByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Delete_AdgroupsNameByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Update_AdgroupsNameByTypeAndDomain_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/adgroups": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Get_Adgroups_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDataSets",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "adgroups"
+        ],
+        "operationId": "Create_Adgroups_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/config/{agentId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_AgentConfigByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hash",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/config": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Update_AgentConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/groups/{cpNameSpace}/{groupName}": {
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Delete_AgentGroupsByCpNameSpaceAndGroupName_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cpNameSpace",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "groupName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/agent/groups/{groupName}": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Update_AgentGroupsByGroupName_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Delete_AgentGroupsByGroupName_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cpNameSpace",
+            "in": "query",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "groupName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/agent/groups": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_AgentGroups_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Create_AgentGroups_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/packages/files/{fileName}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_AgentPackagesFilesByFileName_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Delete_AgentPackagesFilesByFileName_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/agent/packages/info/{packageType}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_AgentPackagesInfoByPackageType_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "osBitness",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "packageType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/packages/types/{packageType}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_AgentPackagesTypesByPackageType_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "osBitness",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "packageType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/packages": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Create_AgentPackages_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/search": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Create_AgentSearch_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent/status/{agentId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_AgentStatusByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Update_AgentStatusByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/agent": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "agent"
+        ],
+        "operationId": "Get_Agent_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/aggregated-events/*path": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "aggregated"
+        ],
+        "operationId": "Get_AggregatedEventsPath_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/aggregated-events": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "aggregated"
+        ],
+        "operationId": "Get_AggregatedEvents_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/appliance/support-bundles/{id}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "appliance"
+        ],
+        "operationId": "Get_ApplianceSupportBundlesById_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "timeout",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "appliance"
+        ],
+        "operationId": "Delete_ApplianceSupportBundlesById_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/appliance/support-bundles": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "appliance"
+        ],
+        "operationId": "Create_ApplianceSupportBundles_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/archiving/config": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "archiving"
+        ],
+        "operationId": "Get_ArchivingConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "archiving"
+        ],
+        "operationId": "Create_ArchivingConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/archiving/test": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "archiving"
+        ],
+        "operationId": "Create_ArchivingTest_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/archiving": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "archiving"
+        ],
+        "operationId": "Get_Archiving_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "archiving"
+        ],
+        "operationId": "Create_Archiving_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/auth-providers": {
+      "get": {
+        "description": "Returns a list of supported authentication providers. You can use these\nproviders with the sessions API.\n",
+        "tags": [
+          "auth"
+        ],
+        "operationId": "Get_AuthProviders_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AuthProvidersresponse"
+            }
+          }
+        }
+      }
+    },
+    "/cassandra/sstables/{table}/nodes/local": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "cassandra"
+        ],
+        "operationId": "Get_CassandraSstablesNodesLocalByTable_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "table",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/cassandra/sstables/{table}": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "cassandra"
+        ],
+        "operationId": "Create_CassandraSstablesByTable_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "table",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/cassandra/version": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "cassandra"
+        ],
+        "operationId": "Get_CassandraVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "cassandra"
+        ],
+        "operationId": "Update_CassandraVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/config/data": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "config"
+        ],
+        "operationId": "Get_ConfigData_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "config"
+        ],
+        "operationId": "Create_ConfigData_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/config": {
+      "get": {
+        "description": "Retrieves the current cluster configuration. Requires a user with at least\nthe *admin_view* permission. See https://kb.vmware.com/kb/2123058\n",
+        "tags": [
+          "config"
+        ],
+        "operationId": "Get_Config_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "defaults",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "Include all un-specified configuration options and their default values too."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Sets a new internal cluster configuration.\nConfiguration is replicated internally to all cluster members.\nSome configuration options require a service restart to take effect.\nOption values modified using one of these methods are not checked for validity.\nConfirm all changes before applying them.\n",
+        "tags": [
+          "config"
+        ],
+        "operationId": "Update_Config_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "validate",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "Whether to perform limited validation on the new configuration blob.\nDefault of `true` is highly recommended.\n"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "x-is-map": false,
+            "schema": {
+              "$ref": "#/definitions/anonymousRepresentation"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Configresponse"
+            }
+          },
+          "400": {
+            "description": "Failed to apply configuration changes, either because of a parse error\nor invalid configuration options.\n"
+          }
+        }
+      }
+    },
+    "/contentpacks/{contentPackNamespace}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "contentpacks"
+        ],
+        "operationId": "Get_ContentpacksByContentPackNamespace_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "contentPackNamespace",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "contentpacks"
+        ],
+        "operationId": "Delete_ContentpacksByContentPackNamespace_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "contentPackNamespace",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/contentpacks": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "contentpacks"
+        ],
+        "operationId": "Get_Contentpacks_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "contentpacks"
+        ],
+        "operationId": "Create_Contentpacks_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/datasets/{dataSetId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "datasets"
+        ],
+        "operationId": "Get_DatasetsByDataSetId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "dataSetId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "datasets"
+        ],
+        "operationId": "Create_DatasetsByDataSetId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "dataSetId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "datasets"
+        ],
+        "operationId": "Delete_DatasetsByDataSetId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "dataSetId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "datasets"
+        ],
+        "operationId": "Update_DatasetsByDataSetId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "dataSetId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/datasets": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "datasets"
+        ],
+        "operationId": "Get_Datasets_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "datasets"
+        ],
+        "operationId": "Create_Datasets_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/deployment/approve": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "deployment"
+        ],
+        "operationId": "Create_DeploymentApprove_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/deployment/join": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "deployment"
+        ],
+        "operationId": "Create_DeploymentJoin_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/deployment/new": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "deployment"
+        ],
+        "operationId": "Create_DeploymentNew_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/deployment/{nodeGuid}": {
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "deployment"
+        ],
+        "operationId": "Delete_DeploymentByNodeGuid_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "nodeGuid",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/diag/checks": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "diag"
+        ],
+        "operationId": "Get_DiagChecks_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/diag/results/summary": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "diag"
+        ],
+        "operationId": "Get_DiagResultsSummary_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/diag/results": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "diag"
+        ],
+        "operationId": "Get_DiagResults_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/diag/results.vcenter.xml": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "diag"
+        ],
+        "operationId": "Get_DiagResultsVcenterXml_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/events/*path": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "events"
+        ],
+        "operationId": "Get_EventsPath_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/events/flush/{agentId}": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "events"
+        ],
+        "operationId": "Update_EventsFlushByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/events/ingest/{agentId}": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "events"
+        ],
+        "operationId": "Create_EventsIngestByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/events": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "events"
+        ],
+        "operationId": "Get_Events_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "x-is-map": false,
+            "type": "string",
+            "description": "The standard HTTP Authorization header includes the keyword Bearer\nand the sessionId value returned from the POST `/sessions` API.\n"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/forwarding/destinations/{destinationId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Get_ForwardingDestinationsByDestinationId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "destinationId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Delete_ForwardingDestinationsByDestinationId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "destinationId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/forwarding/destinations": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Get_ForwardingDestinations_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "destinationId",
+            "in": "query",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Update_ForwardingDestinations_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Create_ForwardingDestinations_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/forwarding/test": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Create_ForwardingTest_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/forwarding": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Get_Forwarding_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "forwarderId",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Update_Forwarding_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Create_Forwarding_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "forwarding"
+        ],
+        "operationId": "Delete_Forwarding_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "forwarderId",
+            "in": "query",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/groups/{groupId}/adgroups": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Get_GroupsAdgroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Create_GroupsAdgroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsAdgroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/groups/{groupId}/capabilities": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Get_GroupsCapabilitiesByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsCapabilitiesByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Create_GroupsCapabilitiesByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsCapabilitiesByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/groups/{groupId}/datasets": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Get_GroupsDatasetsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsDatasetsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Create_GroupsDatasetsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsDatasetsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/groups/{groupId}/users": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Get_GroupsUsersByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Create_GroupsUsersByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsUsersByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/groups/{groupId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Get_GroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDataSets",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Create_GroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Delete_GroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Update_GroupsByGroupId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDisplayMeta",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/groups": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Get_Groups_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeDataSets",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "groups"
+        ],
+        "operationId": "Create_Groups_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/hosts": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "hosts"
+        ],
+        "operationId": "Create_Hosts_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/ilb/status": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ilb"
+        ],
+        "operationId": "Get_IlbStatus_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/ilb": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ilb"
+        ],
+        "operationId": "Get_Ilb_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ilb"
+        ],
+        "operationId": "Create_Ilb_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/internal/agent/autoupdate": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "internal"
+        ],
+        "operationId": "Get_InternalAgentAutoupdate_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "internal"
+        ],
+        "operationId": "Create_InternalAgentAutoupdate_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/internal/cluster/action": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "internal"
+        ],
+        "operationId": "Create_InternalClusterAction_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/internal/force-error/{errorType}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "internal"
+        ],
+        "operationId": "Get_InternalForceErrorByErrorType_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "errorType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/internal/force-error-auth/{errorType}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "internal"
+        ],
+        "operationId": "Get_InternalForceErrorAuthByErrorType_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "errorType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/internal/ping": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "internal"
+        ],
+        "operationId": "Get_InternalPing_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/clients": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventoryClients_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/item/{clientId}/{sourceId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventoryItemByClientIdAndSourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Create_InventoryItemByClientIdAndSourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Delete_InventoryItemByClientIdAndSourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Update_InventoryItemByClientIdAndSourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/items/{clientId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventoryItemsByClientId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/lookup/{hostname}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventoryLookupByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/settings": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventorySettings_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Create_InventorySettings_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Update_InventorySettings_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/source/{sourceId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventorySourceBySourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Create_InventorySourceBySourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Delete_InventorySourceBySourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Update_InventorySourceBySourceId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/source": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Create_InventorySource_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/inventory/sources": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "inventory"
+        ],
+        "operationId": "Get_InventorySources_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/licenses/{licenseId}": {
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "licenses"
+        ],
+        "operationId": "Delete_LicensesByLicenseId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "licenseId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/licenses": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "licenses"
+        ],
+        "operationId": "Get_Licenses_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "licenses"
+        ],
+        "operationId": "Create_Licenses_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/load-balancer/status": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "load"
+        ],
+        "operationId": "LoadBalancerStatus_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/load-balancer": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "load"
+        ],
+        "operationId": "LoadBalancer_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "load"
+        ],
+        "operationId": "Create_LoadBalancer_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/marketplace/index": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "marketplace"
+        ],
+        "operationId": "Get_MarketplaceIndex_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "marketplace"
+        ],
+        "operationId": "Create_MarketplaceIndex_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/messages/flush/{agentId}": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "messages"
+        ],
+        "operationId": "Update_MessagesFlushByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/messages/ingest/{agentId}": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "messages"
+        ],
+        "operationId": "Create_MessagesIngestByAgentId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/notification/channels": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "notification"
+        ],
+        "operationId": "Get_NotificationChannels_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "notification"
+        ],
+        "operationId": "Update_NotificationChannels_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/notifications": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "notifications"
+        ],
+        "operationId": "Get_Notifications_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "notifications"
+        ],
+        "operationId": "Update_Notifications_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/queries/all/timerange": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Get_QueriesAllTimerange_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/queries/compare/token": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Get_QueriesCompareToken_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Create_QueriesCompareToken_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/queries/compare/{cancel_token}": {
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Delete_QueriesCompareByCancelToken_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cancel_token",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/queries/compare": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Create_QueriesCompare_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/queries/token/new": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Get_QueriesTokenNew_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/queries/{request_token}": {
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Delete_QueriesByRequestToken_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request_token",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/queries/{routing_token}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Get_QueriesByRoutingToken_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "timeout",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "routing_token",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/queries": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Get_Queries_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "queries"
+        ],
+        "operationId": "Create_Queries_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/scripts/nodes/local": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "scripts"
+        ],
+        "operationId": "Create_ScriptsNodesLocal_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "timeout",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/scripts/nodes/{nodeId}": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "scripts"
+        ],
+        "operationId": "Create_ScriptsNodesByNodeId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "timeout",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/scripts/nodes": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "scripts"
+        ],
+        "operationId": "Create_ScriptsNodes_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "nodeTimeout",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "integer",
+            "format": "int64",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/sessions/current": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "sessions"
+        ],
+        "operationId": "Get_SessionsCurrent_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/sessions": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "sessions"
+        ],
+        "operationId": "Get_Sessions_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Signs into Log Insight with the given credentials, created and returns a\nnew session.\n",
+        "tags": [
+          "sessions"
+        ],
+        "operationId": "Create_Sessions_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "x-is-map": false,
+            "schema": {
+              "$ref": "#/definitions/anonymousRepresentation2"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Sessionsresponse"
+            }
+          },
+          "401": {
+            "description": "Could not sign in with the given credentials."
+          },
+          "503": {
+            "description": "Log Insight did not have its initial configuration set up yet."
+          }
+        }
+      }
+    },
+    "/short/{token}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "short"
+        ],
+        "operationId": "Get_ShortByToken_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/short": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "short"
+        ],
+        "operationId": "Create_Short_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/ssl/force": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "ssl"
+        ],
+        "operationId": "Update_SslForce_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/stats/groups/{statGroup}/types/{statType}/names/{statName}/events": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "stats"
+        ],
+        "operationId": "Create_StatsGroupsTypesNamesStatNameEvents_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "statGroup",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "statName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "statType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/stats/groups/{statGroup}/types/{statType}/names/{statName}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "stats"
+        ],
+        "operationId": "Get_StatsGroupsTypesNamesStatNameByStatGroup_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "statGroup",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "statType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "statName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "stats"
+        ],
+        "operationId": "Update_StatsGroupsTypesNamesStatNameByStatGroup_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "statGroup",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "statType",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "statName",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/time/config": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "time"
+        ],
+        "operationId": "Get_TimeConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "time"
+        ],
+        "operationId": "Create_TimeConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/time/test": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "time"
+        ],
+        "operationId": "Create_TimeTest_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/time/testservers": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "time"
+        ],
+        "operationId": "Create_TimeTestservers_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/time": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "time"
+        ],
+        "operationId": "Get_Time_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/local": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesLocal_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/eula": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Update_UpgradesEulaByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/nodes/{node}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesNodesByVersionAndNode_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "node",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Update_UpgradesNodesByVersionAndNode_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "node",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/rollback/local": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesRollbackLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_UpgradesRollbackLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/rollback/services/local": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesRollbackServicesLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/rollback/services/{service}/local": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_UpgradesRollbackServicesLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Update_UpgradesRollbackServicesLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/rollback/services": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_UpgradesRollbackServicesByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/rollback": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesRollbackByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_UpgradesRollbackByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/snapshot/local": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesSnapshotLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "unvalidated",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_UpgradesSnapshotLocalByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/snapshot": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesSnapshotByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "unvalidated",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_UpgradesSnapshotByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}/verified": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesVerifiedByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades/{version}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_UpgradesByVersion_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/upgrades": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Get_Upgrades_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "upgrades"
+        ],
+        "operationId": "Create_Upgrades_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/self/snapshots/{snapshotId}/position": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersSelfSnapshotsPositionBySnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/self/snapshots/{snapshotId}": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersSelfSnapshotsBySnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Delete_UsersSelfSnapshotsBySnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersSelfSnapshotsBySnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/self/snapshots": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersSelfSnapshots_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersSelfSnapshots_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Delete_UsersSelfSnapshots_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/users/{userId}/capabilities/{capability}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersCapabilitiesByUserIdAndCapability_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "capability",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/capabilities": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersCapabilitiesByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersCapabilitiesByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersCapabilitiesByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersCapabilitiesByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/datasets": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersDatasetsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersDatasetsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersDatasetsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersDatasetsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/groups": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersGroupsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersGroupsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersGroupsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersGroupsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/snapshots/{snapshotId}/position": {
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersSnapshotsPositionByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/snapshots/{snapshotId}": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersSnapshotsByUserIdAndSnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Delete_UsersSnapshotsByUserIdAndSnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersSnapshotsByUserIdAndSnapshotId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/snapshots": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersSnapshotsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersSnapshotsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Delete_UsersSnapshotsByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/users/{userId}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_UsersByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeExtendedData",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_UsersByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Delete_UsersByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Update_UsersByUserId_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Get_Users_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeExtendedData",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "users"
+        ],
+        "operationId": "Create_Users_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "description": "Retrieve Log Insight version information, in the form Major.Minor.Patch-Build.",
+        "tags": [
+          "version"
+        ],
+        "operationId": "Get_Version_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Versionresponse"
+            }
+          }
+        }
+      }
+    },
+    "/vidm/config": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vidm"
+        ],
+        "operationId": "Create_VidmConfig_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vidm/state": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vidm"
+        ],
+        "operationId": "Get_VidmState_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vidm/status": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vidm"
+        ],
+        "operationId": "Get_VidmStatus_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vidm": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vidm"
+        ],
+        "operationId": "Create_Vidm_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vrops/servers/{hostname}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Get_VropsServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Update_VropsServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Create_VropsServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Delete_VropsServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/vrops/servers": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Get_VropsServers_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Create_VropsServers_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vrops/testconnection": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Create_VropsTestconnection_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vrops/{hostname}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Get_VropsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Update_VropsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Create_VropsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Delete_VropsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/vrops": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Get_Vrops_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vrops"
+        ],
+        "operationId": "Create_Vrops_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vropspacks/{vropsPackNamespace}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vropspacks"
+        ],
+        "operationId": "Get_VropspacksByVropsPackNamespace_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "vropsPackNamespace",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vropspacks"
+        ],
+        "operationId": "Delete_VropspacksByVropsPackNamespace_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "removeAlerts",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "vropsPackNamespace",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/vropspacks": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vropspacks"
+        ],
+        "operationId": "Get_Vropspacks_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vropspacks"
+        ],
+        "operationId": "Create_Vropspacks_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "overwrite",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "installAlerts",
+            "in": "query",
+            "required": false,
+            "x-is-map": false,
+            "type": "boolean",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/servers/{hostname}/hosts": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereServersHostsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereServersHostsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereServersHostsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/servers/{hostname}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Delete_VsphereServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereServersByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/servers/{vSphereHostname}/hosts/{esxiHost}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereServersHostsByVSphereHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "vSphereHostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "esxiHost",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereServersHostsByVSphereHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "vSphereHostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "esxiHost",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereServersHostsByVSphereHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "vSphereHostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          },
+          {
+            "name": "esxiHost",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/servers": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereServers_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereServers_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/testconnection": {
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereTestconnection_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/{hostname}/hosts": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereHostsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereHostsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereHostsByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/{hostname}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Delete_VsphereByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereByHostname_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere/{vSphereHostname}/hosts/{esxiHost}": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_VsphereHostsByVSphereHostnameAndEsxiHost_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "esxiHost",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "vSphereHostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_VsphereHostsByVSphereHostnameAndEsxiHost_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "esxiHost",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "vSphereHostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Update_VsphereHostsByVSphereHostnameAndEsxiHost_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "esxiHost",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string",
+            "description": "TODO: add a description"
+          },
+          {
+            "name": "vSphereHostname",
+            "in": "path",
+            "required": true,
+            "x-is-map": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/vsphere": {
+      "get": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Get_Vsphere_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: add a description",
+        "tags": [
+          "vsphere"
+        ],
+        "operationId": "Create_Vsphere_",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AuthProvidersresponse": {
+      "title": "Auth Providers response",
+      "type": "object",
+      "properties": {
+        "providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "providers"
+      ]
+    },
+    "anonymousRepresentation": {
+      "title": "anonymousRepresentation",
+      "type": "object",
+      "properties": {
+        "configBlob": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "configBlob"
+      ]
+    },
+    "Configresponse": {
+      "title": "Config response",
+      "type": "object",
+      "properties": {
+        "restartRequired": {
+          "type": "boolean"
+        },
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "restartRequired",
+        "success"
+      ]
+    },
+    "anonymousRepresentation2": {
+      "title": "anonymousRepresentation2",
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "provider",
+        "password"
+      ]
+    },
+    "Sessionsresponse": {
+      "title": "Sessions response",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "sessionId": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "required": [
+        "userId",
+        "sessionId",
+        "ttl"
+      ]
+    },
+    "Versionresponse": {
+      "title": "Version response",
+      "type": "object",
+      "properties": {
+        "releaseName": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "releaseName",
+        "version"
+      ]
+    }
+  }
+}
