@@ -1,36 +1,17 @@
 ## Project Platypus
 ![](platypus.jpg)
 
-Platypus is an initiative to improve documentation across a number of VMware's products (see [Supported Products](#supported-products)) as described using [Open API](https://openapis.org/) and [Swagger UI](http://swagger.io/swagger-ui/). This allows everyone to easily consume, and enhance VMware's REST API's & their usage.
+Platypus is an initiative to improve documentation across a number of VMware's products (see [Supported Products](#supported-products)) as described using [Open API](https://openapis.org/) and displaying these local APIs using [VMware's API Explorer component](http://github.com/vmware/api-explorer/). Open API definitions as declared in the root of the project are displayed as 'local' definitions in the API Explorer.  API Explorer can also display official API definitions provided by VMware at https://code.vmware.com/apis.
 
 ## Just Run it
 
-`docker run --rm --name platypus -p 80:80 vmware/platypus`
+`docker run --rm --name platypus -p 80:80 vmware/platypus2`
 
-## Specify PRODUCT & VERSION
+## Migrating from previous versions of Platypus
+Previously Platypus required specifying which API you wanted to access in the Swagger UI, and only allowed
+using one API at a time.  In this new version all APIs are provided simultaneously with no change to the container.  
 
-`docker run --name platypus --rm -p 80:80 -e PRODUCT="vra" -e VERSION="7" vmware/platypus`
-
-> replace vRA and version with product of your choice
-
-## Supported Products
-
-| Product       | Version       | Build   |
-| ------------- | :---:         | :---:   |
-| vRA           | 7             | 3311738 |
-| vROPs         | 6.2           | 3445568 |
-| vRLI          | 3.3           | 3571626 |
-| vRO           | 7             | 3310032 |
-| NSX			| 6.2		    | 2986609 |
-
-
-_**or**_
-
-#### Get it
-
-clone this repo, and then:
-
-`git submodule update --init --recursive` to make sure you obtain the Swagger-UI code-base
+If you wish to see only the APIs provided in the Platypus container, click on the 'local' checkbox at the bottom left corner of the page.  If you also wish to see all VMware official API documents that are currently hosted on the BETA https://code.vmware.com/apis site, you can also click 'remote'
 
 #### Build and run
 
