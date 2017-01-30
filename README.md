@@ -4,8 +4,11 @@
 Platypus is an initiative to improve documentation across a number of VMware's products (see [Supported Products](#supported-products)) as described using [Open API](https://openapis.org/) and displaying these local APIs using [VMware's API Explorer component](http://github.com/vmware/api-explorer/). Open API definitions as declared in the root of the project are displayed as 'local' definitions in the API Explorer.  API Explorer can also display official API definitions provided by VMware at https://code.vmware.com/apis.
 
 ## Just Run it
+There are nightly builds that publish to Dockerhub that you should be able to just use.  The command below will run the container on your host at port 8080 (you can change this port to whatever works for you.  Can be port 80 as well.)
 
-`docker run --rm --name platypus -p 80:80 vmware/platypus2`
+`docker run --rm --name platypus -p 8080:80 vmware/platypus`
+
+This 
 
 ## Migrating from previous versions of Platypus
 Previously Platypus required specifying which API you wanted to access in the Swagger UI, and only allowed
