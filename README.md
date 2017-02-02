@@ -8,8 +8,6 @@ There are nightly builds that publish to Dockerhub that you should be able to ju
 
 `docker run --rm --name platypus -p 8080:80 vmware/platypus`
 
-This 
-
 ## Migrating from previous versions of Platypus
 Previously Platypus required specifying which API you wanted to access in the Swagger UI, and only allowed
 using one API at a time.  In this new version all APIs are provided simultaneously with no change to the container.  
