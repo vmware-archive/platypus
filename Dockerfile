@@ -20,7 +20,7 @@ COPY ./logo_small.png /usr/share/nginx/html/images/logo_small.png
 # and then uninstall python. done as one step so that image size is not bloated with python 
 # which is unused except for the config step.  To pickup a new version, update the VERSION
 # env var below to match the release in github 
-RUN export VER="0.0.2" && \
+RUN export VER="0.0.5" && \
     apk add --update python ca-certificates && \
     wget https://github.com/vmware/api-explorer/releases/download/${VER}/api-explorer-dist-${VER}.zip && \
     wget https://github.com/vmware/api-explorer/releases/download/${VER}/api-explorer-tools-${VER}.zip && \

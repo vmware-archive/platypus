@@ -1,0 +1,5191 @@
+{
+  "definitions": {
+    "ApiError": {
+      "properties": {
+        "code": {
+          "description": "This property contains a short, one-word textual representation of the error. E.g. QuotaError, DiskNotFound, InvalidJson, TooManyRequests, etc.",
+          "type": "string"
+        },
+        "data": {
+          "description": "This property provides an optional string-string map of additional data that provides additional detail and data. Each error has a unique set of additional meta-data.",
+          "type": "object"
+        },
+        "message": {
+          "description": "This property provides a terse description of the error.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "data",
+        "message"
+      ]
+    },
+    "AttachedDisk": {
+      "properties": {
+        "bootDisk": {
+          "description": "This property specifies that the disk is the boot disk for the VM.",
+          "type": "boolean"
+        },
+        "capacityGb": {
+          "description": "This property is the capacity of the disk in GB units. When used in the context of attaching an existing disk, this property, if specified, must be valid, but is otherwise ignored.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "flavor": {
+          "description": "This property specifies the flavor value (e.g., core-100, etc.) for the entity being described by an instance of this class.",
+          "type": "string"
+        },
+        "id": {
+          "description": "id",
+          "type": "string"
+        },
+        "kind": {
+          "description": "This property specifies the kind value (e.g., vm, ephemeral-disk, etc.) for the entity being described by an instance of this class.",
+          "type": "string"
+        },
+        "name": {
+          "description": "name",
+          "type": "string"
+        },
+        "state": {
+          "description": "This property specifies the state value (e.g., STARTED, STOPPED, etc.) for the entity being described by an instance of this class.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bootDisk",
+        "capacityGb",
+        "flavor",
+        "id",
+        "kind",
+        "name",
+        "state"
+      ]
+    },
+    "AttachedDiskCreateSpec": {
+      "properties": {
+        "bootDisk": {
+          "description": "This property specifies that the disk is the boot disk for the VM.",
+          "type": "boolean"
+        },
+        "capacityGb": {
+          "description": "This property is the capacity of the disk in GB units. When used in the context of attaching an existing disk, this property, if specified, must be valid, but is otherwise ignored. Not required if it is boot disk",
+          "type": "integer"
+        },
+        "flavor": {
+          "description": "This property specifies the desired flavor of the Disk.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "This property specifies the desired kind of the Disk: ephemeral is the only one currently supported",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the name of the Disk. Disk names must be unique within their project.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bootDisk",
+        "flavor",
+        "kind",
+        "name"
+      ]
+    },
+    "Auth": {
+      "properties": {
+        "endpoint": {
+          "description": "Url of the Authentication Server Endpoint",
+          "type": "string"
+        },
+        "port": {
+          "description": "The Authentication Server Port",
+          "type": "integer"
+        }
+      }
+    },
+    "AuthInfo": {
+      "properties": {
+        "endpoint": {
+          "description": "Url of the Authentication Server Endpoint",
+          "type": "string"
+        },
+        "password": {
+          "description": "Authentication password",
+          "type": "string"
+        },
+        "port": {
+          "description": "The Authentication Server Port",
+          "type": "integer"
+        },
+        "securityGroups": {
+          "description": "Administrator groups for authorization",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tenant": {
+          "description": "The tenant name on LightWave",
+          "type": "string"
+        },
+        "uiLoginEndpoint": {
+          "description": "The UI login URL on LightWave",
+          "type": "string"
+        },
+        "uiLogoutEndpoint": {
+          "description": "The UI logout URL on LightWave",
+          "type": "string"
+        },
+        "username": {
+          "description": "Authentication username",
+          "type": "string"
+        }
+      }
+    },
+    "AvailabilityZone": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"availabilityZone\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/AvailabilityZoneState",
+          "description": "Supplies the state of the Availability Zone"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name",
+        "state"
+      ]
+    },
+    "AvailabilityZoneCreateSpec": {
+      "properties": {
+        "name": {
+          "description": "This property specifies the name for the availability zone.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "Cluster": {
+      "properties": {
+        "errorReason": {
+          "description": "When the cluster state is either FATAL_ERROR or RECOVERABLE_ERROR, this contains the reason for the error.",
+          "type": "string"
+        },
+        "extendedProperties": {
+          "description": "A table of extra properties describing the cluster: please see the documentation for the complete list.",
+          "type": "object"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "imageId": {
+          "description": "Id of the image used to create the cluster",
+          "type": "string"
+        },
+        "masterVmFlavorName": {
+          "description": "This is the name of the flavor used to make the master VM(s).",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the cluster",
+          "type": "string"
+        },
+        "otherVmFlavorName": {
+          "description": "This is the name of the flavor used to make all the VMs other than the master (e.g. the workers).",
+          "type": "string"
+        },
+        "projectId": {
+          "description": "The id of the project that this cluster belongs to.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "slaveCount": {
+          "description": "Deprecated, use workerCount instead ",
+          "format": "int32",
+          "type": "integer"
+        },
+        "state": {
+          "$ref": "#/definitions/ClusterState",
+          "description": "The cluster state"
+        },
+        "type": {
+          "$ref": "#/definitions/ClusterType",
+          "description": "The cluster type"
+        },
+        "workerCount": {
+          "description": "The number of worker VMs in the cluster.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "extendedProperties",
+        "id",
+        "name",
+        "state",
+        "type"
+      ]
+    },
+    "ClusterConfiguration": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "imageId": {
+          "description": "This property specifies the ID of the cluster image.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"clusterConfig\"",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/ClusterType",
+          "description": "This property specifies the cluster type."
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "type"
+      ]
+    },
+    "ClusterConfigurationSpec": {
+      "properties": {
+        "imageId": {
+          "description": "This property specifies the ID of the cluster image.",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/ClusterType",
+          "description": "This property specifies the cluster type."
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "ClusterCreateSpec": {
+      "properties": {
+        "diskFlavor": {
+          "description": "This property specifies the name of the ephemeral disk flavor to use for the boot disk for all  VMs in the cluster. If omitted, the 'cluster-vm-disk' flavor will be used.",
+          "type": "string"
+        },
+        "extendedProperties": {
+          "description": "This property specifies extra attributes for the cluster. These are extracluster attributes: please see the documentation for the complete list.",
+          "type": "object"
+        },
+        "name": {
+          "description": "This property specifies the cluster name.",
+          "type": "string"
+        },
+        "slaveBatchExpansionSize": {
+          "description": "Deprecated, use workerBatchExpansionSize instead",
+          "format": "int32",
+          "type": "integer"
+        },
+        "slaveCount": {
+          "description": "Deprecated, use workerCount instead",
+          "format": "int32",
+          "type": "integer"
+        },
+        "type": {
+          "$ref": "#/definitions/ClusterType",
+          "description": "This property specifies the cluster type."
+        },
+        "vmFlavor": {
+          "description": "This property specifies the name of VM flavor to use for all VMs in the cluster. If omitted, the 'cluster-master-vm' and 'cluster-other-vm' flavors will be used.",
+          "type": "string"
+        },
+        "vmNetworkId": {
+          "description": "This property specifies the id of the network that the VMs should be attached to. If omitted, the default network will be used.",
+          "type": "string"
+        },
+        "workerBatchExpansionSize": {
+          "description": "This property specifies the size of batch expansion for worker VMs.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "workerCount": {
+          "description": "This property specifies the desired number of worker VMs in the cluster.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "extendedProperties",
+        "name",
+        "type"
+      ]
+    },
+    "ClusterResizeOperation": {
+      "properties": {
+        "newSlaveCount": {
+          "description": "This property specifies the desired number of slave VMs.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "newWorkerCount": {
+          "description": "This property specifies the desired number of worker VMs.",
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ComponentInstance": {
+      "properties": {
+        "address": {
+          "description": "IP Address of instance",
+          "type": "string"
+        },
+        "buildInfo": {
+          "description": "Detailed build information of a component instance",
+          "type": "string"
+        },
+        "message": {
+          "description": "Detailed message regarding a component instance",
+          "type": "string"
+        },
+        "stats": {
+          "description": "Detailed stats of a component instance",
+          "type": "object"
+        },
+        "status": {
+          "$ref": "#/definitions/StatusType",
+          "description": "Status of component instance"
+        }
+      },
+      "required": [
+        "address",
+        "status"
+      ]
+    },
+    "ComponentStatus": {
+      "properties": {
+        "buildInfo": {
+          "description": "Detailed build information of a component instance",
+          "type": "string"
+        },
+        "component": {
+          "$ref": "#/definitions/Component",
+          "description": "Name of component"
+        },
+        "instances": {
+          "description": "Instances of component",
+          "items": {
+            "$ref": "#/definitions/ComponentInstance"
+          },
+          "type": "array"
+        },
+        "message": {
+          "description": "Detailed message regarding a component",
+          "type": "string"
+        },
+        "stats": {
+          "description": "Detailed stats of a component",
+          "type": "object"
+        },
+        "status": {
+          "$ref": "#/definitions/StatusType",
+          "description": "Status of component"
+        }
+      },
+      "required": [
+        "component",
+        "instances",
+        "status"
+      ]
+    },
+    "Datastore": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"datastore\"",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "A list of tags",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        },
+        "type": {
+          "description": "Type of datastore",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "tags",
+        "type"
+      ]
+    },
+    "Deployment": {
+      "properties": {
+        "auth": {
+          "$ref": "#/definitions/AuthInfo",
+          "description": "Authentication/ Authorization information"
+        },
+        "clusterConfigurations": {
+          "description": "List of cluster configurations associated with the deployment",
+          "items": {
+            "$ref": "#/definitions/ClusterConfiguration"
+          },
+          "type": "array"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "imageDatastores": {
+          "description": "imageDatastore",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "description": "kind=\"deployment\"",
+          "type": "string"
+        },
+        "loadBalancerAddress": {
+          "description": "IP address of the loadbalancer",
+          "type": "string"
+        },
+        "loadBalancerEnabled": {
+          "description": "deploy a loadbalancer",
+          "type": "boolean"
+        },
+        "migrationStatus": {
+          "$ref": "#/definitions/MigrationStatus",
+          "description": "Status of migration."
+        },
+        "networkConfiguration": {
+          "$ref": "#/definitions/NetworkConfiguration",
+          "description": "Network configuration information"
+        },
+        "ntpEndpoint": {
+          "description": "ntpEndpoint",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/DeploymentState",
+          "description": "Supplies the state of the Deployment"
+        },
+        "stats": {
+          "$ref": "#/definitions/StatsInfo",
+          "description": "Stats information"
+        },
+        "syslogEndpoint": {
+          "description": "syslogEndpoint",
+          "type": "string"
+        },
+        "useImageDatastoreForVms": {
+          "description": "useImageDatastoreForVms",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "state"
+      ]
+    },
+    "DeploymentSize": {
+      "properties": {
+        "numberClusters": {
+          "description": "Number of clusters in the deployment",
+          "format": "int32",
+          "type": "integer"
+        },
+        "numberDatastores": {
+          "description": "Number of datastores in the deployment",
+          "format": "int32",
+          "type": "integer"
+        },
+        "numberHosts": {
+          "description": "Number of hosts in the deployment",
+          "format": "int32",
+          "type": "integer"
+        },
+        "numberProjects": {
+          "description": "Number of projects in the deployment",
+          "format": "int32",
+          "type": "integer"
+        },
+        "numberTenants": {
+          "description": "Number of tenants in the deployment",
+          "format": "int32",
+          "type": "integer"
+        },
+        "numberVMs": {
+          "description": "Number of VMs in the deployment",
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "DiskCreateSpec": {
+      "properties": {
+        "affinities": {
+          "description": "Locality parameters provide information that will guide the scheduler in placement of the disk with respect to an existing VM. The only supported value for the 'kind' in the LocalitySpec is 'vm'. ",
+          "items": {
+            "$ref": "#/definitions/LocalitySpec"
+          },
+          "type": "array"
+        },
+        "capacityGb": {
+          "description": "This property is the capacity of the disk in GB units. When used in the context of attaching an existing disk, this property, if specified, must be valid, but is otherwise ignored.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "flavor": {
+          "description": "This property specifies the desired flavor of the Disk.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "This property specifies the desired kind of the Disk: persistent is the only one currently supported",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the name of the Disk. Disk names must be unique within their project.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags to attach to the Disk on creation",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "capacityGb",
+        "flavor",
+        "kind",
+        "name"
+      ]
+    },
+    "Entity": {
+      "properties": {
+        "id": {
+          "description": "Entity id",
+          "type": "string"
+        },
+        "kind": {
+          "description": "Entity kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind"
+      ]
+    },
+    "FinalizeMigrationOperation": {
+      "properties": {
+        "sourceNodeGroupReference": {
+          "description": "This property specifies the source node group.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sourceNodeGroupReference"
+      ]
+    },
+    "Flavor": {
+      "properties": {
+        "cost": {
+          "description": "This property specifies the base cost, in terms of various quota keys, for objects of this flavor.",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "This property specifies the kind for the flavor. Acceptable value is persistent-disk, ephemeral-disk or vm.",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/FlavorState",
+          "description": "Supplies the state of the Flavor"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "cost",
+        "id",
+        "kind",
+        "name",
+        "state"
+      ]
+    },
+    "FlavorCreateSpec": {
+      "properties": {
+        "cost": {
+          "description": "This property specifies the base cost, in terms of various quota keys, for objects of this flavor.",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "description": "This property specifies the kind for the flavor. Acceptable value is persistent-disk, ephemeral-disk or vm.",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the name for the flavor. This value is used as the flavor property when creating VMs, specifying attached disks, etc.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cost",
+        "kind",
+        "name"
+      ]
+    },
+    "Host": {
+      "properties": {
+        "address": {
+          "description": "IP Address of Host",
+          "type": "string"
+        },
+        "availabilityZone": {
+          "description": "Availability zone",
+          "type": "string"
+        },
+        "esxVersion": {
+          "description": "ESX Version",
+          "type": "string"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"host\"",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "Custom metadata that needs to be stored but not represented by individually defined properties",
+          "type": "object"
+        },
+        "password": {
+          "description": "Host password",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/HostState",
+          "description": "Supplies the state of the Host"
+        },
+        "usageTags": {
+          "description": "Usage tags",
+          "items": {
+            "$ref": "#/definitions/UsageTag"
+          },
+          "type": "array"
+        },
+        "username": {
+          "description": "Host root username (typically 'root')",
+          "type": "string"
+        }
+      },
+      "required": [
+        "address",
+        "id",
+        "kind",
+        "password",
+        "state",
+        "usageTags",
+        "username"
+      ]
+    },
+    "HostCreateSpec": {
+      "properties": {
+        "address": {
+          "description": "IP Address of Host",
+          "type": "string"
+        },
+        "availabilityZone": {
+          "description": "Availability zone",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "Custom metadata that needs to be stored but not represented by individually defined properties",
+          "type": "object"
+        },
+        "password": {
+          "description": "Host password",
+          "type": "string"
+        },
+        "usageTags": {
+          "description": "Usage tags",
+          "items": {
+            "$ref": "#/definitions/UsageTag"
+          },
+          "type": "array"
+        },
+        "username": {
+          "description": "Host root username (typically 'root')",
+          "type": "string"
+        }
+      },
+      "required": [
+        "address",
+        "password",
+        "usageTags",
+        "username"
+      ]
+    },
+    "HostSetAvailabilityZoneOperation": {
+      "properties": {
+        "availabilityZoneId": {
+          "description": "This property specifies the availability zone.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "availabilityZoneId"
+      ]
+    },
+    "Image": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"image\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "replicationProgress": {
+          "description": "Ratio of datastores in the systems that have this image copy",
+          "type": "string"
+        },
+        "replicationType": {
+          "$ref": "#/definitions/ImageReplication",
+          "description": "Image replication type"
+        },
+        "seedingProgress": {
+          "description": "Ratio of image datastores in the systems that have this image copy",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "settings": {
+          "description": "Settings for creating VM",
+          "items": {
+            "$ref": "#/definitions/ImageSetting"
+          },
+          "type": "array"
+        },
+        "size": {
+          "description": "Image size (in bytes)",
+          "format": "int64",
+          "type": "integer"
+        },
+        "state": {
+          "$ref": "#/definitions/ImageState",
+          "description": "Supplies the state of the Image"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name",
+        "replicationProgress",
+        "replicationType",
+        "seedingProgress",
+        "settings",
+        "size",
+        "state"
+      ]
+    },
+    "ImageCreateSpec": {
+      "properties": {
+        "name": {
+          "description": "This property specifies the name for the image",
+          "type": "string"
+        },
+        "replicationType": {
+          "$ref": "#/definitions/ImageReplication",
+          "description": "Image replication type"
+        }
+      },
+      "required": [
+        "name",
+        "replicationType"
+      ]
+    },
+    "ImageSetting": {
+      "properties": {
+        "defaultValue": {
+          "description": "Default value of the setting",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the setting",
+          "type": "string"
+        }
+      },
+      "required": [
+        "defaultValue",
+        "name"
+      ]
+    },
+    "Info": {
+      "properties": {
+        "baseVersion": {
+          "description": "The base version of Photon Controller. Example: '1.1.0'",
+          "type": "string"
+        },
+        "fullVersion": {
+          "description": "The full version of Photon Controller, which is the base version plus any other identifiying information. Currently it includes the git commit hash. Example: '1.1.0-38a6409'",
+          "type": "string"
+        },
+        "gitCommitHash": {
+          "description": "The git commit hash for this build. Example: '38a6409'",
+          "type": "string"
+        },
+        "networkType": {
+          "$ref": "#/definitions/NetworkType",
+          "description": "Type of networking in use, either PHYSICAL or SOFTWARE_BASED"
+        }
+      },
+      "required": [
+        "networkType"
+      ]
+    },
+    "InitializeMigrationOperation": {
+      "properties": {
+        "sourceNodeGroupReference": {
+          "description": "This property specifies the source node group.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sourceNodeGroupReference"
+      ]
+    },
+    "IpRange": {
+      "properties": {
+        "end": {
+          "description": "The ending IP address (inclusive)",
+          "type": "string"
+        },
+        "start": {
+          "description": "The starting IP address (inclusive)",
+          "type": "string"
+        }
+      }
+    },
+    "Iso": {
+      "properties": {
+        "id": {
+          "description": "id",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"iso\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "name",
+          "type": "string"
+        },
+        "size": {
+          "description": "Iso size (in bytes)",
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "LocalitySpec": {
+      "properties": {
+        "id": {
+          "description": "This property specifies the id or the resource part of the locality relationship.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "This property specifies the kind of the resource part of the locality relationship. Supported values are: vm, disk.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind"
+      ]
+    },
+    "MigrationStatus": {
+      "properties": {
+        "completedDataMigrationCycles": {
+          "description": "Completed data migration cycles.",
+          "format": "int64",
+          "type": "integer"
+        },
+        "dataMigrationCycleProgress": {
+          "description": "Progress of current migration cycle.",
+          "format": "int64",
+          "type": "integer"
+        },
+        "dataMigrationCycleSize": {
+          "description": "Size of the current migration cycle.",
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "completedDataMigrationCycles",
+        "dataMigrationCycleProgress",
+        "dataMigrationCycleSize"
+      ]
+    },
+    "NetworkConfiguration": {
+      "properties": {
+        "dhcpServers": {
+          "description": "IP addresses of DHCP servers",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edgeClusterId": {
+          "description": "The ID of the edge cluster that connects virtual network to physical network",
+          "type": "string"
+        },
+        "floatingIpRange": {
+          "$ref": "#/definitions/IpRange",
+          "description": "The global floating IP range (It could be used as floating IP, SNAT IP, gateway IP, etc."
+        },
+        "ipRange": {
+          "description": "The global IP range for allocating private IP range to virtual network",
+          "type": "string"
+        },
+        "networkEdgeIpPoolId": {
+          "description": "The ID of the Edge IP pool for connecting host to Edge",
+          "type": "string"
+        },
+        "networkHostUplinkPnic": {
+          "description": "The name of the physical nic that the host uses to connect to Edge",
+          "type": "string"
+        },
+        "networkManagerAddress": {
+          "description": "The IP address of the network manager",
+          "type": "string"
+        },
+        "networkManagerPassword": {
+          "description": "The password for accessing the network manager",
+          "type": "string"
+        },
+        "networkManagerUsername": {
+          "description": "The username for accessing the network manager",
+          "type": "string"
+        },
+        "networkTopRouterId": {
+          "description": "The ID of the router for accessing outside network (i.e. Internet)",
+          "type": "string"
+        },
+        "networkZoneId": {
+          "description": "The ID of the network zone which inter-connects all hosts",
+          "type": "string"
+        },
+        "sdnEnabled": {
+          "description": "Flag that indicates if virtual network support is enabled or not",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "edgeClusterId",
+        "floatingIpRange",
+        "ipRange",
+        "networkManagerAddress",
+        "networkManagerPassword",
+        "networkManagerUsername",
+        "networkTopRouterId",
+        "networkZoneId",
+        "sdnEnabled"
+      ]
+    },
+    "NsxConfigurationSpec": {
+      "properties": {
+        "dhcpServerAddresses": {
+          "description": "The mapping between the private IP and public IP of the DHCP servers",
+          "type": "object"
+        },
+        "edgeClusterId": {
+          "description": "The ID of the Edge cluster",
+          "type": "string"
+        },
+        "floatingIpRootRange": {
+          "$ref": "#/definitions/IpRange",
+          "description": "The root range of the floating IPs of the system"
+        },
+        "hostUplinkPnic": {
+          "description": "The name of the host uplink pnic",
+          "type": "string"
+        },
+        "nsxAddress": {
+          "description": "The IP address of NSX setup",
+          "type": "string"
+        },
+        "nsxPassword": {
+          "description": "The password of the NSX setup",
+          "type": "string"
+        },
+        "nsxUsername": {
+          "description": "The username of the NSX setup",
+          "type": "string"
+        },
+        "overlayTransportZoneId": {
+          "description": "The ID of the OVERLAY transport zone",
+          "type": "string"
+        },
+        "privateIpRootCidr": {
+          "description": "The root CIDR of the private IPs of the system",
+          "type": "string"
+        },
+        "t0RouterId": {
+          "description": "The ID of the T0-Router",
+          "type": "string"
+        },
+        "tunnelIpPoolId": {
+          "description": "The ID of the tunnel IP pool",
+          "type": "string"
+        }
+      }
+    },
+    "PersistentDisk": {
+      "properties": {
+        "capacityGb": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cost": {
+          "description": "This property specifies the base cost of the entity. It's important to note that the actual cost may be different due to runtime parameters used in the creation of an entity. For instance, the base cost of an ephemeral or persistent disk is augmented with a capacity cost at runtime.",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "datastore": {
+          "description": "Supplies the datastore id of the Disk",
+          "type": "string"
+        },
+        "flavor": {
+          "description": "This property specifies the flavor of the entity.",
+          "type": "string"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"persistent-disk\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/DiskState",
+          "description": "Supplies the state of the Disk"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        },
+        "vms": {
+          "description": "List of vm ids the persistent disk is attached to",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "cost",
+        "flavor",
+        "id",
+        "kind",
+        "name",
+        "state",
+        "vms"
+      ]
+    },
+    "Project": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"project\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "resourceTicket": {
+          "$ref": "#/definitions/ProjectTicket",
+          "description": "This property is the list of VMs in the project. Note, the list of VMs is in a compact representation form which contains only the id, name, flavor, and state of the VM."
+        },
+        "securityGroups": {
+          "description": "This property is the list of security groups of this project.",
+          "items": {
+            "$ref": "#/definitions/SecurityGroup"
+          },
+          "type": "array"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name",
+        "resourceTicket"
+      ]
+    },
+    "ProjectCreateSpec": {
+      "properties": {
+        "name": {
+          "description": "This property specifies the name of the project. Project names are scoped to a tenant, and duplicate project names within the same tenant are not permitted.",
+          "type": "string"
+        },
+        "resourceTicket": {
+          "$ref": "#/definitions/ResourceTicketReservation",
+          "description": "This property is used to specify which tenant resource ticket the project will drawfrom, and how much it will consume."
+        },
+        "securityGroups": {
+          "description": "SecurityGroups associated with project",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "resourceTicket"
+      ]
+    },
+    "ProjectTicket": {
+      "properties": {
+        "limits": {
+          "description": "Project limits",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "tenantTicketId": {
+          "description": "Tenant ticket id",
+          "type": "string"
+        },
+        "tenantTicketName": {
+          "description": "Tenant ticket name",
+          "type": "string"
+        },
+        "usage": {
+          "description": "Project resource usage",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "limits",
+        "tenantTicketId",
+        "tenantTicketName",
+        "usage"
+      ]
+    },
+    "QuotaLineItem": {
+      "properties": {
+        "key": {
+          "description": "Item key (e.g., vm.cost, vm.memory, etc.)",
+          "type": "string"
+        },
+        "unit": {
+          "$ref": "#/definitions/QuotaUnit",
+          "description": "Item unit"
+        },
+        "value": {
+          "description": "Item value",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "key",
+        "unit",
+        "value"
+      ]
+    },
+    "ResourceList<AvailabilityZone>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/AvailabilityZone"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Cluster>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Cluster"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Datastore>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Datastore"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Deployment>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Deployment"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Flavor>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Flavor"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Host>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Host"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Image>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Image"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<PersistentDisk>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/PersistentDisk"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Project>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Project"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<ResourceTicket>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/ResourceTicket"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Subnet>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Subnet"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Task>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Task"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Tenant>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Tenant"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceList<Vm>": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Vm"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "ResourceTicket": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"resource-ticket\"",
+          "type": "string"
+        },
+        "limits": {
+          "description": "Ticket limits",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        },
+        "tenantId": {
+          "description": "Tenant id",
+          "type": "string"
+        },
+        "usage": {
+          "description": "Ticket usage",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "limits",
+        "name",
+        "tenantId",
+        "usage"
+      ]
+    },
+    "ResourceTicketCreateSpec": {
+      "properties": {
+        "limits": {
+          "description": "Ticket limits",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "name": {
+          "description": "Ticket name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "limits",
+        "name"
+      ]
+    },
+    "ResourceTicketReservation": {
+      "properties": {
+        "limits": {
+          "description": "Supplies the list of quota line items to carve from the tenant level ticket. Note, the key value of 'subdivide.percent' is used to carve out a percentage of the tenant level ticket's original limits. In this mode, the value is the percentage of the ticket that should be used (e.g., 10.0 means 10%).",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "name": {
+          "description": "Supplies the tenant level resource ticket.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "limits",
+        "name"
+      ]
+    },
+    "SecurityGroup": {
+      "properties": {
+        "inherited": {
+          "description": "Flag indicating if this security group was inherited from parent resource.",
+          "type": "boolean"
+        },
+        "name": {
+          "description": "Fully qualified name of the security group.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "StatsInfo": {
+      "properties": {
+        "enabled": {
+          "description": "Flag that indicates if stats is enabled or not",
+          "type": "boolean"
+        },
+        "storeEndpoint": {
+          "description": "Url/IP of the Stats Store Endpoint",
+          "type": "string"
+        },
+        "storePort": {
+          "description": "The Stats Server Port",
+          "type": "integer"
+        },
+        "storeType": {
+          "$ref": "#/definitions/StatsStoreType",
+          "description": "This property specifies the stats store type."
+        }
+      },
+      "required": [
+        "enabled"
+      ]
+    },
+    "Step": {
+      "properties": {
+        "endTime": {
+          "description": "Step finish time",
+          "format": "date",
+          "type": "string"
+        },
+        "errors": {
+          "description": "Step errors (if step is in error state)",
+          "items": {
+            "$ref": "#/definitions/ApiError"
+          },
+          "type": "array"
+        },
+        "operation": {
+          "description": "Operation performed by step",
+          "type": "string"
+        },
+        "options": {
+          "description": "Step options",
+          "type": "object"
+        },
+        "queuedTime": {
+          "description": "Step queueing time",
+          "format": "date",
+          "type": "string"
+        },
+        "sequence": {
+          "description": "Step sequence",
+          "format": "int32",
+          "type": "integer"
+        },
+        "startedTime": {
+          "description": "Step start time",
+          "format": "date",
+          "type": "string"
+        },
+        "state": {
+          "description": "Step state",
+          "type": "string"
+        },
+        "warnings": {
+          "description": "Step errors (if step is in error state)",
+          "items": {
+            "$ref": "#/definitions/ApiError"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "queuedTime",
+        "startedTime",
+        "state"
+      ]
+    },
+    "Subnet": {
+      "properties": {
+        "description": {
+          "description": "Description of subnet",
+          "type": "string"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "isDefault": {
+          "description": "Indicates whether the subnet is default for VM creation",
+          "type": "boolean"
+        },
+        "kind": {
+          "description": "kind=\"subnet\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "portGroups": {
+          "description": "PortGroups associated with subnet",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/SubnetState",
+          "description": "Supplies the state of the subnet"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name",
+        "portGroups",
+        "state"
+      ]
+    },
+    "SubnetCreateSpec": {
+      "properties": {
+        "description": {
+          "description": "Description of subnet",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of subnet",
+          "type": "string"
+        },
+        "portGroups": {
+          "description": "PortGroups associated with subnet",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "portGroups"
+      ]
+    },
+    "SystemProperties": {
+      "properties": {
+        "quorum": {
+          "description": "This is Quorum Setting for Photon Controller. When there are multiple Photon Controller hosts, this indicates how many hosts mustaccept a change before the user can get a response. Usually is it a majority(e.g. when there are 3 hosts, this should be 2). In some special cases (like shutting down) it maybe appropriate to set this to be the same as the number of nodes. Please do not modify the quorum unless you know exactly what you are doing. Incorrectly modifying this can damage your installation.",
+          "type": "string"
+        }
+      }
+    },
+    "SystemStatus": {
+      "properties": {
+        "components": {
+          "description": "Statues of components in system",
+          "items": {
+            "$ref": "#/definitions/ComponentStatus"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/StatusType",
+          "description": "Status of system"
+        }
+      },
+      "required": [
+        "components",
+        "status"
+      ]
+    },
+    "SystemUpdateSpec": {
+      "properties": {
+        "size": {
+          "description": "Quorum size",
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Tag": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "Task": {
+      "properties": {
+        "endTime": {
+          "description": "Task finish time",
+          "format": "date",
+          "type": "string"
+        },
+        "entity": {
+          "$ref": "#/definitions/Entity",
+          "description": "Associated entity"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "operation": {
+          "description": "Operation performed by task",
+          "type": "string"
+        },
+        "queuedTime": {
+          "description": "Task queueing time",
+          "format": "date",
+          "type": "string"
+        },
+        "resourceProperties": {
+          "description": "This property may contain vm subnets' information and other task properties",
+          "type": "object"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "startedTime": {
+          "description": "Task start time",
+          "format": "date",
+          "type": "string"
+        },
+        "state": {
+          "description": "Task state",
+          "type": "string"
+        },
+        "steps": {
+          "description": "Steps associated with the task",
+          "items": {
+            "$ref": "#/definitions/Step"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "queuedTime",
+        "startedTime",
+        "state"
+      ]
+    },
+    "Tenant": {
+      "properties": {
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"tenant\"",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "resourceTickets": {
+          "description": "Full ResourceTicket API representation of tenant resource tickets",
+          "items": {
+            "$ref": "#/definitions/ResourceTicket"
+          },
+          "type": "array"
+        },
+        "securityGroups": {
+          "description": "This property is the list of security groups of this tenant",
+          "items": {
+            "$ref": "#/definitions/SecurityGroup"
+          },
+          "type": "array"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name",
+        "resourceTickets"
+      ]
+    },
+    "TenantCreateSpec": {
+      "properties": {
+        "name": {
+          "description": "Tenant name",
+          "type": "string"
+        },
+        "securityGroups": {
+          "description": "SecurityGroups associated with tenant",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "Vm": {
+      "properties": {
+        "attachedDisks": {
+          "description": "Supplies this list of disks attached to the VM. During VM creation, this list contains the list of disks that should be created and attached to the VM. Persistent disks can be attached to the VM only after the VM has been created.",
+          "items": {
+            "$ref": "#/definitions/AttachedDisk"
+          },
+          "type": "array"
+        },
+        "attachedIsos": {
+          "description": "The ISO list attached to the vm",
+          "items": {
+            "$ref": "#/definitions/Iso"
+          },
+          "type": "array"
+        },
+        "cost": {
+          "description": "This property specifies the base cost of the entity. It's important to note that the actual cost may be different due to runtime parameters used in the creation of an entity. For instance, the base cost of an ephemeral or persistent disk is augmented with a capacity cost at runtime.",
+          "items": {
+            "$ref": "#/definitions/QuotaLineItem"
+          },
+          "type": "array"
+        },
+        "datastore": {
+          "description": "The datastore the vm is located on.",
+          "type": "string"
+        },
+        "flavor": {
+          "description": "This property specifies the flavor of the entity.",
+          "type": "string"
+        },
+        "floatingIp": {
+          "description": "The public accessible IP of the vm",
+          "type": "string"
+        },
+        "host": {
+          "description": "The host the vm is located on.",
+          "type": "string"
+        },
+        "id": {
+          "description": "[Output only] Unique identifier for the resource, generated by the server.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "kind=\"vm\"",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "Custom metadata for the VM instance",
+          "type": "object"
+        },
+        "name": {
+          "description": "This property specifies the project-scoped name of the entity.",
+          "type": "string"
+        },
+        "selfLink": {
+          "description": "[Output Only] Server-defined fully-qualified URL for this resource.",
+          "type": "string"
+        },
+        "sourceImageId": {
+          "description": "The id of the source image to create VM from.",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/VmState",
+          "description": "Supplies the state of the VM"
+        },
+        "tags": {
+          "description": "This property specifies the set of machine-tags attached to the entity",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "attachedDisks",
+        "cost",
+        "flavor",
+        "id",
+        "kind",
+        "name",
+        "state"
+      ]
+    },
+    "VmCreateSpec": {
+      "properties": {
+        "affinities": {
+          "description": "Locality parameters provide a hint that may help the placement engine optimize placement of a VM with respect to an independent disk.",
+          "items": {
+            "$ref": "#/definitions/LocalitySpec"
+          },
+          "type": "array"
+        },
+        "attachedDisks": {
+          "description": "Supplies this list of disks attached to the VM. During VM creation, this list contains the list of disks that should be created and attached to the VM.",
+          "items": {
+            "$ref": "#/definitions/AttachedDiskCreateSpec"
+          },
+          "type": "array"
+        },
+        "environment": {
+          "description": "VM environment",
+          "type": "object"
+        },
+        "flavor": {
+          "description": "This property specifies the desired flavor of the VM.",
+          "type": "string"
+        },
+        "name": {
+          "description": "This property specifies the name of the VM.",
+          "type": "string"
+        },
+        "sourceImageId": {
+          "description": "The id of the source image to be used to create VM from.",
+          "type": "string"
+        },
+        "subnets": {
+          "description": "ids of subnets to place vm on",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "This property specifies the set of tags to attach to the VM on creation.",
+          "items": {},
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "attachedDisks",
+        "flavor",
+        "name",
+        "sourceImageId"
+      ]
+    },
+    "VmDiskOperation": {
+      "properties": {
+        "arguments": {
+          "description": "Operation arguments",
+          "type": "object"
+        },
+        "diskId": {
+          "description": "Supplies disk id that is to attach/detach to the VM. This is the disk that should be attached/detached to/from the VM (only persistent disk is allowed).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "diskId"
+      ]
+    },
+    "VmMetadata": {
+      "properties": {
+        "metadata": {
+          "description": "VM metadata",
+          "type": "object"
+        }
+      },
+      "required": [
+        "metadata"
+      ]
+    }
+  },
+  "info": {
+    "version": "1.1.1",
+    "title":"Photon Controller API",
+    "description": "REST API for Photon Controller version 1.1.1.  The Photon Controller appliance supplies Swagger 1.2 documentation natively, this was exported and converted."
+  },
+  "paths": {
+    "/auth": {
+      "get": {
+        "operationId": "get",
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Auth"
+            }
+          }
+        },
+        "summary": "Returns  Authentication/ Authorization Info",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/availabilityzones": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<AvailabilityZone>"
+            }
+          }
+        },
+        "summary": "Get all availability zones' information",
+        "tags": [
+          "availabilityzones"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "required": false,
+            "type": "AvailabilityZoneCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create availability zone",
+        "tags": [
+          "availabilityzones"
+        ]
+      }
+    },
+    "/availabilityzones/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete availabilityZone",
+        "tags": [
+          "availabilityzones"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/AvailabilityZone"
+            }
+          }
+        },
+        "summary": "Find availabilityZone",
+        "tags": [
+          "availabilityzones"
+        ]
+      }
+    },
+    "/availabilityzones/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with AvailabilityZone. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "availabilityzones"
+        ]
+      }
+    },
+    "/available": {
+      "get": {
+        "description": "This API does not require authorization. It is intended for use by a load-balancer to decide that a host is available to service API requests. The response has no data. Getting a response with HTTP status code 200 is sufficient to indicate the host is available.",
+        "operationId": "get",
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Available"
+            }
+          }
+        },
+        "summary": "Indicates that the Photon Controller API on this host is available",
+        "tags": [
+          "available"
+        ]
+      }
+    },
+    "/clusters/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete a cluster by id",
+        "tags": [
+          "clusters"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Cluster"
+            }
+          }
+        },
+        "summary": "Find a cluster by id",
+        "tags": [
+          "clusters"
+        ]
+      }
+    },
+    "/clusters/{id}/resize": {
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ClusterResizeOperation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Resize a cluster",
+        "tags": [
+          "clusters"
+        ]
+      }
+    },
+    "/clusters/{id}/trigger_maintenance": {
+      "post": {
+        "operationId": "triggerMaintenance",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Triggers background maintenance for a cluster",
+        "tags": [
+          "clusters"
+        ]
+      }
+    },
+    "/clusters/{id}/vms": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Vm>"
+            }
+          }
+        },
+        "summary": "List VMs in a cluster",
+        "tags": [
+          "clusters"
+        ]
+      }
+    },
+    "/datastores": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "tag",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Datastore>"
+            }
+          }
+        },
+        "summary": "Enumerate all datastores",
+        "tags": [
+          "datastores"
+        ]
+      }
+    },
+    "/datastores/{id}": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Datastore"
+            }
+          }
+        },
+        "summary": "Find datastore by id",
+        "tags": [
+          "datastores"
+        ]
+      }
+    },
+    "/deployments": {
+      "get": {
+        "operationId": "list",
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Deployment>"
+            }
+          }
+        },
+        "summary": "Enumerate all deployments",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Deployment"
+            }
+          }
+        },
+        "summary": "Find Deployment by id",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/configure_nsx": {
+      "post": {
+        "operationId": "initializeNsx",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "NsxConfigurationSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Configure NSX associated with the Deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/disable_cluster_type": {
+      "post": {
+        "operationId": "deleteClusterConfiguration",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ClusterConfigurationSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete cluster configuration for a give cluster type",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/enable_cluster_type": {
+      "post": {
+        "operationId": "configureCluster",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ClusterConfigurationSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Configures a given type of cluster associated with the Deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/finalize_migration": {
+      "post": {
+        "operationId": "finalizeMigration",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "FinalizeMigrationOperation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Finish migrating another deployment into this deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/hosts": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Host>"
+            }
+          }
+        },
+        "summary": "Find all hosts associated with the Deployment",
+        "tags": [
+          "deployments"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "required": false,
+            "type": "HostCreateSpec"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Add a host to a deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/initialize_migration": {
+      "post": {
+        "operationId": "initializeMigration",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "InitializeMigrationOperation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Migrate another deployment to this deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/pause_background_tasks": {
+      "post": {
+        "operationId": "pauseBackgroundTasks",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Pause background tasks under the deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/pause_system": {
+      "post": {
+        "operationId": "pauseSystem",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Pause system under the deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/resume_system": {
+      "post": {
+        "operationId": "resumeSystem",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Resume system under the deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/set_image_datastores": {
+      "post": {
+        "operationId": "setImageDatastores",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ResourceList[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Change the image datastores of deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/set_security_groups": {
+      "post": {
+        "operationId": "setAdminSecurityGroups",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ResourceList[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Change the security groups of deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/size": {
+      "get": {
+        "operationId": "getSize",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/DeploymentSize"
+            }
+          }
+        },
+        "summary": "Gets size information about the deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/sync_hosts_config": {
+      "post": {
+        "operationId": "syncHostsConfig",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Synchronize hosts configuration on-demand",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/deployments/{id}/vms": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Vm>"
+            }
+          }
+        },
+        "summary": "Find all Vms associated with the Deployment",
+        "tags": [
+          "deployments"
+        ]
+      }
+    },
+    "/disks/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete Disk",
+        "tags": [
+          "disks"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/PersistentDisk"
+            }
+          }
+        },
+        "summary": "Find Disk by id",
+        "tags": [
+          "disks"
+        ]
+      }
+    },
+    "/disks/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with a DISK, such as CREATE_DISK. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "disks"
+        ]
+      }
+    },
+    "/flavors": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "kind",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Flavor>"
+            }
+          }
+        },
+        "summary": "Get all flavors' information",
+        "tags": [
+          "flavors"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "required": false,
+            "type": "FlavorCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create flavor",
+        "tags": [
+          "flavors"
+        ]
+      }
+    },
+    "/flavors/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete a flavor",
+        "tags": [
+          "flavors"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Flavor"
+            }
+          }
+        },
+        "summary": "Find a flavor",
+        "tags": [
+          "flavors"
+        ]
+      }
+    },
+    "/flavors/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with a Flavor. If page link is provided, then get the tasks on that specific page",
+        "tags": [
+          "flavors"
+        ]
+      }
+    },
+    "/hosts/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete host",
+        "tags": [
+          "hosts"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Host"
+            }
+          }
+        },
+        "summary": "Find host by id",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/enter_maintenance": {
+      "post": {
+        "operationId": "enterMaintenanceMode",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Host enter maintenance mode",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/exit_maintenance": {
+      "post": {
+        "operationId": "exitMaintenanceMode",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Host exit maintenance mode",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/provision": {
+      "post": {
+        "operationId": "provisionHost",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Provision Host for Photon Controller",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/resume": {
+      "post": {
+        "operationId": "resumeHost",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Host resume to normal mode",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/set_availability_zone": {
+      "post": {
+        "operationId": "setHostAvailabilityZone",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "HostSetAvailabilityZoneOperation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Set Host Availability Zone",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/suspend": {
+      "post": {
+        "operationId": "suspendedMode",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Host enter suspended mode",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with a Host. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/hosts/{id}/vms": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Vm>"
+            }
+          }
+        },
+        "summary": "Find all Vms associated with the Host",
+        "tags": [
+          "hosts"
+        ]
+      }
+    },
+    "/images": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Image>"
+            }
+          }
+        },
+        "summary": "Get all images' information",
+        "tags": [
+          "images"
+        ]
+      },
+      "post": {
+        "operationId": "upload",
+        "parameters": [
+          {
+            "required": false,
+            "type": "HttpServletRequest"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Upload an image",
+        "tags": [
+          "images"
+        ]
+      }
+    },
+    "/images/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete Image",
+        "tags": [
+          "images"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Image"
+            }
+          }
+        },
+        "summary": "Get image information",
+        "tags": [
+          "images"
+        ]
+      }
+    },
+    "/images/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with an Image. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "images"
+        ]
+      }
+    },
+    "/info": {
+      "get": {
+        "description": "This API provides read-only information about the Photon Controller installationincluding the version and whether or not software-defined network is enabled.",
+        "operationId": "get",
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Info"
+            }
+          }
+        },
+        "summary": "Information about the Photon Controller deployment",
+        "tags": [
+          "info"
+        ]
+      }
+    },
+    "/projects/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete a project",
+        "tags": [
+          "projects"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          }
+        },
+        "summary": "Find a project",
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/projects/{id}/clusters": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Cluster>"
+            }
+          }
+        },
+        "summary": "List all clusters in a project",
+        "tags": [
+          "projects"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ClusterCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a cluster in a project",
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/projects/{id}/disks": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<PersistentDisk>"
+            }
+          }
+        },
+        "summary": "List Disks in a project",
+        "tags": [
+          "projects"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "DiskCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a Disk in a project",
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/projects/{id}/set_security_groups": {
+      "post": {
+        "operationId": "setSecurityGroups",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ResourceList[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Change the security groups of project",
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/projects/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "kind",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks under a project, such as CREATE_VM under a project. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/projects/{id}/vms": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Vm>"
+            }
+          }
+        },
+        "summary": "List VMs in a project",
+        "tags": [
+          "projects"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "VmCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a VM in a project",
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/resource-tickets/{id}": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceTicket"
+            }
+          }
+        },
+        "summary": "Find a resource ticket",
+        "tags": [
+          "resource-tickets"
+        ]
+      }
+    },
+    "/resource-tickets/{id}/tasks": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with a resource ticket. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "resource-tickets"
+        ]
+      }
+    },
+    "/status": {
+      "get": {
+        "operationId": "get",
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/SystemStatus"
+            }
+          }
+        },
+        "summary": "Get statuses of all components, such as root scheduler, housekeeper, etc.",
+        "tags": [
+          "status"
+        ]
+      }
+    },
+    "/subnets": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Subnet>"
+            }
+          }
+        },
+        "summary": "Get all subnets",
+        "tags": [
+          "subnets"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "required": false,
+            "type": "SubnetCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a subnet",
+        "tags": [
+          "subnets"
+        ]
+      }
+    },
+    "/subnets/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete Subnet",
+        "tags": [
+          "subnets"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Subnet"
+            }
+          }
+        },
+        "summary": "Find Subnet by id",
+        "tags": [
+          "subnets"
+        ]
+      }
+    },
+    "/subnets/{id}/set_default": {
+      "post": {
+        "operationId": "setDefault",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Set Subnet Default",
+        "tags": [
+          "subnets"
+        ]
+      }
+    },
+    "/subnets/{id}/set_portgroups": {
+      "post": {
+        "operationId": "set",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ResourceList[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Set Subnet Port Groups",
+        "tags": [
+          "subnets"
+        ]
+      }
+    },
+    "/system/properties": {
+      "get": {
+        "description": "This API provides read-only information about the Photon Controller System.",
+        "operationId": "get",
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Response"
+            }
+          }
+        },
+        "summary": "Get Photon Controller system properties.",
+        "tags": [
+          "system"
+        ]
+      }
+    },
+    "/system/properties/update/": {
+      "post": {
+        "description": "This API helps update the System SystemProperties. These are not persisted",
+        "operationId": "post",
+        "parameters": [
+          {
+            "required": false,
+            "type": "SystemUpdateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/SystemProperties"
+            }
+          }
+        },
+        "summary": "Update System properties.",
+        "tags": [
+          "system"
+        ]
+      }
+    },
+    "/tasks": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "entityId",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "entityKind",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "List tasks, filtering by entityId and entityKind. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "tasks"
+        ]
+      }
+    },
+    "/tasks/{id}": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Find a task",
+        "tags": [
+          "tasks"
+        ]
+      }
+    },
+    "/tenants": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Tenant>"
+            }
+          }
+        },
+        "summary": "List tenants, optionally filtering by name",
+        "tags": [
+          "tenants"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "required": false,
+            "type": "TenantCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a tenant",
+        "tags": [
+          "tenants"
+        ]
+      }
+    },
+    "/tenants/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete a tenant",
+        "tags": [
+          "tenants"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Tenant"
+            }
+          }
+        },
+        "summary": "Get a tenant by id",
+        "tags": [
+          "tenants"
+        ]
+      }
+    },
+    "/tenants/{id}/projects": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Project>"
+            }
+          }
+        },
+        "summary": "List projects under tenant",
+        "tags": [
+          "tenants"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ProjectCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a project within the tenant",
+        "tags": [
+          "tenants"
+        ]
+      }
+    },
+    "/tenants/{id}/resource-tickets": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<ResourceTicket>"
+            }
+          }
+        },
+        "summary": "List resource tickets by name",
+        "tags": [
+          "tenants"
+        ]
+      },
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ResourceTicketCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create a resource ticket within the tenant",
+        "tags": [
+          "tenants"
+        ]
+      }
+    },
+    "/tenants/{id}/set_security_groups": {
+      "post": {
+        "operationId": "setSecurityGroups",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ResourceList[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Change the security groups of tenant",
+        "tags": [
+          "tenants"
+        ]
+      }
+    },
+    "/tenants/{id}/tasks": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "List tasks associated with a tenant, such as CREATE_TENANT. If pageLink is provided, then get the tasks on that specific page",
+        "tags": [
+          "tenants"
+        ]
+      }
+    },
+    "/vms/{id}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Delete VM",
+        "tags": [
+          "vms"
+        ]
+      },
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Vm"
+            }
+          }
+        },
+        "summary": "Find VM by id",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/attach_disk": {
+      "post": {
+        "operationId": "operate",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "VmDiskOperation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Attaches a PERSISTENT_DISK to the VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/attach_iso": {
+      "post": {
+        "operationId": "operate",
+        "parameters": [
+          {
+            "required": false,
+            "type": "HttpServletRequest"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Attaches a ISO to the VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/create_image": {
+      "post": {
+        "operationId": "create",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "ImageCreateSpec"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Create an image by cloning VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/detach_disk": {
+      "post": {
+        "operationId": "operate",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "VmDiskOperation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Detaches a PERSISTENT_DISK from the VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/detach_iso": {
+      "post": {
+        "operationId": "operate",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Detaches a ISO from the VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/mks_ticket": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Find mks ticket information associated with a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/restart": {
+      "post": {
+        "operationId": "restart",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Perform a restart operation on a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/resume": {
+      "post": {
+        "operationId": "resume",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Perform a resume operation on a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/set_metadata": {
+      "post": {
+        "operationId": "operate",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "VmMetadata"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Set VM Metadata",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/start": {
+      "post": {
+        "operationId": "start",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Perform a start operation on a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/stop": {
+      "post": {
+        "operationId": "stop",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Perform a stop operation on a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/subnets": {
+      "get": {
+        "operationId": "get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Find subnets information associated with a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/suspend": {
+      "post": {
+        "operationId": "suspend",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Perform a suspend operation on a VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/tags": {
+      "post": {
+        "operationId": "add",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "required": false,
+            "type": "Tag"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        },
+        "summary": "Add tag to VM",
+        "tags": [
+          "vms"
+        ]
+      }
+    },
+    "/vms/{id}/tasks": {
+      "get": {
+        "operationId": "list",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "Optional[String]"
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "Optional[Integer]"
+          },
+          {
+            "in": "query",
+            "name": "pageLink",
+            "required": false,
+            "type": "Optional[String]"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/ResourceList<Task>"
+            }
+          }
+        },
+        "summary": "Find tasks associated with a VM, such as CREATE_VM. If pageLink is provided, then get the tasks on that specific page\"",
+        "tags": [
+          "vms"
+        ]
+      }
+    }
+  },
+  "swagger": "2.0",
+  "tags": [
+    {
+      "name": "auth"
+    },
+    {
+      "name": "availabilityzones"
+    },
+    {
+      "name": "available"
+    },
+    {
+      "name": "clusters"
+    },
+    {
+      "name": "datastores"
+    },
+    {
+      "name": "deployments"
+    },
+    {
+      "name": "disks"
+    },
+    {
+      "name": "flavors"
+    },
+    {
+      "name": "hosts"
+    },
+    {
+      "name": "images"
+    },
+    {
+      "name": "info"
+    },
+    {
+      "name": "projects"
+    },
+    {
+      "name": "resource-tickets"
+    },
+    {
+      "name": "status"
+    },
+    {
+      "name": "subnets"
+    },
+    {
+      "name": "system"
+    },
+    {
+      "name": "tasks"
+    },
+    {
+      "name": "tenants"
+    },
+    {
+      "name": "vms"
+    }
+  ]
+}
