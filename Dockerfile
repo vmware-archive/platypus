@@ -14,7 +14,8 @@ COPY ./api*.json /usr/share/nginx/html/local/swagger/
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY "runner.sh" /usr/share/nginx/html/
-COPY ./logo_small.png /usr/share/nginx/html/images/logo_small.png
+# this ADD command will extract the favicons in the html root
+ADD ./favicons.tar.gz /usr/share/nginx/html/
 
 # install python, certificates so that wget works, download the distribution, configure it,
 # and then uninstall python. done as one step so that image size is not bloated with python 
