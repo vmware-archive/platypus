@@ -1,0 +1,82 @@
+{
+    "apis": [
+        {
+            "api_uid": "api_nsx_for_vsphere", 
+            "description": "", 
+            "name": "VMware NSX for vSphere", 
+            "products": [
+                "NSX;6.2"
+            ], 
+            "resources": {
+                "docs": []
+            }, 
+            "url": "local/swagger/api-nsx-6.2.json", 
+            "version": "6.2"
+        }, 
+        {
+            "api_uid": "api_photon_controller", 
+            "description": "REST API for Photon Controller version 1.1.1.  The Photon Controller appliance supplies Swagger 1.2 documentation natively, this was exported and converted.", 
+            "name": "Photon Controller API", 
+            "products": [
+                "Photon Controller;1.1.1"
+            ], 
+            "resources": {
+                "docs": []
+            }, 
+            "url": "local/swagger/api-photon.json", 
+            "version": "1.1.1"
+        }, 
+        {
+            "api_uid": "api_vrealize_automation", 
+            "description": "", 
+            "name": "VMware vRealize Automation 7", 
+            "products": [
+                "vRealize Automation;7.0"
+            ], 
+            "resources": {
+                "docs": []
+            }, 
+            "url": "local/swagger/api-vra-7.json", 
+            "version": "1.2"
+        }, 
+        {
+            "api_uid": "api_log_insight", 
+            "description": "", 
+            "name": "VMware vRealize Log Insight 3.3", 
+            "products": [
+                "vRealize Log Insight;3.3"
+            ], 
+            "resources": {
+                "docs": []
+            }, 
+            "url": "local/swagger/api-vrli-3.3.json", 
+            "version": "1.2"
+        }, 
+        {
+            "api_uid": "api_vrealize_orchestrator", 
+            "description": "", 
+            "name": "VMware vRealize Orchestrator 7", 
+            "products": [
+                "vRealize Orchestrator;7.0"
+            ], 
+            "resources": {
+                "docs": []
+            }, 
+            "url": "local/swagger/api-vro-7.json", 
+            "version": "1.2"
+        }, 
+        {
+            "api_uid": "api_vrealize_operations", 
+            "description": "", 
+            "name": "VMware vRealize Operations 6.2", 
+            "products": [
+                "vRealize Operations;6.2"
+            ], 
+            "resources": {
+                "docs": []
+            }, 
+            "url": "local/swagger/api-vrops-6.2.json", 
+            "version": "1.2"
+        }
+    ]
+}
