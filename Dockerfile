@@ -23,7 +23,7 @@ ADD ./favicons.tar.gz /usr/share/nginx/html/
 # and then uninstall python. done as one step so that image size is not bloated with python 
 # which is unused except for the config step.  To pickup a new version, update the VERSION
 # env var below to match the release in github 
-RUN export VER="0.0.8" && \
+RUN export VER="0.0.19" && \
     apk add --update ca-certificates && \
     wget https://github.com/vmware/api-explorer/releases/download/${VER}/api-explorer-dist-${VER}.zip && \
     wget https://github.com/vmware/api-explorer/releases/download/${VER}/api-explorer-tools-${VER}.zip && \
@@ -31,6 +31,7 @@ RUN export VER="0.0.8" && \
     mv -f ./local/local-apis.json ./local.json && \
     mv -f ./local/config.js . && \
     rm apiFilesToLocalJson.py  api-explorer*.zip && \
+    rm -rf apixlocal* \
     apk del ca-certificates && \
     rm -rf /var/cache/apk/* 
 
