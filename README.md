@@ -51,13 +51,19 @@ file needs to start with "api-" and end with ".json".
 }
 ```
 **api_uid**: This is a VMware specific string id for the API.  You can simply make something up, or you can look at https://https://apigw.vmware.com/v1/m4/api/dcr/rest/apix/apis/uids for a list of currently known supported IDs.  These are used to correlate the API with other documentation and sample code and such on code.vmware.com.
+
 **name**: Human readable name for the API
+
 **description**: what you want to type for this
+
 **products**: This is a list of string names for VMware products that provide this API with a colon and version number optionally.  You can see a list of products at https://apigw.vmware.com/v1/m4/api/dcr/rest/apix/products
+
 **resources**: You can optionally provide links to programming guides and other documentation in this list though the format is a bit cryptic, more documentation to come.
+
 **url**: This is the relative URL from the HTTP root in the container to the swagger reference document.  Note that 
 platypus stages all api references at "local/swagger" in the container so this must prepend the file name of the spec
 located in the platypus-api-additions folder.
+
 **version**: A version number string for the API itself if any.
 
 ## Contribution
