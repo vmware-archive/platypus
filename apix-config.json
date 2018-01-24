@@ -1,0 +1,26 @@
+{
+    "useHash": true,
+    "base" : "/",
+    "path" : "",
+    "apiListHeaderText" : "Available APIs",
+    "remoteApiUrl" : "https://apigw.vmware.com/v1/m4/api/dcr/rest/apix",
+    "remoteSampleExchangeUrl" : "https://apigw.vmware.com/sampleExchange/v1",
+    "localApiUrl" : "local.json",
+    "enableLocal" : true,
+    "enableRemote" : true,
+    "vmwareCodeClient" : "apix,platypus",
+    "vmwareCodeClientUUID" : null,
+    "defaultFilters" : {
+        "keywords" : "",
+        "products" : [],
+        "languages": [],
+        "types" : [],
+        "sources" : []
+    },
+    "hideFilters" : false,
+    "hideProductsFilter" : false,
+    "hideLanguagesFilter" : false,
+    "hideSourcesFilter" : false,
+    "hidePreference" : false,
+    "sso" : []
+}
