@@ -10,8 +10,8 @@ WORKDIR /usr/share/nginx/html/
 
 # copy the local swagger json files into the image.  All files in this location are scanned
 # and included in the 'local' API list in API Explorer
-COPY ./platypus-api-additions/api*.json /usr/share/nginx/html/local/swagger/
-COPY ./platypus-api-additions/local-apis.json /usr/share/nginx/html/local/
+COPY ./api*.json /usr/share/nginx/html/local/swagger/
+COPY ./local-apis.json /usr/share/nginx/html/local/
 COPY ./apix-config.json /usr/share/nginx/html/local/
 
 COPY nginx.conf /etc/nginx/nginx.conf
