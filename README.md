@@ -28,9 +28,9 @@ docker run -p 8080:80 platypus
 
 ## Adding another API
 If you have a Swagger file you can add it as another local API definition:
-1. Copy the Swagger JSON file into platypus-api-additions (sorry only JSON supported right now).  Note that the 
+1. Copy the Swagger JSON file (sorry only JSON supported right now, no yaml).  Note that the 
 file needs to start with "api-" and end with ".json".
-2. Edit the file platypus-api-additions/local-apis.json and add a new entry for your file.  Format details below.
+2. Edit the file local-apis.json and add a new entry for your file.  Format details below.
 3. Build the container As above
 
 ### local-apis.json schema to add another API
