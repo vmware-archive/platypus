@@ -2,6 +2,7 @@
     "useHash": true,
     "base" : "/",
     "path" : "",
+    "title": "VMware API Explorer",
     "apiListHeaderText" : "Available APIs",
     "remoteApiUrl" : "https://apigw.vmware.com/v1/m4/api/dcr/rest/apix",
     "remoteSampleExchangeUrl" : "https://apigw.vmware.com/sampleExchange/v1",
@@ -22,5 +23,6 @@
     "hideLanguagesFilter" : false,
     "hideSourcesFilter" : false,
     "hidePreference" : false,
+    "hideApiInfo" : false,
     "sso" : []
 }

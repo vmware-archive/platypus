@@ -24,7 +24,7 @@ ADD ./favicons.tar.gz /usr/share/nginx/html/
 # which is unused except for the config step.  To pickup a new version, update the VERSION
 # env var below to match the release in github 
 
-RUN export VER="2.0.0" && export MILESTONE="a3" &&\
+RUN export VER="2.0.0" && export MILESTONE="a5" &&\
     apk add --update ca-certificates && \
     wget https://github.com/vmware/api-explorer/releases/download/${VER}${MILESTONE}/api-explorer-dist-${VER}.zip && \
     wget https://github.com/vmware/api-explorer/releases/download/${VER}${MILESTONE}/api-explorer-tools-${VER}.zip && \
